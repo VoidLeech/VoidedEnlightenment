@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.github.voidleech.voided_enlightenment.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.voided_enlightenment.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}
