@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 public class VoidedEnlightenment
 {
     public static final String MOD_ID = "voided_enlightenment";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public VoidedEnlightenment()
     {
