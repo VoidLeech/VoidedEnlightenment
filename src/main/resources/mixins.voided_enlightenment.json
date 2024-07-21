@@ -4,6 +4,8 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.voided_enlightenment.refmap.json",
   "mixins": [
+    "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin",
+    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"
   ],
   "client": [
   ],
