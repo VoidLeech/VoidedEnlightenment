@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment;
 
+import com.github.voidleech.voided_enlightenment.registry.VEPotionRecipes;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +25,7 @@ public class VoidedEnlightenment
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
+        VEPotionRecipes.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
