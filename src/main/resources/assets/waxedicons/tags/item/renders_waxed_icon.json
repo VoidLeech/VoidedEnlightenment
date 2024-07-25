@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "enlightened_end:waxed_bismuth_block",
+    "enlightened_end:waxed_bismuth_sheets",
+    "enlightened_end:waxed_bismuth_sheet_stairs",
+    "enlightened_end:waxed_bismuth_sheet_slab",
+    "enlightened_end:waxed_bismuth_sheet_wall",
+    "enlightened_end:waxed_bismuth_glass_pane",
+    "enlightened_end:waxed_bismuth_glass",
+    "enlightened_end:waxed_bismuth_lamp"
+  ]
+}
