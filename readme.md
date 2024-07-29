@@ -4,12 +4,15 @@
 ![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/{project-id}.svg)
 
 ### Features
+- Disabled Enlightend's end fog, as it had jarring transitions
+- Thematic recipes for 2/3 (3rd tbd) Enlightend potions that lacked recipes
 
 ### Fixes
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
+- Incompatibility with Alex's Mobs Lava Vision Effect
 
 ### F.A.Q.
-**Q: Can this be used in my modpack?**  
+**Q: Can this be used in my CurseForge/Modrinth modpack?**  
 A: Yes.
 
 ### Licensing

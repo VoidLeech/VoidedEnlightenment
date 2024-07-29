@@ -4,10 +4,15 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.voided_enlightenment.refmap.json",
   "mixins": [
-    "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
-    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"
+    "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin", "potion.BurdenedRecipeMixin",
+    "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin",
+    "potion.VitalityRecipeMixin"
   ],
   "client": [
+    "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin", "render.DazedOverlayMixin",
+    "render.EndRenderingProcedureMixin", "render.EndSkiesProcedureMixin", "render.HeliumOverlayMixin",
+    "render.OozeOverlayMixin", "render.RadiatedOverlayMixin", "render.RadiationBarOverlayMixin",
+    "render.RadiationFatalOverlayMixin", "render.RenderWorldProcedureMixin", "render.XenonOverlayMixin"
   ],
   "minVersion": "0.8"
 }
