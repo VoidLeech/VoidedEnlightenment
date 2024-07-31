@@ -4,9 +4,9 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.voided_enlightenment.refmap.json",
   "mixins": [
-    "cerulean_stalk.Stalk0Mixin", "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin", "potion.BurdenedRecipeMixin",
-    "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin",
-    "potion.VitalityRecipeMixin"
+    "cerulean_stalk.Stalk0Mixin", "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin",
+    "ooze.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
+    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"
   ],
   "client": [
     "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin", "render.DazedOverlayMixin",

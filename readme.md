@@ -21,7 +21,8 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
 - Freshly planted cerulean stalk can now be mined and actually drops cerulean stalk.
 - The Offering Statue loot table now works.
-- The Adamantite Knife can now be crafted.
+- The Adamantite Knife can now be crafted and works in Farmer's Delight recipes.
+- Ooze is no longer part of the minecraft:water fluid tag.
 - Lava Vision from Alex's Mobs now works as intended when used in combination with Enlightend.
 - Lang Fixes/Consistency Changes.
 
