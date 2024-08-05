@@ -133,7 +133,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
 
-    // For Waxed Icons compat
+    // For testing Waxed Icons compat
     // runtimeOnly fg.deobf("curse.maven:trimmed-857036:4845938")
     // runtimeOnly fg.deobf("curse.maven:waxedicons-909140:4733260")
 
