@@ -137,9 +137,11 @@ dependencies {
     // runtimeOnly fg.deobf("curse.maven:trimmed-857036:4845938")
     // runtimeOnly fg.deobf("curse.maven:waxedicons-909140:4733260")
 
+    // runtimeOnly fg.deobf("curse.maven:citadel-331936:5559513")
     // For testing AM Lava Vision incompat (incompatible mess on AM's side too but fixable here thankfully)
     // runtimeOnly fg.deobf("curse.maven:alexsmobs-426558:5160697")
-    // runtimeOnly fg.deobf("curse.maven:citadel-331936:5559513")
+    // For testing AC Fog incompat (ditto for AC)
+    // runtimeOnly fg.deobf("curse.maven:alexscaves-924854:5162617")
 }
 
 mixin {

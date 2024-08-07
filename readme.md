@@ -16,6 +16,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 #### Removals
 - Disabled Enlightend's end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
+- Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java).
 
 ### Fixes
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
