@@ -1,11 +1,14 @@
 package com.github.voidleech.voided_enlightenment.mixin.cerulean_stalk;
 
 import net.mcreator.enlightened_end.block.CeruleanStalk0Block;
+import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -45,5 +48,14 @@ public class Stalk0Mixin extends Block {
     @Override
     public List<ItemStack> getDrops(BlockState pState, LootParams.Builder pParams) {
         return List.of(new ItemStack(EnlightenedEndModItems.CERULEAN_STALK.get()));
+    }
+
+    @Override
+    public BlockState updateShape(BlockState pState, Direction pDirection, BlockState pNeighborState, LevelAccessor pLevel, BlockPos pPos, BlockPos pNeighborPos) {
+        return !pState.canSurvive(pLevel, pPos)
+                ? Blocks.AIR.defaultBlockState()
+                : (pLevel.getBlockState(pPos.below()).getBlock() == EnlightenedEndModBlocks.CERULEAN_STALK_1.get()
+                    ? EnlightenedEndModBlocks.CERULEAN_STALK_1.get().defaultBlockState()
+                    : super.updateShape(pState, pDirection, pNeighborState, pLevel, pPos, pNeighborPos));
     }
 }
