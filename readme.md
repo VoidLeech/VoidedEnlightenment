@@ -3,7 +3,7 @@
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/{project-id}?style=flat&logo=curseforge&label=Curseforge)](https://www.curseforge.com/minecraft/mc-mods/{template-mod-slug})
 ![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/{project-id}.svg)
 
-An minuson for [Enlightend](https://modrinth.com/mod/enlightend), that is: an addon that mainly removes things; I reject the supposed enlightenment and substitute my own.
+A minuson for [Enlightend](https://modrinth.com/mod/enlightend), that is: an addon that mainly removes things; I reject the supposed enlightenment and substitute my own.
 
 I like a lot of Enlightend's features. But there's some I don't, and there's features I think can be expanded.  
 Additionally, the mod is in a buggy state at the moment, and while fixes for those have been announced to be in the next big update, that next big update is also set to remove some features I like and add more features I don't, so that won't do (for me).
@@ -13,6 +13,8 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Thematic recipes for 2/3 (3rd tbd) Enlightend potions that lacked recipes.
 - Compat with Waxed Icons for waxed blocks made from Bismuth.
 - Nuclear Bomb can now be disabled via config.
+- Cerulean Stalk can now be bone-mealed.
+- Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
 #### Removals
 - Disabled Enlightend's end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.

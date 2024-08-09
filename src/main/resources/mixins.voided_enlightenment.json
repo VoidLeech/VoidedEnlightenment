@@ -5,6 +5,7 @@
   "refmap": "mixins.voided_enlightenment.refmap.json",
   "mixins": [
     "cerulean_stalk.PlacementMixin", "cerulean_stalk.PlantStalkMixin", "cerulean_stalk.Stalk0Mixin",
+    "cerulean_stalk.Stalk1Mixin", "cerulean_stalk.Stalk2Mixin", "cerulean_stalk.Stalk3Mixin",
     "cerulean_stalk.StalkItemMixin", "misc.PatreonMessageMixin", "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin",
     "ooze.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
     "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"

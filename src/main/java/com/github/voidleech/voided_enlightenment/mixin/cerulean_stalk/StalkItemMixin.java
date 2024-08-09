@@ -1,11 +1,11 @@
 package com.github.voidleech.voided_enlightenment.mixin.cerulean_stalk;
 
+import com.github.voidleech.voided_enlightenment.reimagined.CeruleanStalkGrowing;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.item.CeruleanStalkItem;
-import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -16,6 +16,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
+
+import java.util.function.Consumer;
 
 @Mixin(CeruleanStalkItem.class)
 public class StalkItemMixin extends Item {
@@ -27,51 +30,34 @@ public class StalkItemMixin extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         BlockPlaceContext ctx = new BlockPlaceContext(pContext);
-        BlockState stalk0 = EnlightenedEndModBlocks.CERULEAN_STALK_0.get().getStateForPlacement(ctx);
-        BlockState stalk1 = EnlightenedEndModBlocks.CERULEAN_STALK_1.get().getStateForPlacement(ctx);
+        BlockState stalk0 = EnlightenedEndModBlocks.CERULEAN_STALK_0.get().defaultBlockState();
+        BlockState stalk1 = EnlightenedEndModBlocks.CERULEAN_STALK_1.get().defaultBlockState();
         Level level = ctx.getLevel();
-        Runnable runOnPlaced = () -> {
-            Player player = ctx.getPlayer();
-            if (!player.isCreative()){
-                player.getItemInHand(ctx.getHand()).shrink(1);
-            }
-            if (level.isClientSide()){
-                level.playLocalSound(ctx.getClickedPos(), SoundEvents.BAMBOO_SAPLING_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f, false);
-            }
-            else {
-                level.playSound(null, ctx.getClickedPos(), SoundEvents.BAMBOO_SAPLING_PLACE, SoundSource.BLOCKS, 1.0f, 1.0f);
-            }
-        };
         if (ctx.canPlace() && stalk0.canSurvive(level, ctx.getClickedPos())){
             level.setBlock(ctx.getClickedPos(), stalk0, Block.UPDATE_ALL);
-            runOnPlaced.run();
+            ve$subtractItemWithSound(SoundEvents.BAMBOO_SAPLING_PLACE, ctx, level);
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
         else if (ctx.canPlace() && stalk1.canSurvive(level, ctx.getClickedPos())){
             level.setBlock(ctx.getClickedPos(), stalk1, Block.UPDATE_ALL);
-            runOnPlaced.run();
-            // Block above must be a stalk or stalk "sapling", (otherwise stalk0 could've been placed),
-            // setting the block should've changed the stalk sapling to a stalk.
-            // We now need to do some block entity admin and to determine whether the stalk should a leafier variant
-            BlockEntity be0 = level.getBlockEntity(ctx.getClickedPos().above());
-            int length = be0.getPersistentData().getInt("length");
-            BlockEntity be1 = level.getBlockEntity(ctx.getClickedPos());
-            be1.getPersistentData().putInt("length", length + 1);
-            // TODO These cut-offs aren't set in stone. Will be finalized when rewriting the natural growing for the purpose of bonemealing
-            if (length >= 9){
-                BlockState stalk3 = EnlightenedEndModBlocks.CERULEAN_STALK_3.get().getStateForPlacement(ctx);
-                level.setBlock(ctx.getClickedPos(), stalk3, Block.UPDATE_NONE);
-                BlockEntity be3 = level.getBlockEntity(ctx.getClickedPos());
-                be3.getPersistentData().putInt("length", length + 1);
-            }
-            else if (length >= 4){
-                BlockState stalk2 = EnlightenedEndModBlocks.CERULEAN_STALK_2.get().getStateForPlacement(ctx);
-                level.setBlock(ctx.getClickedPos(), stalk2, Block.UPDATE_NONE);
-                BlockEntity be2 = level.getBlockEntity(ctx.getClickedPos());
-                be2.getPersistentData().putInt("length", length + 1);
-            }
+            ve$subtractItemWithSound(SoundEvents.BAMBOO_PLACE, ctx, level);
+            CeruleanStalkGrowing.growStalk(level, ctx.getClickedPos().above(), level.getBlockState(ctx.getClickedPos().above()), true);
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
         return super.useOn(pContext);
+    }
+
+    @Unique
+    private static void ve$subtractItemWithSound(SoundEvent sound, BlockPlaceContext ctx, Level level) {
+        Player player = ctx.getPlayer();
+        if (!player.isCreative()){
+            player.getItemInHand(ctx.getHand()).shrink(1);
+        }
+        if (level.isClientSide()){
+            level.playLocalSound(ctx.getClickedPos(), sound, SoundSource.BLOCKS, 1.0f, 1.0f, false);
+        }
+        else {
+            level.playSound(null, ctx.getClickedPos(), sound, SoundSource.BLOCKS, 1.0f, 1.0f);
+        }
     }
 }
