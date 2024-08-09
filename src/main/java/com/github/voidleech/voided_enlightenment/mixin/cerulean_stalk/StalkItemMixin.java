@@ -39,7 +39,6 @@ public class StalkItemMixin extends Item {
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
         else if (ctx.canPlace() && stalk1.canSurvive(level, ctx.getClickedPos())){
-            level.setBlock(ctx.getClickedPos(), stalk1, Block.UPDATE_ALL);
             ve$subtractItemWithSound(SoundEvents.BAMBOO_PLACE, ctx, level);
             CeruleanStalkGrowing.growStalk(level, ctx.getClickedPos().above(), level.getBlockState(ctx.getClickedPos().above()), true);
             return InteractionResult.sidedSuccess(level.isClientSide());
