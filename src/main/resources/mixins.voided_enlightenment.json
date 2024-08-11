@@ -9,9 +9,9 @@
     "cerulean_stalk.StalkItemMixin", "misc.HeliumJarMixin", "misc.JellyBottleMixin", "misc.PatreonMessageMixin",
     "misc.XenonJarMixin", "nuke.ActivateNukeMixin", "nuke.NukeBlockMixin", "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin",
     "ooze.CauldronFullMixin", "ooze.EmptyCauldronProcedureMixin", "ooze.FillCauldronProcedureMixin",
-    "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin", "ooze.ReloadableServerResourcesMixin",
-    "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin",
-    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"
+    "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin", "ooze.vanilla.AbstractCauldronBlockMixin",
+    "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
+    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin"
   ],
   "client": [
     "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin", "render.DazedOverlayMixin",

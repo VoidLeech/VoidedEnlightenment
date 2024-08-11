@@ -15,6 +15,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Nuclear Bomb can now be disabled via config.
 - Cerulean Stalk can now be bone-mealed.
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
+- Ooze Rain can now fill Cauldrons.
 #### Removals
 - Disabled Enlightend's end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.

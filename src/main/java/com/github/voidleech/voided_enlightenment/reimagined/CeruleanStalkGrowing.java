@@ -19,7 +19,7 @@ public class CeruleanStalkGrowing {
     }
 
     public static void growStalk(Level level, BlockPos blockPos, BlockState blockState, boolean forced) {
-        if (!level.isEmptyBlock(blockPos.below())){
+        if (!level.isEmptyBlock(blockPos.below()) || blockPos.below().getY() < level.getMinBuildHeight()){
             return;
         }
         BlockEntity be0 = level.getBlockEntity(blockPos);

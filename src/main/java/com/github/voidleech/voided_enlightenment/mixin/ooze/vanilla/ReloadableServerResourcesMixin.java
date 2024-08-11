@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.ooze;
+package com.github.voidleech.voided_enlightenment.mixin.ooze.vanilla;
 
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenmentConfig;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
