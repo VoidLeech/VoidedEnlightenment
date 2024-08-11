@@ -26,8 +26,11 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - The Offering Statue loot table now works.
 - The Adamantite Knife can now be crafted and works in Farmer's Delight recipes.
 - Ooze is no longer part of the minecraft:water fluid tag.
+- Cauldrons can now be filled via Ooze Buckets (instead of only via Ooze Bottles), and can be properly emptied via Glass Bottles.
+- Several items now have proper crafting remainders.
 - Lava Vision from Alex's Mobs now works as intended when used in combination with Enlightend.
-- Lang Fixes/Consistency Changes.
+- Fixes/Consistency Changes related to the Language file.
+- Fixes/Consistency Changes related to Sounds.
 
 ### F.A.Q.
 **Q: Can this be used in my CurseForge/Modrinth modpack?**  

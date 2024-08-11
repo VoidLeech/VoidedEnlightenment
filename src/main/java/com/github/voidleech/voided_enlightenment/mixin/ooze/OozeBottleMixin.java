@@ -1,7 +1,12 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
+import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.mcreator.enlightened_end.item.OozeBottleItem;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Tuple;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -10,6 +15,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.items.ItemHandlerHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -32,22 +38,21 @@ public class OozeBottleMixin extends Item {
     }
 
     @Unique
-    private static final Map<Block, Block> VE$OOZE_BOTTLE_TRANSFORMATIONS = Collections.synchronizedMap(new HashMap<>());
+    private static final Map<Block, Tuple<Block, SoundEvent>> VE$OOZE_BOTTLE_TRANSFORMATIONS = Collections.synchronizedMap(new HashMap<>());
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Block toTransform = pContext.getLevel().getBlockState(pContext.getClickedPos()).getBlock();
-        Block transformInto = VE$OOZE_BOTTLE_TRANSFORMATIONS.get(toTransform);
+        Tuple<Block, SoundEvent> transformInto = VE$OOZE_BOTTLE_TRANSFORMATIONS.get(toTransform);
         if (transformInto != null){
-            pContext.getLevel().setBlock(pContext.getClickedPos(), transformInto.defaultBlockState(), Block.UPDATE_ALL);
+            pContext.getLevel().setBlock(pContext.getClickedPos(), transformInto.getA().defaultBlockState(), Block.UPDATE_ALL);
             Player player = pContext.getPlayer();
             if (!player.isCreative()){
                 ItemStack glassBottle = new ItemStack(Items.GLASS_BOTTLE);
                 player.getItemInHand(pContext.getHand()).shrink(1);
-                if (!player.getInventory().add(glassBottle)) {
-                    player.drop(glassBottle, false);
-                }
+                ItemHandlerHelper.giveItemToPlayer(player, glassBottle);
             }
+            pContext.getLevel().playSound(player, pContext.getClickedPos(), transformInto.getB(), SoundSource.BLOCKS, 1.0f, 1.0f);
             return InteractionResult.sidedSuccess(pContext.getLevel().isClientSide());
         }
 
@@ -55,8 +60,8 @@ public class OozeBottleMixin extends Item {
     }
 
     static {
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.CAULDRON, EnlightenedEndModBlocks.OOZE_CAULDRON_1.get());
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), EnlightenedEndModBlocks.OOZE_CAULDRON_2.get());
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get());
+        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.CAULDRON, new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), SoundEvents.BOTTLE_EMPTY));
+        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), SoundEvents.BOTTLE_EMPTY));
+        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get(), SoundEvents.BOTTLE_EMPTY));
     }
 }

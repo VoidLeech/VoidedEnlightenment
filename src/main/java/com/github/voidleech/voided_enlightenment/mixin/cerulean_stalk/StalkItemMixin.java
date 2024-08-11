@@ -52,11 +52,6 @@ public class StalkItemMixin extends Item {
         if (!player.isCreative()){
             player.getItemInHand(ctx.getHand()).shrink(1);
         }
-        if (level.isClientSide()){
-            level.playLocalSound(ctx.getClickedPos(), sound, SoundSource.BLOCKS, 1.0f, 1.0f, false);
-        }
-        else {
-            level.playSound(null, ctx.getClickedPos(), sound, SoundSource.BLOCKS, 1.0f, 1.0f);
-        }
+        level.playSound(player, ctx.getClickedPos(), sound, SoundSource.BLOCKS, 1.0f, 1.0f);
     }
 }
