@@ -31,8 +31,10 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Cauldrons can now be filled via Ooze Buckets (instead of only via Ooze Bottles), and can be properly emptied via Glass Bottles.
 - Several items now have proper crafting remainders.
 - Lava Vision from Alex's Mobs now works as intended when used in combination with Enlightend.
+- Fog from Alex's Caves now works as intended when used in combination with Enlightend.
+- Fixes an incidental crash with Presence Footsteps.
 - Fixes/Consistency Changes related to the Language file.
-- Fixes/Consistency Changes related to Sounds.
+- Volume/Consistency Changes related to Sounds.
 
 ### F.A.Q.
 **Q: Can this be used in my CurseForge/Modrinth modpack?**  
