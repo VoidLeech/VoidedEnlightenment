@@ -30,6 +30,8 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Ooze is no longer part of the minecraft:water fluid tag.
 - Cauldrons can now be filled via Ooze Buckets (instead of only via Ooze Bottles), and can be properly emptied via Glass Bottles.
 - Several items now have proper crafting remainders.
+- Xenon Laser now can be properly toggled between burning and freezing mode, and works on active lasers as well.
+- Several fixes to right-click interactions not triggering.
 - Lava Vision from Alex's Mobs now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
