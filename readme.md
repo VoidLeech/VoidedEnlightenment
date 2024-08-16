@@ -17,10 +17,11 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
 - Ooze Rain can now fill Cauldrons.
 #### Removals
-- Disabled Enlightend's end fog, as it had jarring, sudden transitions.
+- Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
 - Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java).
 - Liquid Ooze is no longer a swimmable liquid, isn't renewable via adjacent source blocks anymore, and is slightly slower to move through.
+- Disabled Void Leviathan spawning for the foreseeable future, until I figure out a way to tweak it that doesn't leave it as an unengaging damage sponge.
 
 ### Fixes
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
