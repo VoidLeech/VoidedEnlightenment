@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.nuke;
+package com.github.voidleech.voided_enlightenment.mixin.nuclear;
 
 import net.mcreator.enlightened_end.procedures.LightNuclearBombProcedure;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;

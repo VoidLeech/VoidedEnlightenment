@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.nuke;
+package com.github.voidleech.voided_enlightenment.mixin.nuclear;
 
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenmentConfig;
 import com.github.voidleech.voided_enlightenment.util.AdvancementHelper;

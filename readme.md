@@ -22,6 +22,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java).
 - Liquid Ooze is no longer a swimmable liquid, isn't renewable via adjacent source blocks anymore, and is slightly slower to move through.
 - Disabled Void Leviathan spawning for the foreseeable future, until I figure out a way to tweak it that doesn't leave it as an unengaging damage sponge.
+- Hoppers don't break when horizontally adjacent to Nuclear Furnaces anymore.
 
 ### Fixes
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
