@@ -16,6 +16,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Cerulean Stalk can now be bone-mealed.
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
 - Ooze Rain can now fill Cauldrons.
+- Sides of Nuclear Furnace now correspond to the input and output slots for automation.
 #### Removals
 - Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
@@ -34,6 +35,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Several items now have proper crafting remainders.
 - Xenon Laser now can be properly toggled between burning and freezing mode, and works on active lasers as well.
 - Several fixes to right-click interactions not triggering.
+- Non-Nuclear Fuel Items being able to be put in the Nuclear Furnace's fuel slot via Item Transfer Capabilities.
 - Lava Vision from Alex's Mobs now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
