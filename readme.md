@@ -17,6 +17,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
 - Ooze Rain can now fill Cauldrons.
 - Sides of Nuclear Furnace now correspond to the input and output slots for automation.
+- Dash Leggings now also work vertically, and horizontal dash is now also dependent on your looking direction.
 #### Removals
 - Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
@@ -49,10 +50,14 @@ A: Yes.
 
 **Q: Will you add support for Enlightend versions past 5.0.14, when that releases?**  
 A: I'm undecided. It'd practically be an entire rewrite, as:
-- Lixir (Enlightend dev) has gone and stated he's fixed many (but tbf not all) of the bugs I've shimmied in a fix for
-- His next big (stated to be final) update is also a massive rewrite, probably breaking a bunch of what I've done here.
-- He's adding a bunch of new features to review (lots of work due to the nature of Enlightend being an MCreator mod), when I'm more inclined to stick to 5.0.14 for personal use due to:
-- Stated Dependency on V-Minus and the (valid but not to my taste) design mindset that comes with it. I'd have to basically gut that entire mod as well.
+- Lixir (Enlightend dev) has gone and stated he's fixed many (but tbf not all) of the bugs I've shimmied in a fix for.
+- His next big (stated to be final) update is also a massive rewrite, probably breaking a bunch/all of what I've done here.
+- He's adding a bunch of new features that'll have to review for whether I think they're actually fun:
+  - This is a significant amount of work due to the nature of Enlightend being an MCreator mod and the code being very unorganized. Editing it too is a pain.
+  - For some of the announced features, I already know I'd want to remove them, and the others don't excite me all that much.
+  - A stated dependency on V-Minus and the (valid but not to my taste) design mindset that comes with it. I'd have to gut that entire mod as well.
+
+So all in all I'm more inclined to stick to 5.0.14 and not put time into removing 99% of his update.
 
 ### Licensing
 This project is released under a [VL Art-Excluding MIT license](LICENSE).
