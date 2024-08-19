@@ -2,6 +2,7 @@ package com.github.voidleech.voided_enlightenment.mixin.misc;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.mcreator.enlightened_end.procedures.DashingLeggingsAbilityOnKeyPressedProcedure;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
@@ -21,4 +22,13 @@ public class DashAbilityMixin {
         );
     }
 
+    @ModifyArg(method = "execute", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;playSound(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V"), remap = false)
+    private static SoundSource ve$playerSoundIsntNeutral(SoundSource original){
+        return SoundSource.PLAYERS;
+    }
+
+    @ModifyArg(method = "execute", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;playLocalSound(DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZ)V"), remap = false)
+    private static SoundSource ve$playerSoundIsntNeutralLocal(SoundSource original){
+        return SoundSource.PLAYERS;
+    }
 }
