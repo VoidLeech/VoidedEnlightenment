@@ -1,7 +1,5 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze.vanilla;
 
-import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
