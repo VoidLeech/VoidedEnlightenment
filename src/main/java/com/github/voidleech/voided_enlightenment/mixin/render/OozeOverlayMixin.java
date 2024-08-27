@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(OozeOverlayOverlay.class)
 public class OozeOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!OozeOverlayDisplayOverlayIngameProcedure.execute(player.level(), player.getX(), player.getY(), player.getZ(), player)){
         ci.cancel();

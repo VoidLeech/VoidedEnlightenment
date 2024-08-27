@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(BubbleJellyOverlayOverlay.class)
 public class BubbleJellyOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!BubbleJellyOverlayDisplayProcedure.execute(player.level(), player.getX(), player.getY(), player.getZ())){
         ci.cancel();

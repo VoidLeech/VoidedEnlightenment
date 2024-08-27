@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerMixLaserProcedure.class)
 public class ModifyLaserTypeMixin {
     @Inject(method = "onRightClickBlock", at = @At("HEAD"), remap = false, cancellable = true)
-    private static void ve$cancelMixEvent(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){
+    private static void voided_enlightenment$cancelMixEvent(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){
         ci.cancel();
     }
 }

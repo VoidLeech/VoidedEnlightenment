@@ -13,13 +13,13 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GasVentBottomBlock.class)
-public class GasVentBottomMixin extends Block{
+public class GasVentBottomMixin extends Block {
     public GasVentBottomMixin(Properties pProperties) {
         super(pProperties);
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void ve$footstepIsJustStep(CallbackInfo ci){
+    private void voided_enlightenment$footstepIsJustStep(CallbackInfo ci){
         SoundType soundtype = new ForgeSoundType(1.0f, 1.0f,
                 EnlightenedEndModSounds.LIGHT_VOID_SHALE_BREAK,
                 EnlightenedEndModSounds.VOID_SHALE_STEP,

@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(RadiationFatalOverlay.class)
 public class RadiationFatalOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!FatalRadiationOverlayDisplayOverlayIngameProcedure.execute(player)){
         ci.cancel();

@@ -33,7 +33,7 @@ public class Cauldron1Mixin extends Block {
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    void ve$enableRandomTicks(CallbackInfo ci){
+    void voided_enlightenment$enableRandomTicks(CallbackInfo ci){
         this.isRandomlyTicking = true;
 
         // Adjust this.properties in case another mod needs this.properties to be accurate

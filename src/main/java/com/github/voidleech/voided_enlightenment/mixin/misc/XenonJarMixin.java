@@ -15,7 +15,7 @@ public class XenonJarMixin extends Item {
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void ve$setCraftingRemainder(CallbackInfo ci){
+    private void voided_enlightenment$setCraftingRemainder(CallbackInfo ci){
         this.craftingRemainingItem = EnlightenedEndModItems.GAS_JAR.get();
     }
 }

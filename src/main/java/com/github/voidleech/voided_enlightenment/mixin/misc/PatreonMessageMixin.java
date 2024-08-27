@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(PlayerEnterEndProcedure.class)
 public class PatreonMessageMixin {
     @Inject(method = "onPlayerTick", at = @At("HEAD"), remap = false, cancellable = true)
-    private static void ve$noAdvertising(TickEvent.PlayerTickEvent event, CallbackInfo ci){
+    private static void voided_enlightenment$noAdvertising(TickEvent.PlayerTickEvent event, CallbackInfo ci){
         /*
         > Why are you cancelling this?!?! Don't you want to see modders supported for their work?
         No of course I do, but I don't believe in-game is the place for advertising. Ever.

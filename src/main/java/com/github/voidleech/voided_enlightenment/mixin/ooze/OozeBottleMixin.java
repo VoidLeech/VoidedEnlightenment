@@ -1,7 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
-import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.mcreator.enlightened_end.item.OozeBottleItem;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -33,17 +32,17 @@ public class OozeBottleMixin extends Item {
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void ve$setCraftingRemainder(CallbackInfo ci){
+    private void voided_enlightenment$setCraftingRemainder(CallbackInfo ci){
         this.craftingRemainingItem = Items.GLASS_BOTTLE;
     }
 
     @Unique
-    private static final Map<Block, Tuple<Block, SoundEvent>> VE$OOZE_BOTTLE_TRANSFORMATIONS = Collections.synchronizedMap(new HashMap<>());
+    private static final Map<Block, Tuple<Block, SoundEvent>> VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS = Collections.synchronizedMap(new HashMap<>());
 
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Block toTransform = pContext.getLevel().getBlockState(pContext.getClickedPos()).getBlock();
-        Tuple<Block, SoundEvent> transformInto = VE$OOZE_BOTTLE_TRANSFORMATIONS.get(toTransform);
+        Tuple<Block, SoundEvent> transformInto = VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.get(toTransform);
         if (transformInto != null){
             pContext.getLevel().setBlock(pContext.getClickedPos(), transformInto.getA().defaultBlockState(), Block.UPDATE_ALL);
             Player player = pContext.getPlayer();
@@ -60,8 +59,8 @@ public class OozeBottleMixin extends Item {
     }
 
     static {
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.CAULDRON, new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), SoundEvents.BOTTLE_EMPTY));
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), SoundEvents.BOTTLE_EMPTY));
-        VE$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get(), SoundEvents.BOTTLE_EMPTY));
+        VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.CAULDRON, new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), SoundEvents.BOTTLE_EMPTY));
+        VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), SoundEvents.BOTTLE_EMPTY));
+        VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get(), SoundEvents.BOTTLE_EMPTY));
     }
 }

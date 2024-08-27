@@ -35,8 +35,8 @@ public class Stalk0Mixin extends Block implements BonemealableBlock {
         super(pProperties);
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"), remap = false)
-    private void ve$newProperties(CallbackInfo ci){
+    @Inject(method = "<init>", at = @At("TAIL"))
+    private void voided_enlightenment$newProperties(CallbackInfo ci){
         this.properties = this.properties.strength(1.0f);
         StateDefinition.Builder<Block, BlockState> builder = new StateDefinition.Builder<>(this);
         this.createBlockStateDefinition(builder);
@@ -49,7 +49,7 @@ public class Stalk0Mixin extends Block implements BonemealableBlock {
         return box(4, 6, 4, 12, 16, 12);
     }
 
-    // TODO ig, more hacky things /w properties so super.getDrops(...) doesn't return empty
+    // TODO ig, more hacky things /w properties so super.getDrops(...) doesn't return empty, but this works for now
     @Override
     public List<ItemStack> getDrops(BlockState pState, LootParams.Builder pParams) {
         return List.of(new ItemStack(EnlightenedEndModItems.CERULEAN_STALK.get()));

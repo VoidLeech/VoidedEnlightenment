@@ -14,7 +14,7 @@ public class OozeFluidMixin extends FluidType {
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
-    private void ve$newOozeProperties(CallbackInfo ci){
+    private void voided_enlightenment$newOozeProperties(CallbackInfo ci){
         this.canConvertToSource = false;
         this.canSwim = false;
         this.viscosity = 2000; // Double the viscosity of water

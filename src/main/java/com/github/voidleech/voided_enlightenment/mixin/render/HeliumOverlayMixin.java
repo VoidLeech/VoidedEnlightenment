@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(HeliumOverlayOverlay.class)
 public class HeliumOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!HeliumOverlayDisplayOverlayIngameProcedure.execute(player.level(), player.getX(), player.getY(), player.getZ())){
         ci.cancel();

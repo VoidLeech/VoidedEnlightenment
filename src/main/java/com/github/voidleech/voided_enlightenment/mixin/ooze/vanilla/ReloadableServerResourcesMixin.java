@@ -18,7 +18,7 @@ public class ReloadableServerResourcesMixin {
 
     @ModifyExpressionValue(method = "updateRegistryTags(Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/tags/TagManager$LoadResult;)V",
     at = @At(value = "INVOKE", target = "Lnet/minecraft/tags/TagManager$LoadResult;tags()Ljava/util/Map;"))
-    private static <T> Map<ResourceLocation, Collection<Holder<T>>> ve$oozeIsntWater(Map<ResourceLocation, Collection<Holder<T>>> original){
+    private static <T> Map<ResourceLocation, Collection<Holder<T>>> voided_enlightenment$oozeIsntWater(Map<ResourceLocation, Collection<Holder<T>>> original){
         if (!VoidedEnlightenmentConfig.oozeIsntWater){
             return original;
         }

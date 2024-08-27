@@ -19,7 +19,7 @@ public class DashChargeOverlayMixin {
             at = @At("HEAD"),
             cancellable = true,
             remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!(Dash0Procedure.execute(player) || Dash1Procedure.execute(player) || Dash2Procedure.execute(player) || Dash3Procedure.execute(player))){
         ci.cancel();

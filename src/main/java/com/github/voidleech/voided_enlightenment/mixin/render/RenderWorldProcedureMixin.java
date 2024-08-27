@@ -12,7 +12,7 @@ public class RenderWorldProcedureMixin {
     // I'll be real, I don't understand what this function is doing. I think some sort of random ambiance.
     // However, it's certainly messing with the render system, even when we're not in the end.
     @Inject(method = "renderSky", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$cancelSky(RenderLevelStageEvent event, CallbackInfo ci){
+    private static void voided_enlightenment$cancelSky(RenderLevelStageEvent event, CallbackInfo ci){
         ci.cancel();
     }
 

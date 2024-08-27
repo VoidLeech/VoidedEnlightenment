@@ -27,7 +27,7 @@ public class AbstractCauldronBlockMixin extends Block {
     // Even though they seem to use the tick method to handle dripstone dripping
     // My extra ticking behaviour is never called without this *shrug*
     @Inject(method = "<init>", at = @At("TAIL"))
-    void ve$enableRandomTicks(CallbackInfo ci){
+    void voided_enlightenment$enableRandomTicks(CallbackInfo ci){
         this.isRandomlyTicking = true;
 
         // Adjust this.properties in case another mod needs this.properties to be accurate
@@ -40,7 +40,7 @@ public class AbstractCauldronBlockMixin extends Block {
     }
 
     @WrapMethod(method = "tick")
-    private void ve$fillWithOoze(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource, Operation<Void> original){
+    private void voided_enlightenment$fillWithOoze(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource, Operation<Void> original){
         if (level.dimension() == Level.END && IsOozeRainProcedure.execute(level) && randomSource.nextFloat() < 0.05){
             level.setBlock(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_1.get().defaultBlockState(), Block.UPDATE_ALL);
             return; // We've replaced the block

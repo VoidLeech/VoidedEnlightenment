@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Dazed0Overlay.class)
 public class DazedOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!Dazed0DisplayOverlayIngameProcedure.execute(player)){
         ci.cancel();

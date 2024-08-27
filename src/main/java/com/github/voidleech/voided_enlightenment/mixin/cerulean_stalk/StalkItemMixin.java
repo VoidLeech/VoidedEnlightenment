@@ -32,11 +32,11 @@ public class StalkItemMixin extends Item {
         Level level = ctx.getLevel();
         if (ctx.canPlace() && stalk0.canSurvive(level, ctx.getClickedPos())){
             level.setBlock(ctx.getClickedPos(), stalk0, Block.UPDATE_ALL);
-            ve$subtractItemWithSound(SoundEvents.BAMBOO_SAPLING_PLACE, ctx, level);
+            voided_enlightenment$subtractItemWithSound(SoundEvents.BAMBOO_SAPLING_PLACE, ctx, level);
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
         else if (ctx.canPlace() && stalk1.canSurvive(level, ctx.getClickedPos())){
-            ve$subtractItemWithSound(SoundEvents.BAMBOO_PLACE, ctx, level);
+            voided_enlightenment$subtractItemWithSound(SoundEvents.BAMBOO_PLACE, ctx, level);
             CeruleanStalkGrowing.growStalk(level, ctx.getClickedPos().above(), level.getBlockState(ctx.getClickedPos().above()), true);
             return InteractionResult.sidedSuccess(level.isClientSide());
         }
@@ -44,7 +44,7 @@ public class StalkItemMixin extends Item {
     }
 
     @Unique
-    private static void ve$subtractItemWithSound(SoundEvent sound, BlockPlaceContext ctx, Level level) {
+    private static void voided_enlightenment$subtractItemWithSound(SoundEvent sound, BlockPlaceContext ctx, Level level) {
         Player player = ctx.getPlayer();
         if (!player.isCreative()){
             player.getItemInHand(ctx.getHand()).shrink(1);

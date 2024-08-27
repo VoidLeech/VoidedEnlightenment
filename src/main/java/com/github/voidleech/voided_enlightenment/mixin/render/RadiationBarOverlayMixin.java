@@ -32,7 +32,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(RadiationBarOverlay.class)
 public class RadiationBarOverlayMixin {
     @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
-    private static void ve$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
+    private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!(Radiation0Procedure.execute(player)  || Radiation1Procedure.execute(player)  || Radiation2Procedure.execute(player)
            || Radiation3Procedure.execute(player)  || Radiation4Procedure.execute(player)  || Radiation5Procedure.execute(player)
