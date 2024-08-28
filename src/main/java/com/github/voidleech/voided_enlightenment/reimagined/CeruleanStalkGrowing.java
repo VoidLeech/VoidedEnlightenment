@@ -21,6 +21,7 @@ public class CeruleanStalkGrowing {
     public static void growStalk(Level level, BlockPos blockPos, BlockState blockState, boolean forced) {
         if (!level.isEmptyBlock(blockPos.below()) || blockPos.below().getY() < level.getMinBuildHeight()){
             return;
+            // This does mean that level cerulean "saplings" never grow to the stalk form at world bottom but this is consistent with bamboo at world height
         }
         BlockEntity be0 = level.getBlockEntity(blockPos);
         BlockState toPlace = EnlightenedEndModBlocks.CERULEAN_STALK_1.get().defaultBlockState();
@@ -39,7 +40,7 @@ public class CeruleanStalkGrowing {
                 }
             }
         }
-        level.setBlock(blockPos.below(), toPlace, Block.UPDATE_ALL);
+        level.setBlockAndUpdate(blockPos.below(), toPlace);
         BlockEntity newBE = level.getBlockEntity(blockPos.below());
         newBE.getPersistentData().putDouble("length", length + 1);
         newBE.setChanged();

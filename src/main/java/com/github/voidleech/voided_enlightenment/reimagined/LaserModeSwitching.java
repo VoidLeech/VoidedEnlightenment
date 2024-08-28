@@ -1,6 +1,6 @@
 package com.github.voidleech.voided_enlightenment.reimagined;
 
-import com.github.voidleech.voided_enlightenment.util.AdvancementHelper;
+import com.github.voidleech.oblivion.advancement.AdvancementHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;

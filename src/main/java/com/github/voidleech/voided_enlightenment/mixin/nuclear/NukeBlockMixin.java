@@ -1,7 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.nuclear;
 
+import com.github.voidleech.oblivion.advancement.AdvancementHelper;
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenmentConfig;
-import com.github.voidleech.voided_enlightenment.util.AdvancementHelper;
 import net.mcreator.enlightened_end.block.NuclearBombBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModEntities;
 import net.minecraft.core.BlockPos;
@@ -32,7 +32,7 @@ public class NukeBlockMixin extends Block {
         if (pPlayer.getItemInHand(pHand).getItem() == Items.FLINT_AND_STEEL && VoidedEnlightenmentConfig.nukeAllowed){
             pLevel.playSound(pPlayer, pPos, SoundEvents.FLINTANDSTEEL_USE, SoundSource.BLOCKS, 1.0f, 1.0f);
             pPlayer.getItemInHand(pHand).hurtAndBreak(1, pPlayer, (p) -> p.broadcastBreakEvent(pHand));
-            pLevel.setBlock(pPos, Blocks.AIR.defaultBlockState(), Block.UPDATE_ALL);
+            pLevel.setBlockAndUpdate(pPos, Blocks.AIR.defaultBlockState());
             if (pLevel instanceof ServerLevel serverLevel){
                 EnlightenedEndModEntities.ACTIVATED_NUCLEAR_BOMB.get().spawn(serverLevel, pPos, MobSpawnType.TRIGGERED);
                 if (pPlayer instanceof ServerPlayer serverPlayer){

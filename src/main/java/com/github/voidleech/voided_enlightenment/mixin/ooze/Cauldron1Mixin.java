@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import net.mcreator.enlightened_end.block.OozeCauldron1Block;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
@@ -34,21 +35,15 @@ public class Cauldron1Mixin extends Block {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     void voided_enlightenment$enableRandomTicks(CallbackInfo ci){
-        this.isRandomlyTicking = true;
-
-        // Adjust this.properties in case another mod needs this.properties to be accurate
-        this.properties.isRandomlyTicking = true;
-        // Remake state definition s.t. property changes are reflected in-game
-        StateDefinition.Builder<Block, BlockState> builder = new StateDefinition.Builder<>(this);
-        this.createBlockStateDefinition(builder);
-        this.stateDefinition = builder.create(Block::defaultBlockState, BlockState::new);
-        this.registerDefaultState(this.stateDefinition.any());
+        BlockPropertiesRebuilder.of(this)
+                .randomTicks(true)
+                .finalizeRebuild();
     }
 
     @Override
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pLevel.dimension() == Level.END && IsOozeRainProcedure.execute(pLevel) && pRandom.nextFloat() < 0.05){
-            pLevel.setBlock(pPos, EnlightenedEndModBlocks.OOZE_CAULDRON_2.get().defaultBlockState(), Block.UPDATE_ALL);
+            pLevel.setBlockAndUpdate(pPos, EnlightenedEndModBlocks.OOZE_CAULDRON_2.get().defaultBlockState());
             return; // We've replaced the block
         }
         super.tick(pState, pLevel, pPos, pRandom);
@@ -57,7 +52,7 @@ public class Cauldron1Mixin extends Block {
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         if (pPlayer.getItemInHand(pHand).getItem() == Items.GLASS_BOTTLE) {
-            pLevel.setBlock(pPos, Blocks.CAULDRON.defaultBlockState(), Block.UPDATE_ALL);
+            pLevel.setBlockAndUpdate(pPos, Blocks.CAULDRON.defaultBlockState());
             if (!pPlayer.isCreative()){
                 ItemStack oozeBottle = new ItemStack(EnlightenedEndModItems.OOZE_BOTTLE.get());
                 pPlayer.getItemInHand(pHand).shrink(1);

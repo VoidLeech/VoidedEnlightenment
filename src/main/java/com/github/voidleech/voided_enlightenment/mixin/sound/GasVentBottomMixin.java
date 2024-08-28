@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.sound;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import net.mcreator.enlightened_end.block.GasVentBottomBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.minecraft.world.level.block.Block;
@@ -27,11 +28,8 @@ public class GasVentBottomMixin extends Block {
                 EnlightenedEndModSounds.LIGHT_VOID_SHALE_BREAK,
                 EnlightenedEndModSounds.VOID_SHALE_STEP
         );
-        this.soundType = soundtype;
-        this.properties.soundType = soundtype;
-        StateDefinition.Builder<Block, BlockState> builder = new StateDefinition.Builder<>(this);
-        this.createBlockStateDefinition(builder);
-        this.stateDefinition = builder.create(Block::defaultBlockState, BlockState::new);
-        this.registerDefaultState(this.stateDefinition.any());
+        BlockPropertiesRebuilder.of(this)
+                .soundType(soundtype)
+                .finalizeRebuild();
     }
 }

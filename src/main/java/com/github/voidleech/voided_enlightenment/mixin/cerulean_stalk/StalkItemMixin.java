@@ -31,7 +31,7 @@ public class StalkItemMixin extends Item {
         BlockState stalk1 = EnlightenedEndModBlocks.CERULEAN_STALK_1.get().defaultBlockState();
         Level level = ctx.getLevel();
         if (ctx.canPlace() && stalk0.canSurvive(level, ctx.getClickedPos())){
-            level.setBlock(ctx.getClickedPos(), stalk0, Block.UPDATE_ALL);
+            level.setBlockAndUpdate(ctx.getClickedPos(), stalk0);
             voided_enlightenment$subtractItemWithSound(SoundEvents.BAMBOO_SAPLING_PLACE, ctx, level);
             return InteractionResult.sidedSuccess(level.isClientSide());
         }

@@ -30,7 +30,7 @@ public class CauldronFullMixin extends Block {
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         ItemStack itemStack = pPlayer.getItemInHand(pHand);
         if (itemStack.getItem() == Items.GLASS_BOTTLE) {
-            pLevel.setBlock(pPos, EnlightenedEndModBlocks.OOZE_CAULDRON_2.get().defaultBlockState(), Block.UPDATE_ALL);
+            pLevel.setBlockAndUpdate(pPos, EnlightenedEndModBlocks.OOZE_CAULDRON_2.get().defaultBlockState());
             if (!pPlayer.isCreative()){
                 ItemStack oozeBottle = new ItemStack(EnlightenedEndModItems.OOZE_BOTTLE.get());
                 itemStack.shrink(1);
@@ -40,7 +40,7 @@ public class CauldronFullMixin extends Block {
             return InteractionResult.sidedSuccess(pLevel.isClientSide());
         }
         if (itemStack.getItem() == Items.BUCKET){
-            pLevel.setBlock(pPos, Blocks.CAULDRON.defaultBlockState(), Block.UPDATE_ALL);
+            pLevel.setBlockAndUpdate(pPos, Blocks.CAULDRON.defaultBlockState());
             if (!pPlayer.isCreative()){
                 ItemStack oozeBucket = new ItemStack(EnlightenedEndModItems.OOZE_FLUID_BUCKET.get());
                 itemStack.shrink(1);

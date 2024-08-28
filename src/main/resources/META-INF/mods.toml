@@ -46,6 +46,12 @@ description='''${mod_description}'''
     versionRange="[5.0.14]"
     ordering="AFTER"
     side="BOTH"
+[[dependences.${mod_id}]]
+    modId="oblivion_api"
+    mandatory=true
+    versionRange="[0.1.0,)"
+    ordering="NONE"
+    side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't

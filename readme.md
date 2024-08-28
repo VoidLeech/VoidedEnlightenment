@@ -18,6 +18,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Ooze Rain can now fill Cauldrons.
 - Sides of Nuclear Furnace now correspond to the input and output slots for automation.
 - Dash Leggings now also work vertically, and horizontal dash is now also dependent on your looking direction.
+- Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.
 #### Removals
 - Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.

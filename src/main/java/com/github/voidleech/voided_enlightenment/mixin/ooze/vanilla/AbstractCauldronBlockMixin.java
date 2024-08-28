@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze.vanilla;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
@@ -28,21 +29,15 @@ public class AbstractCauldronBlockMixin extends Block {
     // My extra ticking behaviour is never called without this *shrug*
     @Inject(method = "<init>", at = @At("TAIL"))
     void voided_enlightenment$enableRandomTicks(CallbackInfo ci){
-        this.isRandomlyTicking = true;
-
-        // Adjust this.properties in case another mod needs this.properties to be accurate
-        this.properties.isRandomlyTicking = true;
-        // Remake state definition s.t. property changes are reflected in-game
-        StateDefinition.Builder<Block, BlockState> builder = new StateDefinition.Builder<>(this);
-        this.createBlockStateDefinition(builder);
-        this.stateDefinition = builder.create(Block::defaultBlockState, BlockState::new);
-        this.registerDefaultState(this.stateDefinition.any());
+        BlockPropertiesRebuilder.of(this)
+                .randomTicks(true)
+                .finalizeRebuild();
     }
 
     @WrapMethod(method = "tick")
     private void voided_enlightenment$fillWithOoze(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource, Operation<Void> original){
         if (level.dimension() == Level.END && IsOozeRainProcedure.execute(level) && randomSource.nextFloat() < 0.05){
-            level.setBlock(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_1.get().defaultBlockState(), Block.UPDATE_ALL);
+            level.setBlockAndUpdate(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_1.get().defaultBlockState());
             return; // We've replaced the block
         }
         original.call(state, level, pos, randomSource);

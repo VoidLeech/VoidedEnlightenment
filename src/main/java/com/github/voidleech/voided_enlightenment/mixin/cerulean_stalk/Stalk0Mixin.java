@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.cerulean_stalk;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import com.github.voidleech.voided_enlightenment.reimagined.CeruleanStalkGrowing;
 import net.mcreator.enlightened_end.block.CeruleanStalk0Block;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
@@ -37,11 +38,9 @@ public class Stalk0Mixin extends Block implements BonemealableBlock {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voided_enlightenment$newProperties(CallbackInfo ci){
-        this.properties = this.properties.strength(1.0f);
-        StateDefinition.Builder<Block, BlockState> builder = new StateDefinition.Builder<>(this);
-        this.createBlockStateDefinition(builder);
-        this.stateDefinition = builder.create(Block::defaultBlockState, BlockState::new);
-        this.registerDefaultState(this.stateDefinition.any());
+        BlockPropertiesRebuilder.of(this)
+                .strength(1.0f)
+                .finalizeRebuild();
     }
 
     @Override

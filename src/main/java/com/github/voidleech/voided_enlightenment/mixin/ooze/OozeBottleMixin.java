@@ -44,7 +44,7 @@ public class OozeBottleMixin extends Item {
         Block toTransform = pContext.getLevel().getBlockState(pContext.getClickedPos()).getBlock();
         Tuple<Block, SoundEvent> transformInto = VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.get(toTransform);
         if (transformInto != null){
-            pContext.getLevel().setBlock(pContext.getClickedPos(), transformInto.getA().defaultBlockState(), Block.UPDATE_ALL);
+            pContext.getLevel().setBlockAndUpdate(pContext.getClickedPos(), transformInto.getA().defaultBlockState());
             Player player = pContext.getPlayer();
             if (!player.isCreative()){
                 ItemStack glassBottle = new ItemStack(Items.GLASS_BOTTLE);

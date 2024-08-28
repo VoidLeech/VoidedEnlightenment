@@ -29,7 +29,7 @@ public class OozeBucketMixin extends Item {
         Level level = pContext.getLevel();
         BlockPos pos = pContext.getClickedPos();
         if (level.getBlockState(pos).getBlock() == Blocks.CAULDRON){
-            level.setBlock(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get().defaultBlockState(), Block.UPDATE_ALL);
+            level.setBlockAndUpdate(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get().defaultBlockState());
             Player player = pContext.getPlayer();
             if (!player.isCreative()){
                 ItemStack bucket = new ItemStack(Items.BUCKET);
