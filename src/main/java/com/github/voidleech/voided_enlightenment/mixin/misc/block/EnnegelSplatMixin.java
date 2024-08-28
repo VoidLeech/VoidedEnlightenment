@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.misc;
+package com.github.voidleech.voided_enlightenment.mixin.misc.block;
 
 import net.mcreator.enlightened_end.block.EnnegelSplatBlock;
 import net.minecraft.core.BlockPos;

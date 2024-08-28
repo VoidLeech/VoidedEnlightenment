@@ -1,21 +1,21 @@
-package com.github.voidleech.voided_enlightenment.mixin.misc;
+package com.github.voidleech.voided_enlightenment.mixin.misc.item;
 
-import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
-import net.mcreator.enlightened_end.item.XenonBucketItem;
+import net.mcreator.enlightened_end.item.BubbleJellyBottleItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(XenonBucketItem.class)
-public class XenonJarMixin extends Item {
-    public XenonJarMixin(Properties pProperties) {
+@Mixin(BubbleJellyBottleItem.class)
+public class JellyBottleMixin extends Item {
+    public JellyBottleMixin(Properties pProperties) {
         super(pProperties);
     }
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voided_enlightenment$setCraftingRemainder(CallbackInfo ci){
-        this.craftingRemainingItem = EnlightenedEndModItems.GAS_JAR.get();
+        this.craftingRemainingItem = Items.GLASS_BOTTLE;
     }
 }

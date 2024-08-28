@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.misc;
+package com.github.voidleech.voided_enlightenment.mixin.misc.item;
 
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.mcreator.enlightened_end.item.HeliumBucketItem;

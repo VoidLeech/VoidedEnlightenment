@@ -39,6 +39,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Several fixes to right-click interactions not triggering.
 - Non-Nuclear Fuel Items being able to be put in the Nuclear Furnace's fuel slot via Item Transfer Capabilities.
 - Ennegel Splat can't float freely anymore.
+- Springleaf no longer has a hitbox that is solid all the way to the bottom of the block.
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
