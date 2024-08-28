@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DTD",
+    "D#D",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "#": {
+      "item": "enlightened_end:void_shale"
+    },
+    "T": {
+      "item": "enlightened_end:adamantite_smithing_template"
+    }
+  },
+  "result": {
+    "item": "enlightened_end:adamantite_smithing_template",
+    "count":  2
+  }
+}
