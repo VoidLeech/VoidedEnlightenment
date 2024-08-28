@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
+import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.mcreator.enlightened_end.item.OozeBottleItem;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -62,5 +63,6 @@ public class OozeBottleMixin extends Item {
         VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.CAULDRON, new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), SoundEvents.BOTTLE_EMPTY));
         VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_1.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), SoundEvents.BOTTLE_EMPTY));
         VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(EnlightenedEndModBlocks.OOZE_CAULDRON_2.get(), new Tuple<>(EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get(), SoundEvents.BOTTLE_EMPTY));
+        VOIDED_ENLIGHTENMENT$OOZE_BOTTLE_TRANSFORMATIONS.put(Blocks.MUD, new Tuple<>(EnlightenedEndModBlocks.CHORLOAM.get(), SoundEvents.MUD_PLACE));
     }
 }
