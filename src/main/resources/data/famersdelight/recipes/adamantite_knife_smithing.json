@@ -1,21 +1,8 @@
 {
-  "type": "minecraft:smithing_transform",
+  "comment": "This should not be in this *typo'd* namespace",
   "conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "farmersdelight"
+      "type": "forge:false"
     }
-  ],
-  "template": {
-    "item": "enlightened_end:adamantite_smithing_template"
-  },
-  "base": {
-    "item": "farmersdelight:iron_knife"
-  },
-  "addition": {
-    "item": "enlightened_end:adamantite_ingot"
-  },
-  "result": {
-    "item": "enlightened_end:adamantite_knife"
-  }
+  ]
 }

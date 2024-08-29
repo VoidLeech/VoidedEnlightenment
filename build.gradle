@@ -138,6 +138,9 @@ dependencies {
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
     implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:0.1.0")
 
+    // For testing the Farmer's Delight compat recipe
+    // runtimeOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
+
     // For testing Waxed Icons compat
     // runtimeOnly fg.deobf("curse.maven:trimmed-857036:4845938")
     // runtimeOnly fg.deobf("curse.maven:waxedicons-909140:4733260")
