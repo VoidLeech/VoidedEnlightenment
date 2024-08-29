@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "enlightened_end:bismuth_sheets"
+    },
+    {
+      "item": "minecraft:honeycomb_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:waxed_bismuth_sheets"
+    }
+  ],
+  "keepHeldItem": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

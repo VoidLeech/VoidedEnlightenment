@@ -1,0 +1,23 @@
+{
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "enlightened_end:ooze_fluid_bucket"
+    }
+  ],
+  "results": [
+    {
+      "fluid": "enlightened_end:ooze_fluid",
+      "amount": 1000
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

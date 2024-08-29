@@ -1,0 +1,21 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "enlightened_end:stardust_block"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "enlightened_end:stardust",
+      "count": 4
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:stripped_cerulean_log"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:cerulean_planks",
+      "count": 3
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

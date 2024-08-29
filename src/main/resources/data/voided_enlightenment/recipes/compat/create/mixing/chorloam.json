@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:mud"
+    },
+    {
+      "amount": 250,
+      "fluid": "enlightened_end:ooze_fluid"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:chorloam"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

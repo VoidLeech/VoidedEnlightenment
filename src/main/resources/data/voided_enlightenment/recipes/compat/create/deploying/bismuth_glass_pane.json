@@ -1,0 +1,23 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "item": "enlightened_end:bismuth_glass_pane"
+    },
+    {
+      "item": "minecraft:honeycomb_block"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:waxed_bismuth_glass_pane"
+    }
+  ],
+  "keepHeldItem": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -1,7 +1,40 @@
 {
   "replace": false,
   "values": [
+    "#create:ignore_seat",
     "minecraft:ender_dragon",
-    "minecraft:wither"
+    "minecraft:wither",
+    {
+      "id": "create:carriage_contraption",
+      "required": false
+    },
+    {
+      "id": "create:contraption",
+      "required": false
+    },
+    {
+      "id": "create:crafting_blueprint",
+      "required": false
+    },
+    {
+      "id": "create:gantry_contraption",
+      "required": false
+    },
+    {
+      "id": "create:potato_projectile",
+      "required": false
+    },
+    {
+      "id": "create:seat",
+      "required": false
+    },
+    {
+      "id": "create:stationary_contraption",
+      "required": false
+    },
+    {
+      "id": "create:super_glue",
+      "required": false
+    }
   ]
 }

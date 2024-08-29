@@ -1,0 +1,23 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "fluid": "enlightened_end:ooze_fluid",
+      "amount": 250
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:ooze_bottle"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

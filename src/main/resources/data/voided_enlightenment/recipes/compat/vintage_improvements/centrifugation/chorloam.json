@@ -1,0 +1,29 @@
+{
+  "type":"vintageimprovements:centrifugation",
+  "ingredients": [
+    {
+      "item": "enlightened_end:chorloam"
+    }
+  ],
+  "results": [
+    {
+      "item": "minecraft:mud",
+      "count": 1
+    },
+    {
+      "fluid": "enlightened_end:ooze_fluid",
+      "amount": 250
+    }
+  ],
+  "processingTime": 1000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "vintageimprovements"
+    }
+  ]
+}

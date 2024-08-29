@@ -1,0 +1,20 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:cerulean_log"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:stripped_cerulean_log"
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

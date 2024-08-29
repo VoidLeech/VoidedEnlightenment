@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "enlightened_end:open_odd_roots"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "minecraft:purple_dye",
+      "count": 1
+    },
+    {
+      "item": "minecraft:pink_dye",
+      "chance": 0.1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

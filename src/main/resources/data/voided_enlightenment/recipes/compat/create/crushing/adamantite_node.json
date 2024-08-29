@@ -1,0 +1,30 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "enlightened_end:adamantite_node"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:adamantite_nugget",
+      "count": 8
+    },
+    {
+      "item": "enlightened_end:adamantite_nugget",
+      "count": 4,
+      "chance": 0.75
+    },
+    {
+      "item": "create:experience_nugget",
+      "chance": 0.75
+    }
+  ],
+  "processingTime": 350,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

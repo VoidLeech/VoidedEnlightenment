@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "enlightened_end:cradling_flower"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "minecraft:lime_dye",
+      "count": 2
+    },
+    {
+      "item": "minecraft:cyan_dye",
+      "chance": 0.1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

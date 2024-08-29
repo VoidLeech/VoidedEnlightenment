@@ -1,0 +1,24 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "enlightened_end:indigo_sprouts"
+    }
+  ],
+  "processingTime": 50,
+  "results": [
+    {
+      "item": "minecraft:purple_dye"
+    },
+    {
+      "item": "minecraft:magenta_dye",
+      "chance": 0.1
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

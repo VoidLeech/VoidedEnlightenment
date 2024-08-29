@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "iridescent_gleam",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "enlightened_end:serene_bismuth_gleam"
+    },
+    {
+      "item": "enlightened_end:verdant_bismuth_gleam"
+    },
+    {
+      "item": "enlightened_end:poise_bismuth_gleam"
+    },
+    {
+      "item": "enlightened_end:dazzling_bismuth_gleam"
+    },
+    {
+      "item": "enlightened_end:ethereal_bismuth_gleam"
+    }
+  ],
+  "result": {
+    "item": "enlightened_end:iridescent_bismuth_gleam",
+    "count": 5
+  }
+}

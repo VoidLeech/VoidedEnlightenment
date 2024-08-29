@@ -1,0 +1,21 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:stripped_indigo_hyphae"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:indigo_planks",
+      "count": 6
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

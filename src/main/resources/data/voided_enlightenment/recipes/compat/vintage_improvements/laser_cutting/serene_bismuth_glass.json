@@ -1,0 +1,26 @@
+{
+  "type":"vintageimprovements:laser_cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:serene_bismuth_glass"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:serene_bismuth_glass_pane",
+      "count": 6
+    }
+  ],
+  "energy": 2000,
+  "maxChargeRate": 50,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "vintageimprovements"
+    }
+  ]
+}

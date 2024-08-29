@@ -1,0 +1,20 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:indigo_stem"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:stripped_indigo_stem"
+    }
+  ],
+  "processingTime": 50,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

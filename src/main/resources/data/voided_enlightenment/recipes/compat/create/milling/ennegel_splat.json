@@ -1,0 +1,20 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "enlightened_end:ennegel_splat"
+    }
+  ],
+  "processingTime": 100,
+  "results": [
+    {
+      "item": "enlightened_end:ennegel_glob"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

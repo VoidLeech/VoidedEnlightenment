@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "enlightened_end:ooze_bottle",
+    "enlightened_end:ooze_fluid_bucket",
+    "enlightened_end:gas_jar",
+    "enlightened_end:helium_jar",
+    "enlightened_end:xenon_jar",
+    "enlightened_end:bubble_jelly_bottle"
+  ]
+}
