@@ -29,9 +29,7 @@ public class LaserModeSwitching {
         if (!player.isCreative()) {
             player.getItemInHand(hand).shrink(1);
         }
-        if (player instanceof ServerPlayer serverPlayer) {
-            AdvancementHelper.grantByName("enlightened_end:laser_mix_advancement", serverPlayer);
-        }
+        AdvancementHelper.grantByName("enlightened_end:laser_mix_advancement", player);
         level.playSound(player, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0f, 1.0f);
         return InteractionResult.sidedSuccess(level.isClientSide());
     }

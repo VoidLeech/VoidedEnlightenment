@@ -46,6 +46,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Applying Ennegel Glob to an Ennegel Block now consumes Ennegel.
 - Springleaf no longer has a hitbox that is solid all the way to the bottom of the block.
 - Iridescent Bismuth Gleam can now be crafted shapelessly.
+- Naturally occurring Ooze Rain now doesn't get into a state where it will never start anymore, which would likely happen before a player even got to the End to begin with.
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.

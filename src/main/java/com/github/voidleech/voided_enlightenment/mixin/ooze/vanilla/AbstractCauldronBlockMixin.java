@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze.vanilla;
 
 import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
+import com.github.voidleech.voided_enlightenment.reimagined.OozeCauldronFilling;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
@@ -36,7 +37,7 @@ public class AbstractCauldronBlockMixin extends Block {
 
     @WrapMethod(method = "tick")
     private void voided_enlightenment$fillWithOoze(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource, Operation<Void> original){
-        if (level.dimension() == Level.END && IsOozeRainProcedure.execute(level) && randomSource.nextFloat() < 0.05){
+        if (OozeCauldronFilling.canFill(level, pos, randomSource)){
             level.setBlockAndUpdate(pos, EnlightenedEndModBlocks.OOZE_CAULDRON_1.get().defaultBlockState());
             return; // We've replaced the block
         }

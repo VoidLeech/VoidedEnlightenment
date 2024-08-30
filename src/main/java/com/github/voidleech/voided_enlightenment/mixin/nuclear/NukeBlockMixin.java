@@ -35,9 +35,7 @@ public class NukeBlockMixin extends Block {
             pLevel.setBlockAndUpdate(pPos, Blocks.AIR.defaultBlockState());
             if (pLevel instanceof ServerLevel serverLevel){
                 EnlightenedEndModEntities.ACTIVATED_NUCLEAR_BOMB.get().spawn(serverLevel, pPos, MobSpawnType.TRIGGERED);
-                if (pPlayer instanceof ServerPlayer serverPlayer){
-                    AdvancementHelper.grantByName("enlightened_end:ihavebecomedeath", serverPlayer);
-                }
+                AdvancementHelper.grantByName("enlightened_end:ihavebecomedeath", pPlayer);
             }
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
         }
