@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.ItemPropertiesRebuilder;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.mcreator.enlightened_end.item.OozeBottleItem;
@@ -34,7 +35,9 @@ public class OozeBottleMixin extends Item {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voided_enlightenment$setCraftingRemainder(CallbackInfo ci){
-        this.craftingRemainingItem = Items.GLASS_BOTTLE;
+        ItemPropertiesRebuilder.of(this)
+                .craftingRemainder(Items.GLASS_BOTTLE)
+                .finalizeRebuild();
     }
 
     @Unique

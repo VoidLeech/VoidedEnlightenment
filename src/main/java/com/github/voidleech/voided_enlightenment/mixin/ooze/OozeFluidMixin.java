@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.FluidTypePropertiesRebuilder;
 import net.mcreator.enlightened_end.fluid.types.OozeFluidFluidType;
 import net.minecraftforge.fluids.FluidType;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,8 +16,10 @@ public class OozeFluidMixin extends FluidType {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voided_enlightenment$newOozeProperties(CallbackInfo ci){
-        this.canConvertToSource = false;
-        this.canSwim = false;
-        this.viscosity = 2000; // Double the viscosity of water
+        FluidTypePropertiesRebuilder.of(this)
+                .canConvertToSource(false)
+                .canSwim(false)
+                .viscosity(2000) // double the viscosity of water
+                .finalizeRebuild();
     }
 }

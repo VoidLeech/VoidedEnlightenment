@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.gas;
 
+import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.ItemPropertiesRebuilder;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.mcreator.enlightened_end.item.XenonBucketItem;
 import net.minecraft.world.item.Item;
@@ -16,6 +17,8 @@ public class XenonJarMixin extends Item {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     private void voided_enlightenment$setCraftingRemainder(CallbackInfo ci){
-        this.craftingRemainingItem = EnlightenedEndModItems.GAS_JAR.get();
+        ItemPropertiesRebuilder.of(this)
+                .craftingRemainder(EnlightenedEndModItems.GAS_JAR.get())
+                .finalizeRebuild();
     }
 }
