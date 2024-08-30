@@ -21,8 +21,9 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.
 - Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas.
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
-- Create and Create: Vintage Improvements Recipe compat.
-- KleeSlabs support.
+- Create and Create: Vintage Improvements recipe compat.
+- KleeSlabs compat.
+- Seamless compat.
 #### Removals
 - Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.

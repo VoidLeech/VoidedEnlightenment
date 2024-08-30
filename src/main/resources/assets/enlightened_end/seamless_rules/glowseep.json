@@ -1,0 +1,5 @@
+{
+  "blocks": ["enlightened_end:glowseep"],
+  "directions": ["up", "down"],
+  "connecting_blocks": ["enlightened_end:glowseep"]
+}
