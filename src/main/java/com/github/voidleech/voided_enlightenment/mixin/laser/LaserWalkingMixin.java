@@ -1,6 +1,8 @@
 package com.github.voidleech.voided_enlightenment.mixin.laser;
 
+import com.github.voidleech.oblivion.advancement.AdvancementHelper;
 import net.mcreator.enlightened_end.procedures.LaserEmissionEntityCollidesInTheBlockProcedure;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.LevelAccessor;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +17,9 @@ public class LaserWalkingMixin {
                 shift = At.Shift.BEFORE),
             remap = false, cancellable = true)
     private static void voided_enlightenment$cancelFloatingBehaviour(LevelAccessor world, double x, double y, double z, Entity entity, CallbackInfo ci){
-        // Todo reimplement advancement for walking on them (probably just override the advancement data with non-"minecraft:impossible" criteria
+        if (entity instanceof ServerPlayer player) {
+            AdvancementHelper.grantByName("enlightened_end:laser_fly", player);
+        }
         ci.cancel();
     }
 }

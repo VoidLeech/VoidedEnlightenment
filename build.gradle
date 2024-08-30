@@ -87,7 +87,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     flatDir {
-        dir 'libs'
+        dir '../Oblivion/build/libs'
     }
     exclusiveContent {
         forRepository {
