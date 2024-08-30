@@ -10,7 +10,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 
 ### Features
 #### Additions
-- Thematic recipes for 2/3 (3rd tbd) Enlightend potions that lacked recipes.
+- Thematic recipes for 2/3 Enlightend potions that lacked recipes. The third one will be obtainable, without brewing, in a future update.
 - Compat with Waxed Icons for waxed blocks made from Bismuth.
 - Nuclear Bomb can now be disabled via config.
 - Cerulean Stalk can now be bone-mealed.
@@ -22,10 +22,11 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas.
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
 - Create and Create: Vintage Improvements Recipe compat.
+- KleeSlabs support.
 #### Removals
 - Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
-- Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java).
+- Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java) if you're interested in supporting the dev of the original mod.
 - Liquid Ooze is no longer a swimmable liquid, isn't renewable via adjacent source blocks anymore, and is slightly slower to move through.
 - Disabled Void Leviathan spawning for the foreseeable future, until I figure out a way to tweak it that doesn't leave it as an unengaging damage sponge.
 - Hoppers don't break when horizontally adjacent to Nuclear Furnaces anymore.

@@ -156,6 +156,10 @@ dependencies {
     // runtimeOnly fg.deobf("curse.maven:lionfish-1001614:5363774")
     // runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
 
+    // For testing KleeSlabs compat
+    // runtimeOnly fg.deobf("curse.maven:kleeslabs-241895:4583104")
+    // runtimeOnly fg.deobf("curse.maven:balm-531761:5644976")
+
     // For testing Presence Footsteps crashes (needs forge_version 47.2.19 in gradle.properties but we keep it at 47.1.3 normally for Neo compat)
     // runtimeOnly fg.deobf("curse.maven:presencefootsteps-433068:5015286")
 }
