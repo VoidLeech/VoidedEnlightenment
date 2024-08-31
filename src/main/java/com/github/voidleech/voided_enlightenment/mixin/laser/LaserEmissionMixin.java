@@ -4,7 +4,6 @@ import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPro
 import net.mcreator.enlightened_end.block.LaserEmissionBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.BlockGetter;

@@ -3,7 +3,6 @@ package com.github.voidleech.voided_enlightenment.reimagined;
 import com.github.voidleech.oblivion.advancement.AdvancementHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;

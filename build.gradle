@@ -83,14 +83,13 @@ minecraft {
     }
 }
 
-sourceSets.main.resources {
-    srcDir 'src/generated/resources'
+sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-    srcDir '.'
-    include 'LICENSE'
-    include 'RESTRICTED-CONTENT'
-    include 'README.md'
-    include 'other-licenses/'
+processResources {
+    from('LICENSE')
+    from('REQUIRED-CONTENT')
+    from('README.MD')
+    from('other-license/')
 }
 
 repositories {

@@ -4,7 +4,6 @@ import net.mcreator.enlightened_end.network.EnlightenedEndModVariables;
 import net.mcreator.enlightened_end.procedures.OozeRainChanceProcedure;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraftforge.eventbus.api.Event;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

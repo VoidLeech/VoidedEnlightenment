@@ -5,8 +5,6 @@ import net.mcreator.enlightened_end.block.GasVentBottomBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraftforge.common.util.ForgeSoundType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

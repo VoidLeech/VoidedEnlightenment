@@ -1,6 +1,6 @@
 package com.github.voidleech.voided_enlightenment.registry;
 
-import com.github.voidleech.oblivion.event.AbstractObsidianPacks;
+import com.github.voidleech.oblivion.registry.AbstractObsidianPacks;
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Tuple;

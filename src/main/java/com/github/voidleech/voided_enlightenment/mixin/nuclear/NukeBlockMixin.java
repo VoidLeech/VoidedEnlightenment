@@ -6,7 +6,6 @@ import net.mcreator.enlightened_end.block.NuclearBombBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
