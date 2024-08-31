@@ -25,7 +25,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - KleeSlabs compat.
 - Seamless compat.
 #### Removals
-- Disabled Enlightend's custom end fog, as it had jarring, sudden transitions.
+- Disabled Enlightend's custom end fog, as it has jarring, sudden transitions, and is the source of visual incompatibilities.
 - Ender Chests have the vanilla loot table and recipe instead of the Enlightend one requiring Malachite.
 - Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java) if you're interested in supporting the dev of the original mod.
 - Liquid Ooze is no longer a swimmable liquid, isn't renewable via adjacent source blocks anymore, and is slightly slower to move through.
@@ -57,19 +57,20 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Adds some other mods' entities to Enlightend bubble_immune tag to prevent serious issues.
 
 ### F.A.Q.
-**Q: Can this be used in my CurseForge/Modrinth modpack?**  
-A: Yes.
+**Q: Can this be used in my modpack?**  
+A: Yes, but do note our license does not allow directly including the mod files in your pack.
 
 **Q: Will you add support for Enlightend versions past 5.0.14, when that releases?**  
-A: I'm undecided but heavily lean towards no. It'd practically be an entire rewrite, as:
+A: I'm undecided but heavily lean towards no. It'd be an entire rewrite of the mod, as:
 - Lixir (Enlightend dev) has gone and stated he's fixed many (but tbf not all) of the bugs I've shimmied in a fix for.
 - His next big (stated to be final) update is also a massive rewrite, probably breaking a bunch/all of what I've done here.
 - He's adding a bunch of new features that I'll have to review for whether I think they're actually fun:
-  - This is a significant amount of work due to the nature of Enlightend being an MCreator mod and the code being very unorganized. Editing it too is a pain.
-  - For some of the announced features, I already know I'd want to remove them, and the others don't excite me all that much.
+  - This is a significant amount of work due to the nature of Enlightend being an MCreator mod, and the code being very unorganized. Editing it too is a pain.
+  - For some of the announced features, I already know I'd want to remove them, and the others don't excite me all that much to be worth switching over for.
   - A stated dependency on V-Minus and the (valid but not to my taste) design mindset that comes with it. I'd have to gut that entire mod as well.
 
-So all in all I'm more inclined to stick to 5.0.14 and not put time into removing 99% of his update.
+So all in all I'm more inclined to stick to 5.0.14 and develop new features and fixes, instead of putting time into removing 99% of his update.
 
 ### Licensing
-This project is released under a [VL Art-Excluding MIT license](LICENSE).
+This project is released under the [Avoiding Leeching License, version 1.0](LICENSE).  
+Special permission is granted to Lixir, the developer of Enlightend, to use, copy, modify, share, and deal in the mod's code and assets, but not the branding, as he sees fit, exclusively for the purpose of improving Enlightend, with no further restrictions.
