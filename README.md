@@ -3,6 +3,9 @@
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/{project-id}?style=flat&logo=curseforge&label=Curseforge)](https://www.curseforge.com/minecraft/mc-mods/{template-mod-slug})
 ![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/{project-id}.svg)
 
+Requires [Oblivion](https://github.com/VoidLeech/Oblivion).  
+I don't currently have a maven, nor is the library uploaded to CurseForge/Modrinth to access via their mavens, so build.gradle currently assumes you have cloned Oblivion and built it normally.
+
 A minuson for [Enlightend](https://modrinth.com/mod/enlightend), that is: an addon that mainly removes things; I reject the supposed enlightenment and substitute my own.
 
 I like a lot of Enlightend's features. But there's some I don't, and there's features I think can be expanded.  
@@ -48,6 +51,7 @@ Additionally, the mod is in a buggy state at the moment, and while fixes for tho
 - Applying Ennegel Glob to an Ennegel Block now consumes Ennegel.
 - Springleaf no longer has a hitbox that is solid all the way to the bottom of the block.
 - Iridescent Bismuth Gleam can now be crafted shapelessly.
+- Improve findability of Dashing Leggings keybind by moving it to its own category instead of sitting in vanilla's Gameplay section
 - Naturally occurring Ooze Rain now doesn't get into a state where it will never start anymore, which would likely happen before a player even got to the End to begin with.
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.

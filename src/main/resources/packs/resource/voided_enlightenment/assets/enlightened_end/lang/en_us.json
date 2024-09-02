@@ -6,5 +6,6 @@
   "block.enlightened_end.ethereal_bismuth_block": "Ethereal Block of Bismuth",
   "block.enlightened_end.serene_bismuth_block": "Serene Block of Bismuth",
   "block.enlightened_end.iridescent_bismuth_block": "Iridescent Block of Bismuth",
-  "block.enlightened_end.palerock_tile_wall": "Palerock Tile Wall"
+  "block.enlightened_end.palerock_tile_wall": "Palerock Tile Wall",
+  "key.categories.enlightened_end": "Enlightend"
 }

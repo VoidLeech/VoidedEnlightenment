@@ -9,14 +9,15 @@
     "cerulean_stalk.StalkItemMixin", "ennegel.EnnegelGlobMixin", "ennegel.EnnegelGlobProcedureMixin",
     "ennegel.EnnegelSplatMixin", "gas.HeliumGasMixin", "gas.HeliumJarMixin", "gas.XenonGasMixin", "gas.XenonJarMixin",
     "laser.LaserBlockMixin", "laser.LaserEmissionMixin", "laser.LaserOnBlockMixin", "laser.LaserWalkingMixin",
-    "laser.ModifyLaserTypeMixin", "misc.DashAbilityMixin", "misc.PatreonMessageMixin", "misc.block.SpringLeafMixin",
-    "misc.item.JellyBottleMixin", "nuclear.ActivateNukeMixin", "nuclear.FurnaceEntityMixin",
-    "nuclear.HopperKillingProcedureMixin", "nuclear.NukeBlockMixin", "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin",
-    "ooze.CauldronFullMixin", "ooze.EmptyCauldronProcedureMixin", "ooze.FillCauldronProcedureMixin",
-    "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin", "ooze.OozeRainChanceProcedureMixin",
-    "ooze.vanilla.AbstractCauldronBlockMixin", "ooze.vanilla.ReloadableServerResourcesMixin",
-    "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin",
-    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "sound.GasVentBottomMixin"
+    "laser.ModifyLaserTypeMixin", "misc.DashAbilityMixin", "misc.KeyMappingsMixin", "misc.PatreonMessageMixin",
+    "misc.block.SpringLeafMixin", "misc.item.JellyBottleMixin", "nuclear.ActivateNukeMixin",
+    "nuclear.FurnaceEntityMixin", "nuclear.HopperKillingProcedureMixin", "nuclear.NukeBlockMixin",
+    "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin", "ooze.CauldronFullMixin", "ooze.EmptyCauldronProcedureMixin",
+    "ooze.FillCauldronProcedureMixin", "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin",
+    "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.AbstractCauldronBlockMixin",
+    "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
+    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin",
+    "sound.GasVentBottomMixin"
   ],
   "client": [
     "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin", "render.DazedOverlayMixin",
