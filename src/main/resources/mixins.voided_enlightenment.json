@@ -16,7 +16,7 @@
     "ooze.FillCauldronProcedureMixin", "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin",
     "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.AbstractCauldronBlockMixin",
     "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
-    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin",
+    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "sound.EndMusicMixin",
     "sound.GasVentBottomMixin"
   ],
   "client": [
