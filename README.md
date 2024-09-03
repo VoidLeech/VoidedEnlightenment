@@ -16,7 +16,6 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 ### Features
 #### Additions
 - Thematic recipes for 2/3 Enlightend potions that lacked recipes. The third one will be obtainable, without brewing, in a future update.
-- Compat with Waxed Icons for waxed blocks made from Bismuth.
 - Nuclear Bomb can now be disabled via config.
 - Cerulean Stalk can now be bone-mealed.
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
@@ -24,9 +23,10 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Sides of Nuclear Furnace now correspond to the input and output slots for automation.
 - Dash Leggings now also work vertically, and horizontal dash is now also dependent on your looking direction.
 - Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.
-- Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas.
+- Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas. 
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
 - Create and Create: Vintage Improvements recipe compat.
+- Waxed Icons compat.
 - KleeSlabs compat.
 - Seamless compat.
 #### Removals
