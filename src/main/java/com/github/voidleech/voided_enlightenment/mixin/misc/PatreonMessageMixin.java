@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlayerEnterEndProcedure.class)
 public class PatreonMessageMixin {
-    @Inject(method = "onPlayerTick", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "onPlayerTick", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$noAdvertising(TickEvent.PlayerTickEvent event, CallbackInfo ci){
         /*
         > Why are you cancelling this?!?! Don't you want to see modders supported for their work?

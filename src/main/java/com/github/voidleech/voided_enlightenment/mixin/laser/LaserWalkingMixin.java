@@ -14,8 +14,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class LaserWalkingMixin {
     @Inject(method = "execute", at = @At(value = "INVOKE",
                 target = "Lnet/minecraft/world/entity/Entity;setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V",
-                shift = At.Shift.BEFORE),
-            remap = false, cancellable = true)
+                shift = At.Shift.BEFORE,
+                remap = true),
+            cancellable = true,
+            remap = false)
     private static void voided_enlightenment$cancelFloatingBehaviour(LevelAccessor world, double x, double y, double z, Entity entity, CallbackInfo ci){
         if (entity instanceof ServerPlayer player) {
             AdvancementHelper.grantByName("enlightened_end:laser_fly", player);

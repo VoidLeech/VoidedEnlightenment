@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(NuclearFurnaceNeighbourBlockChangesProcedure.class)
 public class HopperKillingProcedureMixin {
-    @Inject(method = "execute", at = @At("HEAD"), remap = false, cancellable = true)
+    @Inject(method = "execute", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$dontBreakHopper(LevelAccessor world, double x, double y, double z, CallbackInfo ci){
         // It's not like the capabilities don't work on the sides.
         // This procedure was specifically made to kill hoppers on the side.

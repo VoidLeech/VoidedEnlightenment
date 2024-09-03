@@ -15,10 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(DashChargeOverlay.class)
 public class DashChargeOverlayMixin {
-    @Inject(method = "eventHandler(Lnet/minecraftforge/client/event/RenderGuiEvent$Pre;)V",
-            at = @At("HEAD"),
-            cancellable = true,
-            remap = false)
+    @Inject(method = "eventHandler", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$dontTouchRenderIfDoNoWork(RenderGuiEvent.Pre event, CallbackInfo ci){
         Player player = Minecraft.getInstance().player;
         if (!(Dash0Procedure.execute(player) || Dash1Procedure.execute(player) || Dash2Procedure.execute(player) || Dash3Procedure.execute(player))){

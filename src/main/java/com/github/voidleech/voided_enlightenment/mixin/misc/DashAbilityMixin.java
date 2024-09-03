@@ -11,7 +11,11 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(DashingLeggingsAbilityOnKeyPressedProcedure.class)
 public class DashAbilityMixin {
-    @ModifyArg(method = "execute", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V"), remap = false)
+    @ModifyArg(method = "execute", at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/entity/Entity;setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V",
+            remap = true
+    ), remap = false)
     private static Vec3 voided_enlightenment$allowVerticalDash(Vec3 pDeltaMovement, @Local(argsOnly = true) Entity entity){
         Vec3 lookingAt = entity.getLookAngle();
         Vec3 currentDeltaMovement = entity.getDeltaMovement();
@@ -22,12 +26,20 @@ public class DashAbilityMixin {
         );
     }
 
-    @ModifyArg(method = "execute", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;playSound(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V"), remap = false)
+    @ModifyArg(method = "execute", at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/level/Level;playSound(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V",
+            remap = true
+    ), remap = false)
     private static SoundSource voided_enlightenment$playerSoundIsntNeutral(SoundSource original){
         return SoundSource.PLAYERS;
     }
 
-    @ModifyArg(method = "execute", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;playLocalSound(DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZ)V"), remap = false)
+    @ModifyArg(method = "execute", at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/world/level/Level;playLocalSound(DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FFZ)V",
+            remap = true
+    ), remap = false)
     private static SoundSource voided_enlightenment$playerSoundIsntNeutralLocal(SoundSource original){
         return SoundSource.PLAYERS;
     }
