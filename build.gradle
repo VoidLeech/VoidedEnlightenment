@@ -147,7 +147,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
-    implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:0.1.0")
+    implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}")
 
     // For testing the Farmer's Delight compat recipe
     // runtimeOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
