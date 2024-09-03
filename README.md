@@ -3,15 +3,15 @@
 [![CurseForge Downloads](https://img.shields.io/curseforge/dt/{project-id}?style=flat&logo=curseforge&label=Curseforge)](https://www.curseforge.com/minecraft/mc-mods/{template-mod-slug})
 ![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/{project-id}.svg)
 
-[![Oblivion](https://raw.githubusercontent.com/VoidLeech/Oblivion/1.20.1/forge/src/main/resources/obv-icon.png)](https://github.com/VoidLeech/Oblivion)  
-Requires Oblivion.  
-I don't currently have a maven, nor is the library (currently) uploaded to CurseForge/Modrinth to access via their mavens, so build.gradle currently assumes you have cloned Oblivion and built it normally.
-Compiling the mod requires using the Vineflower decompiler in your IDE instead of Fernflower.
-
 A minuson for [Enlightend](https://modrinth.com/mod/enlightend), that is: an addon that mainly removes things; I reject the supposed enlightenment and substitute my own.
 
 I like a lot of Enlightend's features. But there's some I don't, and there's features I think can be expanded.  
 Additionally, the mod is in a buggy state at the moment, and while fixes for those have been announced to be in the next big update, that next big update is also set to remove some features I like and add more features I don't, so that won't do (for me).
+
+[![Oblivion](https://raw.githubusercontent.com/VoidLeech/Oblivion/1.20.1/forge/src/main/resources/obv-icon.png)](https://github.com/VoidLeech/Oblivion)  
+Requires Oblivion.  
+I don't currently have a maven, nor is the library (currently) uploaded to CurseForge/Modrinth to access via their mavens, so build.gradle currently assumes you have cloned Oblivion and built it normally.
+Compiling the mod requires using the Vineflower decompiler in your IDE instead of Fernflower.
 
 ### Features
 #### Additions
