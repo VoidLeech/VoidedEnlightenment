@@ -1,7 +1,7 @@
 # Voided Enlightenment
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/{template-mod-slug}?style=flat&logo=modrinth&label=Modrinth)](https://modrinth.com/mod/{template-mod-slug})
-[![CurseForge Downloads](https://img.shields.io/curseforge/dt/{project-id}?style=flat&logo=curseforge&label=Curseforge)](https://www.curseforge.com/minecraft/mc-mods/{template-mod-slug})
-![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/{project-id}.svg)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/voided-enlightenment?style=flat&logo=modrinth&label=Modrinth)](https://modrinth.com/mod/voided-enlightenment)
+[![CurseForge Downloads](https://img.shields.io/curseforge/dt/1096334?style=flat&logo=curseforge&label=Curseforge)](https://www.curseforge.com/minecraft/mc-mods/voided-enlightenment)
+![Modrinth Game Versions](https://cf.way2muchnoise.eu/versions/voided-enlightenment.svg)
 
 A minuson for [Enlightend](https://modrinth.com/mod/enlightend), that is: an addon that mainly removes things; I reject the supposed enlightenment and substitute my own.
 
