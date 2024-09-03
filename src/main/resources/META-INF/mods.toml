@@ -49,7 +49,7 @@ description='''${mod_description}'''
 [[dependences.${mod_id}]]
     modId="oblivion_api"
     mandatory=true
-    versionRange="[0.1.0,)"
+    versionRange="[1.0.0,)"
     ordering="NONE"
     side="BOTH"
 
