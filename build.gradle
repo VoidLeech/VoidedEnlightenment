@@ -89,7 +89,7 @@ processResources {
     from('LICENSE')
     from('REQUIRED-CONTENT')
     from('README.MD')
-    from('other-license/')
+    from('other-licenses/')
 }
 
 repositories {
