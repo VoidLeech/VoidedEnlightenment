@@ -25,7 +25,8 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.
 - Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas. 
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
-- Create and Create: Vintage Improvements recipe compat.
+- Create compat
+- Create: Vintage Improvements recipe compat.
 - Waxed Icons compat.
 - KleeSlabs compat.
 - Seamless compat.

@@ -131,6 +131,10 @@ repositories {
         name = "shedaniel's maven"
         url = "https://maven.shedaniel.me/"
     }
+    maven {
+        name = 'tterrag maven'
+        url = 'https://maven.tterrag.com/'
+    }
 }
 
 dependencies {
@@ -138,9 +142,7 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.4.1"))
-    implementation(jarJar("io.github.llamalad7:mixinextras-forge:0.4.1")) {
-        jarJar.ranged(it, "[0.4.1,)")
-    }
+    implementation("io.github.llamalad7:mixinextras-forge:0.4.1")
 
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
@@ -148,6 +150,11 @@ dependencies {
 
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
     implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}")
+
+    // Create compat
+    compileOnly fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
+    compileOnly fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
+    compileOnly fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
 
     // For testing the Farmer's Delight compat recipe
     // runtimeOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
@@ -182,6 +189,12 @@ dependencies {
 mixin {
     add sourceSets.main, "mixins.${mod_id}.refmap.json"
     config "mixins.${mod_id}.json"
+}
+
+// Workaround for SpongePowered/MixinGradle#38
+afterEvaluate {
+    tasks.configureReobfTaskForReobfJar.mustRunAfter(tasks.compileJava)
+    tasks.configureReobfTaskForReobfJarJar.mustRunAfter(tasks.compileJava)
 }
 
 tasks.named('processResources', ProcessResources).configure {
