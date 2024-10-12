@@ -23,9 +23,10 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Sides of Nuclear Furnace now correspond to the input and output slots for automation.
 - Dash Leggings now also work vertically, and horizontal dash is now also dependent on your looking direction.
 - Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.
-- Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas. 
+- Boots enchanted with Frost Walker now allow you to walk on Helium and Xenon Gas.
+- Boots enchanted with Frost Walker now allow you to walk on Frostburn Ice (I+II) and Glacium block variants (II) without freezing, or while freezing slower than normal if the level isn't high enough.
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
-- Create compat
+- Create compat.
 - Create: Vintage Improvements recipe compat.
 - Waxed Icons compat.
 - KleeSlabs compat.
