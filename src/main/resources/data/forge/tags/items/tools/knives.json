@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "enlightened_end:adamantite_knife"
+    {
+      "id": "voided_enlightenment:adamantite_knife",
+      "required": false
+    }
   ]
 }

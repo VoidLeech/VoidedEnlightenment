@@ -1,14 +1,21 @@
 package com.github.voidleech.voided_enlightenment;
 
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
+import com.github.voidleech.voided_enlightenment.registry.VEItems;
+import com.github.voidleech.voided_enlightenment.registry.VEItemsFD;
 import com.github.voidleech.voided_enlightenment.registry.VEPacks;
 import com.github.voidleech.voided_enlightenment.registry.VEPotionRecipes;
+import com.github.voidleech.voided_enlightenment.registry.VERecipeSerializers;
+import com.github.voidleech.voided_enlightenment.registry.VERecipeSerializersFD;
+import com.github.voidleech.voided_enlightenment.registry.VERecipeTypes;
+import com.github.voidleech.voided_enlightenment.registry.VERecipeTypesFD;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -30,6 +37,14 @@ public class VoidedEnlightenment
         modEventBus.addListener(this::commonSetup);
         VEPotionRecipes.register();
         new VEPacks().register(modEventBus);
+        VEItems.register(modEventBus);
+        VERecipeTypes.register(modEventBus);
+        VERecipeSerializers.register(modEventBus);
+        if (ModList.get().isLoaded("farmersdelight")){
+            VEItemsFD.register(modEventBus);
+            VERecipeTypesFD.register();
+            VERecipeSerializersFD.register();
+        }
 
         forgeBus.register(this);
         MobEvents.register(forgeBus);

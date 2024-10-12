@@ -3,6 +3,7 @@
   "package": "com.github.voidleech.voided_enlightenment.mixin",
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.voided_enlightenment.refmap.json",
+  "plugin": "com.github.voidleech.voided_enlightenment.mixin.VoidedEnlightenmentMixinConfig",
   "mixins": [
     "cerulean_stalk.PlacementMixin", "cerulean_stalk.PlantStalkMixin", "cerulean_stalk.Stalk0Mixin",
     "cerulean_stalk.Stalk1Mixin", "cerulean_stalk.Stalk2Mixin", "cerulean_stalk.Stalk3Mixin",
@@ -12,14 +13,15 @@
     "glacium.GlaciumBricksMixin", "glacium.GlaciumSlabMixin", "glacium.GlaciumStairsMixin", "glacium.GlaciumWallMixin",
     "laser.LaserBlockMixin", "laser.LaserEmissionMixin", "laser.LaserOnBlockMixin", "laser.LaserWalkingMixin",
     "laser.ModifyLaserTypeMixin", "misc.DashAbilityMixin", "misc.KeyMappingsMixin", "misc.PatreonMessageMixin",
-    "misc.block.SpringLeafMixin", "misc.item.JellyBottleMixin", "nuclear.ActivateNukeMixin",
-    "nuclear.FurnaceEntityMixin", "nuclear.HopperKillingProcedureMixin", "nuclear.NukeBlockMixin",
-    "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin", "ooze.CauldronFullMixin", "ooze.EmptyCauldronProcedureMixin",
-    "ooze.FillCauldronProcedureMixin", "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFluidMixin",
-    "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.AbstractCauldronBlockMixin",
-    "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
-    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "sound.EndMusicMixin",
-    "sound.GasVentBottomMixin", "sound.OozeRainAmbienceMixin"
+    "misc.block.SpringLeafMixin", "misc.item.AdamantiteKnifeMixin", "misc.item.JellyBottleMixin",
+    "nuclear.ActivateNukeMixin", "nuclear.FurnaceEntityMixin", "nuclear.HopperKillingProcedureMixin",
+    "nuclear.NukeBlockMixin", "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin", "ooze.CauldronFullMixin",
+    "ooze.EmptyCauldronProcedureMixin", "ooze.FillCauldronProcedureMixin", "ooze.OozeBottleMixin",
+    "ooze.OozeBucketMixin", "ooze.OozeFluidMixin", "ooze.OozeRainChanceProcedureMixin",
+    "ooze.vanilla.AbstractCauldronBlockMixin", "ooze.vanilla.ReloadableServerResourcesMixin",
+    "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin",
+    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "sound.EndMusicMixin", "sound.GasVentBottomMixin",
+    "sound.OozeRainAmbienceMixin"
   ],
   "client": [
     "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin", "render.DazedOverlayMixin",

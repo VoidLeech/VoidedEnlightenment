@@ -60,6 +60,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
+- Replaced Enlightend's Adamantite Knife with one that actually depends on Farmer's Delight: cuts grass without damaging, is enchantable.
 - Fixes/Consistency Changes related to the Language file.
 - Volume/Consistency Changes related to Sounds.
 - Adds some other mods' entities to Enlightend bubble_immune tag to prevent serious issues.

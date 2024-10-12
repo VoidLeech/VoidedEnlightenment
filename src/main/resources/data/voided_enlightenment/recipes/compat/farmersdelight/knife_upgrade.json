@@ -1,0 +1,9 @@
+{
+  "type": "voided_enlightenment:knife_upgrade",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

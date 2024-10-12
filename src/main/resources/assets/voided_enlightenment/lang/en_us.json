@@ -1,0 +1,5 @@
+{
+  "item.voided_enlightenment.adamantite_knife": "Adamantite Knife",
+  "tooltip.voided_enlightenment.knife_deprecation": "This implementation of the Adamantite Knife is superseded by Voided Enlightenment's implementation.\nUpgrade it by placing it in a crafting grid.",
+  "tooltip.voided_enlightenment.knife_unsupported": "This implementation of the Adamantite Knife is unsupported by Voided Enlightenment.\nInstall Farmer's Delight to be able upgrade it to a functional knife."
+}
