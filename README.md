@@ -57,10 +57,11 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Iridescent Bismuth Gleam can now be crafted shapelessly.
 - Improve findability of Dashing Leggings keybind by moving it to its own category instead of sitting in vanilla's Gameplay section
 - Naturally occurring Ooze Rain now doesn't get into a state where it will never start anymore, which would likely happen before a player even got to the End to begin with.
+- Made Ooze Fluid Interactions more consistent.
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
-- Replaced Enlightend's Adamantite Knife with one that actually depends on Farmer's Delight: cuts grass without damaging, is enchantable.
+- Replaced Enlightend's Adamantite Knife with one that actually depends on Farmer's Delight: it now cuts grass without damaging, is enchantable, and will work with addons that require a KnifeItem.
 - Fixes/Consistency Changes related to the Language file.
 - Volume/Consistency Changes related to Sounds.
 - Adds some other mods' entities to Enlightend bubble_immune tag to prevent serious issues.
