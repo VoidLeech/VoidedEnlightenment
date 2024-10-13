@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment;
 
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
+import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
 import com.github.voidleech.voided_enlightenment.registry.VEItems;
 import com.github.voidleech.voided_enlightenment.registry.VEItemsFD;
 import com.github.voidleech.voided_enlightenment.registry.VEPacks;
@@ -53,6 +54,9 @@ public class VoidedEnlightenment
 
         forgeBus.register(this);
         MobEvents.register(forgeBus);
+        if (ModList.get().isLoaded("create")){
+            PipeCollisionEvents.register(forgeBus);
+        }
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, VoidedEnlightenmentConfig.SPEC);
     }
