@@ -2,7 +2,6 @@ package com.github.voidleech.voided_enlightenment.mixin.misc.entity;
 
 import net.mcreator.enlightened_end.entity.FlashBombEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.level.Level;

@@ -57,22 +57,19 @@ public class Stalk0Mixin extends Block implements BonemealableBlock {
     public BlockState updateShape(BlockState pState, Direction pDirection, BlockState pNeighborState, LevelAccessor pLevel, BlockPos pPos, BlockPos pNeighborPos) {
         return !pState.canSurvive(pLevel, pPos)
                 ? Blocks.AIR.defaultBlockState()
-                : (pLevel.getBlockState(pPos.below()).getBlock() == EnlightenedEndModBlocks.CERULEAN_STALK_1.get()
+                : (CeruleanStalkGrowing.isStalk(pLevel.getBlockState(pPos.below()).getBlock())
                     ? EnlightenedEndModBlocks.CERULEAN_STALK_1.get().defaultBlockState()
                     : super.updateShape(pState, pDirection, pNeighborState, pLevel, pPos, pNeighborPos));
     }
 
     @Override
     public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
-        int upperLimit = pLevel.dimension() == Level.END ? 19 : 39;
-        if (pRandom.nextInt(0, upperLimit) == 0){
-            CeruleanStalkGrowing.growStalk(pLevel, pPos, pState, false);
-        }
+        CeruleanStalkGrowing.growthTick(pLevel, pPos, pState, pRandom);
     }
 
     @Override
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean b) {
-        return true;
+        return levelReader.isEmptyBlock(blockPos.below());
     }
 
     @Override
