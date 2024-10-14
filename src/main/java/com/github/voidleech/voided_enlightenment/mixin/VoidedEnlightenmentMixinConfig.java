@@ -1,7 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin;
 
 import com.github.voidleech.oblivion.mixin.plugin.AbstractOblivionMixinPlugin;
-import net.minecraftforge.fml.loading.LoadingModList;
 
 import java.util.Map;
 

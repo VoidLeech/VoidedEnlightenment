@@ -1,7 +1,6 @@
 package com.github.voidleech.voided_enlightenment.recipe;
 
 import com.github.voidleech.voided_enlightenment.registry.VEItemsFD;
-import com.github.voidleech.voided_enlightenment.registry.VERecipeSerializers;
 import com.github.voidleech.voided_enlightenment.registry.VERecipeSerializersFD;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.RegistryAccess;

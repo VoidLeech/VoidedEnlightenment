@@ -2,6 +2,8 @@ package com.github.voidleech.voided_enlightenment;
 
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
 import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
+import com.github.voidleech.voided_enlightenment.registry.VEDispenserBehaviors;
+import com.github.voidleech.voided_enlightenment.registry.VEFluidInteractions;
 import com.github.voidleech.voided_enlightenment.registry.VEItems;
 import com.github.voidleech.voided_enlightenment.registry.VEItemsFD;
 import com.github.voidleech.voided_enlightenment.registry.VEPacks;
@@ -11,16 +13,11 @@ import com.github.voidleech.voided_enlightenment.registry.VERecipeSerializersFD;
 import com.github.voidleech.voided_enlightenment.registry.VERecipeTypes;
 import com.github.voidleech.voided_enlightenment.registry.VERecipeTypesFD;
 import com.mojang.logging.LogUtils;
-import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
-import net.mcreator.enlightened_end.init.EnlightenedEndModFluidTypes;
-import net.mcreator.enlightened_end.init.EnlightenedEndModFluids;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fluids.FluidInteractionRegistry;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -64,12 +61,8 @@ public class VoidedEnlightenment
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
-            FluidInteractionRegistry.addInteraction(EnlightenedEndModFluidTypes.OOZE_FLUID_TYPE.get(),
-                    new FluidInteractionRegistry.InteractionInformation(ForgeMod.WATER_TYPE.get(), fluidState ->
-                            EnlightenedEndModBlocks.PALEROCK.get().defaultBlockState()));
-            FluidInteractionRegistry.addInteraction(EnlightenedEndModFluidTypes.OOZE_FLUID_TYPE.get(),
-                    new FluidInteractionRegistry.InteractionInformation(ForgeMod.LAVA_TYPE.get(),
-                            fluidState -> EnlightenedEndModBlocks.VOID_SHALE.get().defaultBlockState()));
+            VEFluidInteractions.register();
+            VEDispenserBehaviors.register();
         });
     }
 
