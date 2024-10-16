@@ -23,6 +23,7 @@ import net.minecraft.world.level.block.entity.DispenserBlockEntity;
 public class VEDispenserBehaviors {
     static final DefaultDispenseItemBehavior DEFAULT = new DefaultDispenseItemBehavior();
     public static void register(){
+        // Ooze Bucket
         DispenserBlock.registerBehavior(EnlightenedEndModItems.OOZE_FLUID_BUCKET.get(), new DefaultDispenseItemBehavior(){
 
             @Override
@@ -36,6 +37,7 @@ public class VEDispenserBehaviors {
                 return DEFAULT.dispense(pSource, pStack);
             }
         });
+        // Ooze Bottle
         DispenserBlock.registerBehavior(EnlightenedEndModItems.OOZE_BOTTLE.get(), new DefaultDispenseItemBehavior(){
             @Override
             protected ItemStack execute(BlockSource pSource, ItemStack pStack) {
@@ -49,8 +51,9 @@ public class VEDispenserBehaviors {
                 return DEFAULT.dispense(pSource, pStack);
             }
         });
+        // Glass Bottle
         DispenseItemBehavior bottleOriginal = ((DispenserBlockInvoker)Blocks.DISPENSER).callGetDispenseMethod(new ItemStack(Items.GLASS_BOTTLE));
-        if (bottleOriginal instanceof DefaultDispenseItemBehavior bottleOriginalDef) {
+        if (bottleOriginal instanceof OptionalDispenseItemBehavior bottleOriginalOpt) {
             DispenserBlock.registerBehavior(Items.GLASS_BOTTLE, new OptionalDispenseItemBehavior() {
                 @Override
                 protected ItemStack execute(BlockSource pSource, ItemStack pStack) {
@@ -69,7 +72,9 @@ public class VEDispenserBehaviors {
                         }
                         return pStack;
                     }
-                    return ((DefaultDispenseItemBehaviorInvoker)bottleOriginalDef).callExecute(pSource, pStack);
+                    ItemStack res = ((DefaultDispenseItemBehaviorInvoker)bottleOriginalOpt).callExecute(pSource, pStack);
+                    setSuccess(bottleOriginalOpt.isSuccess());
+                    return res;
                 }
             });
         }
