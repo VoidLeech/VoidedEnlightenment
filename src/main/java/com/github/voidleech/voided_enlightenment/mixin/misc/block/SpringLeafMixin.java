@@ -11,7 +11,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(SpringleafBlock.class)
-public class SpringLeafMixin extends Block {
+public abstract class SpringLeafMixin extends Block {
     public SpringLeafMixin(Properties pProperties) {
         super(pProperties);
     }

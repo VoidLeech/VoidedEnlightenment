@@ -13,7 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(AncientStalk3Block.class)
-public class Stalk3Mixin extends Block implements BonemealableBlock {
+public abstract class Stalk3Mixin extends Block implements BonemealableBlock {
     public Stalk3Mixin(Properties pProperties) {
         super(pProperties);
     }

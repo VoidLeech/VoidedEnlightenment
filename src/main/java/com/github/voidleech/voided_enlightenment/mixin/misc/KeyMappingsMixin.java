@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EnlightenedEndModKeyMappings.class)
-public class KeyMappingsMixin {
+public abstract class KeyMappingsMixin {
     @Shadow @Final public static KeyMapping DASHING_LEGGINGS_ABILITY;
 
     @Inject(method = "registerKeyMappings", at = @At("HEAD"), remap = false)

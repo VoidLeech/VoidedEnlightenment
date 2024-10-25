@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EndRenderingProcedure.class)
-public class EndRenderingProcedureMixin {
+public abstract class EndRenderingProcedureMixin {
     // Upper end fog sucks. It's jarring and flickery on the borders.
     @Inject(method = "renderFog", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelFog(ViewportEvent.RenderFog event, CallbackInfo ci){

@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BrewFrigidPotionBrewingRecipe.class)
-public class FrigidRecipeMixin {
+public abstract class FrigidRecipeMixin {
     @Inject(method = "init", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$recipeViewableFrigidRecipe(FMLCommonSetupEvent event, CallbackInfo ci){
         event.enqueueWork(() -> PotionBrewing.addMix(Potions.AWKWARD, EnlightenedEndModItems.FROST_FRUIT.get(), EnlightenedEndModPotions.FRIGID_POTION.get()));

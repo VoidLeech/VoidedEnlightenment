@@ -18,10 +18,11 @@
     "nuclear.HopperKillingProcedureMixin", "nuclear.NukeBlockMixin", "ooze.Cauldron1Mixin", "ooze.Cauldron2Mixin",
     "ooze.CauldronFullMixin", "ooze.EmptyCauldronProcedureMixin", "ooze.FillCauldronProcedureMixin",
     "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFlowingMixin", "ooze.OozeFluidBlockMixin",
-    "ooze.OozeFluidMixin", "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.AbstractCauldronBlockMixin",
-    "ooze.vanilla.LavaFluidMixin", "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin",
-    "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin",
-    "potion.VitalityRecipeMixin", "sound.EndMusicMixin", "sound.GasVentBottomMixin", "sound.OozeRainAmbienceMixin"
+    "ooze.OozeFluidMixin", "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.BlockBehaviour$PropertiesMixin",
+    "ooze.vanilla.BlockBehaviourMixin", "ooze.vanilla.BlocksMixinForCauldron", "ooze.vanilla.LavaFluidMixin",
+    "ooze.vanilla.ReloadableServerResourcesMixin", "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin",
+    "potion.RootedRecipeMixin", "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "sound.EndMusicMixin",
+    "sound.GasVentBottomMixin", "sound.OozeRainAmbienceMixin"
   ],
   "client": [
     "misc.entity.FlashBombMixin", "render.BubbleJellyOverlayMixin", "render.DashChargeOverlayMixin",

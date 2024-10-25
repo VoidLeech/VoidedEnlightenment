@@ -1,8 +1,10 @@
 package com.github.voidleech.voided_enlightenment.registry;
 
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
+import com.github.voidleech.voided_enlightenment.api.OozeBotteTransformations;
 import com.github.voidleech.voided_enlightenment.mixin.accessor.DefaultDispenseItemBehaviorInvoker;
 import com.github.voidleech.voided_enlightenment.mixin.accessor.DispenserBlockInvoker;
+import com.github.voidleech.voided_enlightenment.reimagined.OozeCauldronFilling;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
@@ -10,15 +12,19 @@ import net.minecraft.core.BlockSource;
 import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Tuple;
 import net.minecraft.world.item.DispensibleContainerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DispenserBlock;
 import net.minecraft.world.level.block.entity.DispenserBlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 
 public class VEDispenserBehaviors {
     static final DefaultDispenseItemBehavior DEFAULT = new DefaultDispenseItemBehavior();
@@ -43,9 +49,11 @@ public class VEDispenserBehaviors {
             protected ItemStack execute(BlockSource pSource, ItemStack pStack) {
                 BlockPos pos = pSource.getPos().relative(pSource.getBlockState().getValue(DispenserBlock.FACING));
                 Level level = pSource.getLevel();
-                if (level.getBlockState(pos).getBlock() == Blocks.MUD){
-                    level.setBlockAndUpdate(pos, EnlightenedEndModBlocks.CHORLOAM.get().defaultBlockState());
-                    level.playSound(null, pos, SoundEvents.BOTTLE_EMPTY, SoundSource.BLOCKS, 1.0f, 1.0f);
+                BlockState state = level.getBlockState(pos);
+                Tuple<Block, SoundEvent> oozeInteraction = OozeBotteTransformations.get(state.getBlock());
+                if (oozeInteraction != null && !OozeCauldronFilling.isOozeFillableBlock(state)){
+                    level.setBlockAndUpdate(pos, oozeInteraction.getA().defaultBlockState());
+                    level.playSound(null, pos, oozeInteraction.getB(), SoundSource.BLOCKS, 1.0f, 1.0f);
                     return new ItemStack(Items.GLASS_BOTTLE);
                 }
                 return DEFAULT.dispense(pSource, pStack);

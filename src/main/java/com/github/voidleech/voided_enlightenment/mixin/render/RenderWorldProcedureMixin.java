@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(RenderWorldProcedure.class)
-public class RenderWorldProcedureMixin {
+public abstract class RenderWorldProcedureMixin {
     // I'll be real, I don't understand what this function is doing. I think some sort of random ambiance.
     // However, it's certainly messing with the render system, even when we're not in the end.
     @Inject(method = "renderSky", at = @At("HEAD"), cancellable = true, remap = false)

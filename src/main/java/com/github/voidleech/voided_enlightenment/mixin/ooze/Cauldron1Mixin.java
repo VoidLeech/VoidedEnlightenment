@@ -1,7 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.ooze;
 
-import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import com.github.voidleech.voided_enlightenment.reimagined.OozeCauldronFilling;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.mcreator.enlightened_end.block.OozeCauldron1Block;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
@@ -23,20 +23,16 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.items.ItemHandlerHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(OozeCauldron1Block.class)
-public class Cauldron1Mixin extends Block {
+public abstract class Cauldron1Mixin extends Block {
     public Cauldron1Mixin(Properties pProperties) {
         super(pProperties);
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"))
-    void voided_enlightenment$enableRandomTicks(CallbackInfo ci){
-        BlockPropertiesRebuilder.of(this)
-                .randomTicks(true)
-                .finalizeRebuild();
+    @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;of()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;"))
+    private static Properties voided_enlightenment$enableRandomTicks(Properties original){
+        return original.randomTicks();
     }
 
     @Override
@@ -62,5 +58,15 @@ public class Cauldron1Mixin extends Block {
         }
 
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+    }
+
+    @Override
+    public boolean hasAnalogOutputSignal(BlockState pState) {
+        return true;
+    }
+
+    @Override
+    public int getAnalogOutputSignal(BlockState pState, Level pLevel, BlockPos pPos) {
+        return 1;
     }
 }

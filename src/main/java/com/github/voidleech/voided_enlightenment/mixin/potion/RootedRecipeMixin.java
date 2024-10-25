@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BrewRootedPotionBrewingRecipe.class)
-public class RootedRecipeMixin {
+public abstract class RootedRecipeMixin {
     @Inject(method = "init", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$recipeViewableBurdenedRecipe(FMLCommonSetupEvent event, CallbackInfo ci){
         event.enqueueWork(() -> PotionBrewing.addMix(Potions.AWKWARD, EnlightenedEndModItems.ANCIENT_ROOT.get(), EnlightenedEndModPotions.ROOTED_POTION.get()));

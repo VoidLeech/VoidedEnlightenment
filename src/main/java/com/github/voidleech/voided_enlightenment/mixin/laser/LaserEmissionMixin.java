@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.laser;
 
-import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
+import com.github.voidleech.oblivion.propertyUndoers.IBlockPropertyUndoerExtensions;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.mcreator.enlightened_end.block.LaserEmissionBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
@@ -18,11 +19,9 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LaserEmissionBlock.class)
-public class LaserEmissionMixin extends Block {
+public abstract class LaserEmissionMixin extends Block {
     @Shadow
     @Final
     public static DirectionProperty FACING;
@@ -31,11 +30,9 @@ public class LaserEmissionMixin extends Block {
         super(pProperties);
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"))
-    private void voided_enlightenment$newProperties(CallbackInfo ci) {
-        BlockPropertiesRebuilder.of(this)
-                .collision(true)
-                .finalizeRebuild();
+    @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;noCollission()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;"))
+    private static Properties voided_enlightenment$enableCollision(Properties original){
+        return ((IBlockPropertyUndoerExtensions)original).oblivion$collision();
     }
 
     @Override

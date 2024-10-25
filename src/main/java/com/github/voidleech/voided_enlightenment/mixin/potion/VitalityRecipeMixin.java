@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BrewVitalityPotionBrewingRecipe.class)
-public class VitalityRecipeMixin {
+public abstract class VitalityRecipeMixin {
     @Inject(method = "init", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$recipeViewableVitalityRecipe(FMLCommonSetupEvent event, CallbackInfo ci){
         event.enqueueWork(() -> PotionBrewing.addMix(Potions.AWKWARD, EnlightenedEndModItems.BISMUTH_INGOT.get(), EnlightenedEndModPotions.VITALITY.get()));

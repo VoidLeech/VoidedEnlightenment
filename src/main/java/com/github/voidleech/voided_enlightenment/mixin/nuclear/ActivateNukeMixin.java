@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LightNuclearBombProcedure.class)
-public class ActivateNukeMixin {
+public abstract class ActivateNukeMixin {
     // We're gonna both fix the activation and make it configurable, cancel the original impl.
     @Inject(method = "onRightClickBlock", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelNukeEvent(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(DashingLeggingsAbilityOnKeyPressedProcedure.class)
-public class DashAbilityMixin {
+public abstract class DashAbilityMixin {
     @ModifyArg(method = "execute", at = @At(
             value = "INVOKE",
             target = "Lnet/minecraft/world/entity/Entity;setDeltaMovement(Lnet/minecraft/world/phys/Vec3;)V",

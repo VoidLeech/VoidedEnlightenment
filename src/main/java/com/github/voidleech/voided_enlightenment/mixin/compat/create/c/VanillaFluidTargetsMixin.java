@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(VanillaFluidTargets.class)
-public class VanillaFluidTargetsMixin {
+public abstract class VanillaFluidTargetsMixin {
     @ModifyReturnValue(method = "canProvideFluidWithoutCapability", at = @At("RETURN"), remap = false)
     private static boolean voided_enlightenment$oozeCauldronsCanProvide(boolean original, @Local(argsOnly = true) BlockState state){
         return original || (state.getBlock() == EnlightenedEndModBlocks.OOZE_CAULDRON_FULL.get());

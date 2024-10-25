@@ -4,11 +4,7 @@ import net.mcreator.enlightened_end.block.entity.NuclearFurnaceBlockEntity;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.WorldlyContainer;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -22,7 +18,7 @@ import org.spongepowered.asm.mixin.Mutable;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(NuclearFurnaceBlockEntity.class)
-public class FurnaceEntityMixin extends RandomizableContainerBlockEntity implements WorldlyContainer {
+public abstract class FurnaceEntityMixin extends RandomizableContainerBlockEntity implements WorldlyContainer {
 
     @Final
     @Mutable
@@ -30,11 +26,6 @@ public class FurnaceEntityMixin extends RandomizableContainerBlockEntity impleme
     private LazyOptional<? extends IItemHandler>[] handlers;
     protected FurnaceEntityMixin(BlockEntityType<?> pType, BlockPos pPos, BlockState pBlockState) {
         super(pType, pPos, pBlockState);
-    }
-
-    @Shadow
-    public int[] getSlotsForFace(Direction direction) {
-        throw new AbstractMethodError("Shadow");
     }
 
     @Override
@@ -63,30 +54,5 @@ public class FurnaceEntityMixin extends RandomizableContainerBlockEntity impleme
             case WEST -> i == 1;
             case EAST -> i == 3;
         };
-    }
-
-    @Shadow
-    protected NonNullList<ItemStack> getItems() {
-        throw new AbstractMethodError("Shadow");
-    }
-
-    @Shadow
-    protected void setItems(NonNullList<ItemStack> nonNullList) {
-        throw new AbstractMethodError("Shadow");
-    }
-
-    @Shadow
-    public Component getDefaultName() {
-        throw new AbstractMethodError("Shadow");
-    }
-
-    @Shadow
-    public AbstractContainerMenu createMenu(int i, Inventory inventory) {
-        throw new AbstractMethodError("Shadow");
-    }
-
-    @Shadow
-    public int getContainerSize() {
-        throw new AbstractMethodError("Shadow");
     }
 }

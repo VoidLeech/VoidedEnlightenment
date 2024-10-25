@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(EbonyStalkBlockValidPlacementConditionProcedure.class)
-public class PlacementMixin {
+public abstract class PlacementMixin {
     @ModifyReturnValue(method = "execute", at = @At("RETURN"), remap = false)
     private static boolean voided_enlightenment$stalkOnFreshlyPlantedToo(boolean original, LevelAccessor level, double x, double y, double z){
         return original || level.getBlockState(BlockPos.containing(x, y + 1, z)).getBlock() == EnlightenedEndModBlocks.CERULEAN_STALK_0.get();

@@ -21,7 +21,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(OozeCauldronFullBlock.class)
-public class CauldronFullMixin extends Block {
+public abstract class CauldronFullMixin extends Block {
     public CauldronFullMixin(Properties pProperties) {
         super(pProperties);
     }
@@ -51,5 +51,15 @@ public class CauldronFullMixin extends Block {
         }
 
         return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+    }
+
+    @Override
+    public boolean hasAnalogOutputSignal(BlockState pState) {
+        return true;
+    }
+
+    @Override
+    public int getAnalogOutputSignal(BlockState pState, Level pLevel, BlockPos pPos) {
+        return 3;
     }
 }

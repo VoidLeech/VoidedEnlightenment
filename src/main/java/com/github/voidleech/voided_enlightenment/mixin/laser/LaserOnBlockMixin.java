@@ -16,7 +16,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(LaserOnBlock.class)
-public class LaserOnBlockMixin extends Block {
+public abstract class LaserOnBlockMixin extends Block {
     public LaserOnBlockMixin(Properties pProperties) {
         super(pProperties);
     }

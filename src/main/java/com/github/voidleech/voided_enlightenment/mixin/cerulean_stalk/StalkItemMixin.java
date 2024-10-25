@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(CeruleanStalkItem.class)
-public class StalkItemMixin extends Item {
+public abstract class StalkItemMixin extends Item {
 
     public StalkItemMixin(Properties pProperties) {
         super(pProperties);

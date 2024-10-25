@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 
 @Mixin(EndSkiesProcedure.class)
-public class EndSkiesProcedureMixin {
+public abstract class EndSkiesProcedureMixin {
     // Upper end fog sucks, shifting background colors is very jarring on the boundaries
     @Inject(method = "computeFogColor", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelComputeFog(ViewportEvent.ComputeFogColor event, CallbackInfo ci){

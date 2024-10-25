@@ -15,7 +15,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(EnnegelGlobItem.class)
-public class EnnegelGlobMixin extends Item {
+public abstract class EnnegelGlobMixin extends Item {
     public EnnegelGlobMixin(Properties pProperties) {
         super(pProperties);
     }

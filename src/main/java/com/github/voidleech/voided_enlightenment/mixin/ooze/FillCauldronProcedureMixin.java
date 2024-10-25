@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FillCauldronOozeProcedure.class)
-public class FillCauldronProcedureMixin {
+public abstract class FillCauldronProcedureMixin {
     @Inject(method = "onRightClickBlock", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelFillEvent(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){
         ci.cancel();

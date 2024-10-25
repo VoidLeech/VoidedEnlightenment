@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import java.util.List;
 
 @Mixin(AdamantiteKnifeItem.class)
-public class AdamantiteKnifeMixin extends Item {
+public abstract class AdamantiteKnifeMixin extends Item {
 
     public AdamantiteKnifeMixin(Properties pProperties) {
         super(pProperties);

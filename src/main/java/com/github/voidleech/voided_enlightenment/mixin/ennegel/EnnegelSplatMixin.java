@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(EnnegelSplatBlock.class)
-public class EnnegelSplatMixin extends Block {
+public abstract class EnnegelSplatMixin extends Block {
     @Shadow @Final public static EnumProperty<AttachFace> FACE;
 
     @Shadow @Final public static DirectionProperty FACING;

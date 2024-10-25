@@ -20,6 +20,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Cerulean Stalk can now be bone-mealed.
 - Cerulean Stalk can now directly be placed below other cerulean stalk, like bamboo can on top of bamboo.
 - Ooze Rain can now fill Cauldrons.
+- Ooze Cauldrons now give off Comparator output.
 - Sides of Nuclear Furnace now correspond to the input and output slots for automation.
 - Dash Leggings now also work vertically, and horizontal dash is now also dependent on your looking direction.
 - Boost Boots now behave on Lasers like Leather Boots on Powder Snow: proper walking, jumping possible, sneaking to descend.

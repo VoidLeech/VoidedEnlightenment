@@ -1,7 +1,7 @@
 package com.github.voidleech.voided_enlightenment.mixin.cerulean_stalk;
 
-import com.github.voidleech.oblivion.hackyMixinUtils.propertyRebuilders.BlockPropertiesRebuilder;
 import com.github.voidleech.voided_enlightenment.reimagined.CeruleanStalkGrowing;
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.mcreator.enlightened_end.block.CeruleanStalk0Block;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
@@ -23,23 +23,19 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
 @Mixin(CeruleanStalk0Block.class)
-public class Stalk0Mixin extends Block implements BonemealableBlock {
+public abstract class Stalk0Mixin extends Block implements BonemealableBlock {
 
     public Stalk0Mixin(Properties pProperties) {
         super(pProperties);
     }
 
-    @Inject(method = "<init>", at = @At("TAIL"))
-    private void voided_enlightenment$newProperties(CallbackInfo ci){
-        BlockPropertiesRebuilder.of(this)
-                .strength(1.0f)
-                .finalizeRebuild();
+    @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;instabreak()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;"))
+    private static Properties voided_enlightenment$hasStrength(Properties original){
+        return original.strength(1.0f);
     }
 
     @Override
@@ -47,7 +43,6 @@ public class Stalk0Mixin extends Block implements BonemealableBlock {
         return box(4, 6, 4, 12, 16, 12);
     }
 
-    // TODO ig, more hacky things /w properties so super.getDrops(...) doesn't return empty, but this works for now
     @Override
     public List<ItemStack> getDrops(BlockState pState, LootParams.Builder pParams) {
         return List.of(new ItemStack(EnlightenedEndModItems.CERULEAN_STALK.get()));

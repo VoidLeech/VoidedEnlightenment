@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlantCeruleanStalkProcedure.class)
-public class PlantStalkMixin {
+public abstract class PlantStalkMixin {
     @Inject(method = "onRightClickBlock", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelPlacement(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){
         ci.cancel();

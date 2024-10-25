@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(PlaceEnnegelProcedure.class)
-public class EnnegelGlobProcedureMixin {
+public abstract class EnnegelGlobProcedureMixin {
     @Inject(method = "onRightClickBlock", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$cancelRightClick(PlayerInteractEvent.RightClickBlock event, CallbackInfo ci){
         ci.cancel();

@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Map;
 
 @Mixin(ReloadableServerResources.class)
-public class ReloadableServerResourcesMixin {
+public abstract class ReloadableServerResourcesMixin {
 
     @ModifyExpressionValue(method = "updateRegistryTags(Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/tags/TagManager$LoadResult;)V",
     at = @At(value = "INVOKE", target = "Lnet/minecraft/tags/TagManager$LoadResult;tags()Ljava/util/Map;"))

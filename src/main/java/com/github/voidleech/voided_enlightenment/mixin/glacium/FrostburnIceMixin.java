@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(FrostburnIceBlock.class)
-public class FrostburnIceMixin extends Block {
+public abstract class FrostburnIceMixin extends Block {
     public FrostburnIceMixin(Properties pProperties) {
         super(pProperties);
     }

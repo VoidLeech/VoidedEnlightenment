@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(OozeFluidBlock.class)
-public class OozeFluidBlockMixin extends LiquidBlock {
+public abstract class OozeFluidBlockMixin extends LiquidBlock {
     public OozeFluidBlockMixin(FlowingFluid pFluid, Properties pProperties) {
         super(pFluid, pProperties);
     }

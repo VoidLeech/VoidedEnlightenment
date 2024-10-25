@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(NuclearFurnaceNeighbourBlockChangesProcedure.class)
-public class HopperKillingProcedureMixin {
+public abstract class HopperKillingProcedureMixin {
     @Inject(method = "execute", at = @At("HEAD"), cancellable = true, remap = false)
     private static void voided_enlightenment$dontBreakHopper(LevelAccessor world, double x, double y, double z, CallbackInfo ci){
         // It's not like the capabilities don't work on the sides.

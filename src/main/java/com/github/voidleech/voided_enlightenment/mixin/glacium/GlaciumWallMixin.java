@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GlaciumBrickWallBlock.class)
-public class GlaciumWallMixin extends WallBlock {
+public abstract class GlaciumWallMixin extends WallBlock {
     public GlaciumWallMixin(Properties pProperties) {
         super(pProperties);
     }

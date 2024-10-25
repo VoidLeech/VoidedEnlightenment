@@ -21,7 +21,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(NuclearBombBlock.class)
-public class NukeBlockMixin extends Block {
+public abstract class NukeBlockMixin extends Block {
     public NukeBlockMixin(Properties pProperties) {
         super(pProperties);
     }

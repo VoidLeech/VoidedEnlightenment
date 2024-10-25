@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.function.Supplier;
 
 @Mixin(GlaciumBrickStairsBlock.class)
-public class GlaciumStairsMixin extends StairBlock {
+public abstract class GlaciumStairsMixin extends StairBlock {
 
     public GlaciumStairsMixin(Supplier<BlockState> state, Properties properties) {
         super(state, properties);

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(OozeRainChanceProcedure.class)
-public class OozeRainChanceProcedureMixin {
+public abstract class OozeRainChanceProcedureMixin {
     @Inject(method = "execute(Lnet/minecraftforge/eventbus/api/Event;Lnet/minecraft/world/level/LevelAccessor;)V",
             at = @At(
                     value = "INVOKE",

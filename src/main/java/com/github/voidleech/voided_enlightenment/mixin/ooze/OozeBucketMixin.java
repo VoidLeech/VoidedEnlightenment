@@ -17,7 +17,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(OozeFluidItem.class)
-public class OozeBucketMixin extends Item {
+public abstract class OozeBucketMixin extends Item {
     public OozeBucketMixin(Properties pProperties) {
         super(pProperties);
     }
