@@ -149,7 +149,10 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
-    implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}")
+
+    // Oblivion
+    // implementation fg.deobf("curse.maven:oblivion-1096331:5692443") // 1.1.0 todo update
+    implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}") // Local for concurrent dev
 
     // Create compat
     compileOnly fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
