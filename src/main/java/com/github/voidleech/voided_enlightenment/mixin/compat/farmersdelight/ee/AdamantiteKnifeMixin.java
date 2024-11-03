@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.mixin.misc.item;
+package com.github.voidleech.voided_enlightenment.mixin.compat.farmersdelight.ee;
 
 import net.mcreator.enlightened_end.item.AdamantiteKnifeItem;
 import net.minecraft.network.chat.Component;

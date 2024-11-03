@@ -41,6 +41,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Hoppers don't break when horizontally adjacent to Nuclear Furnaces anymore.
 - Crafting of Adamantite Gear via Iron. Now needs Diamond as is it far more comparable to Netherite.
 - Standing next to Glacium Blocks is now safe, only the top is dangerous. (Note: this will be re-added /w more consistency in a future update)
+- "Enlightend: Compatability" Creative Mode Tab. Other mods adding to this tab should see their items show up in Enlightend's main tab.
 
 ### Fixes
 - Enlightend's potion recipes are now viewable in recipe viewers like JEI.
