@@ -4,7 +4,6 @@ import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.mcreator.enlightened_end.init.EnlightenedEndModTabs;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.spongepowered.asm.mixin.Final;
@@ -18,7 +17,7 @@ public abstract class DeferredRegisterMixin {
     @Shadow @Final private String modid;
 
     /** Completely removes Enlightend's compatibility tab and just makes the field point at
-     * @reason See EETabsMixin for reasoning.
+     * @reason See compat/farmersdelight/ee/EETabsMixin for reasoning.
      */
     @WrapMethod(method = "register(Ljava/lang/String;Ljava/util/function/Supplier;)Lnet/minecraftforge/registries/RegistryObject;", remap = false)
     private <I> RegistryObject<I> voided_enlightenment$pointCompatTabAtBaseTab(String name, Supplier<? extends I> sup, Operation<RegistryObject<I>> original){

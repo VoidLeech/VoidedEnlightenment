@@ -151,8 +151,12 @@ dependencies {
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
 
     // Oblivion
-    implementation fg.deobf("maven.modrinth:oblivion-api:${oblivion_version}-${minecraft_version}")
-    // implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}") // Local for concurrent dev
+    if (oblivion_version > public_oblivion_version) {
+        implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api:${oblivion_version}") // Local for concurrent dev
+    }
+    else {
+        implementation fg.deobf("maven.modrinth:oblivion-api:${oblivion_version}-${minecraft_version}")
+    }
 
     // Create compat
     compileOnly fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }

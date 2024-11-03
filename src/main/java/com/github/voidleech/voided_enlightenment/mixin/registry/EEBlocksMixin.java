@@ -1,0 +1,66 @@
+package com.github.voidleech.voided_enlightenment.mixin.registry;
+
+import com.github.voidleech.oblivion.blocks.OblivionHangingSignBlock;
+import com.github.voidleech.oblivion.blocks.OblivionStandingSignBlock;
+import com.github.voidleech.oblivion.blocks.OblivionWallHangingSignBlock;
+import com.github.voidleech.oblivion.blocks.OblivionWallSignBlock;
+import com.github.voidleech.voided_enlightenment.registry.VEBlocks;
+import com.github.voidleech.voided_enlightenment.registry.VEWoodTypes;
+import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
+
+@Mixin(EnlightenedEndModBlocks.class)
+public abstract class EEBlocksMixin {
+    // This is one massive hack to get the signs registered under Enlightend's mod id, s.t. mods like EveryCompat can detect them
+    @Shadow @Final public static DeferredRegister<Block> REGISTRY;
+    @Unique
+    private static final RegistryObject<OblivionStandingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN = REGISTRY.register("cerulean_sign", () ->
+            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+
+    @Unique
+    private static final RegistryObject<OblivionWallSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_WALL_SIGN = REGISTRY.register("cerulean_wall_sign", () ->
+            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+
+    @Unique
+    private static final RegistryObject<OblivionHangingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN = REGISTRY.register("cerulean_hanging_sign", () ->
+            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+
+    @Unique
+    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_WALL_SIGN = REGISTRY.register("cerulean_hanging_wall_sign", () ->
+            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+
+    @Unique
+    private static final RegistryObject<OblivionStandingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN = REGISTRY.register("indigo_sign", () ->
+            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+
+    @Unique
+    private static final RegistryObject<OblivionWallSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_WALL_SIGN = REGISTRY.register("indigo_wall_sign", () ->
+            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+
+    @Unique
+    private static final RegistryObject<OblivionHangingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN = REGISTRY.register("indigo_hanging_sign", () ->
+            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+
+    @Unique
+    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_HANGING_WALL_SIGN = REGISTRY.register("indigo_hanging_wall_sign", () ->
+            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+
+    static {
+        VEBlocks.CERULEAN_STANDING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN);
+        VEBlocks.CERULEAN_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_WALL_SIGN);
+        VEBlocks.CERULEAN_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN);
+        VEBlocks.CERULEAN_HANGING_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_WALL_SIGN);
+        VEBlocks.INDIGO_STANDING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN);
+        VEBlocks.INDIGO_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_WALL_SIGN);
+        VEBlocks.INDIGO_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN);
+        VEBlocks.INDIGO_HANGING_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_WALL_SIGN);
+    }
+}

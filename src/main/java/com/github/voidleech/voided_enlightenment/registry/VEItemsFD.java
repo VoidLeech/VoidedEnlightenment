@@ -12,7 +12,7 @@ import vectorwing.farmersdelight.common.item.KnifeItem;
 
 public class VEItemsFD {
 
-    // We'll just make our own knife because some I cannot give something a different superclass with mixin
+    // We'll just make our own knife because I cannot give something a different superclass with mixin
     public static final RegistryObject<KnifeItem> ADAMANTITE_KNIFE = VEItems.ITEMS.register("adamantite_knife", () ->
             // I hate this, all the Enlightend tools use inlined tiers /w different attack damage bonus,
                     // I just have to take a *stab* here to see what the damage value should be

@@ -2,7 +2,7 @@
   "type": "create:crushing",
   "ingredients": [
     {
-      "item": "enlightened_end:irradium_ore"
+      "item": "enlightened_end:raw_irradium"
     }
   ],
   "results": [
@@ -10,19 +10,11 @@
       "item": "voided_enlightenment:crushed_raw_irradium"
     },
     {
-      "item": "voided_enlightenment:crushed_raw_irradium",
-      "chance": 0.75
-    },
-    {
       "item": "create:experience_nugget",
       "chance": 0.75
-    },
-    {
-      "item": "minecraft:end_stone",
-      "chance": 0.125
     }
   ],
-  "processingTime": 250,
+  "processingTime": 400,
   "conditions": [
     {
       "type": "forge:mod_loaded",

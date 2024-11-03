@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "voided_enlightenment:item/crushed_raw_bismuth"
+  }
+}

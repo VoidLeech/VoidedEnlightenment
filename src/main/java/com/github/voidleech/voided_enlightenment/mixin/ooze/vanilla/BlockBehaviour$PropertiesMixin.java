@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(targets = "net.minecraft.world.level.block.state.BlockBehaviour$Properties")
+@Mixin(BlockBehaviour.Properties.class)
 public class BlockBehaviour$PropertiesMixin {
     // Ensure that blocks copying from Cauldron don't take over the isRandomlyTicking value and have to get that as normal by calling randomTicks()
     @ModifyReturnValue(method = "copy", at = @At("RETURN"))

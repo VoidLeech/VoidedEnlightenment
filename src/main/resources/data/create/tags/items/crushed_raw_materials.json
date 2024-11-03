@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "voided_enlightenment:crushed_raw_bismuth",
+      "required": false
+    },
+    {
+      "id": "voided_enlightenment:crushed_raw_irradium",
+      "required": false
+    }
+  ]
+}

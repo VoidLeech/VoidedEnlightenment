@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "enlightened_end:item/indigo_chest_boat"
+  }
+}
