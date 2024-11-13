@@ -25,7 +25,7 @@ public abstract class EEItemsMixin {
 
     @Unique
     private static final RegistryObject<HangingSignItem> VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN = REGISTRY.register("cerulean_hanging_sign", () ->
-            new HangingSignItem(VEBlocks.CERULEAN_HANGING_SIGN.get().get(), VEBlocks.CERULEAN_HANGING_WALL_SIGN.get().get(), new Item.Properties().stacksTo(16)));
+            new HangingSignItem(VEBlocks.CERULEAN_HANGING_SIGN.get().get(), VEBlocks.CERULEAN_WALL_HANGING_SIGN.get().get(), new Item.Properties().stacksTo(16)));
 
     @Unique
     private static final RegistryObject<SignItem> VOIDED_ENLIGHTENMENT$INDIGO_SIGN = REGISTRY.register("indigo_sign", () ->
@@ -33,7 +33,7 @@ public abstract class EEItemsMixin {
 
     @Unique
     private static final RegistryObject<HangingSignItem> VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN = REGISTRY.register("indigo_hanging_sign", () ->
-            new HangingSignItem(VEBlocks.INDIGO_HANGING_SIGN.get().get(), VEBlocks.INDIGO_HANGING_WALL_SIGN.get().get(), new Item.Properties().stacksTo(16)));
+            new HangingSignItem(VEBlocks.INDIGO_HANGING_SIGN.get().get(), VEBlocks.INDIGO_WALL_HANGING_SIGN.get().get(), new Item.Properties().stacksTo(16)));
 
     @Unique
     private static final RegistryObject<VEBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_BOAT = REGISTRY.register("cerulean_boat",

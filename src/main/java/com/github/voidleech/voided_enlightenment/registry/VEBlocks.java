@@ -22,7 +22,7 @@ public class VEBlocks {
 
     public static final AssignOnceSupplier<OblivionHangingSignBlock> CERULEAN_HANGING_SIGN = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<OblivionWallHangingSignBlock> CERULEAN_HANGING_WALL_SIGN = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionWallHangingSignBlock> CERULEAN_WALL_HANGING_SIGN = new AssignOnceSupplier<>();
 
     public static final AssignOnceSupplier<OblivionStandingSignBlock> INDIGO_STANDING_SIGN = new AssignOnceSupplier<>();
 
@@ -30,11 +30,13 @@ public class VEBlocks {
 
     public static final AssignOnceSupplier<OblivionHangingSignBlock> INDIGO_HANGING_SIGN = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<OblivionWallHangingSignBlock> INDIGO_HANGING_WALL_SIGN = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionWallHangingSignBlock> INDIGO_WALL_HANGING_SIGN = new AssignOnceSupplier<>();
 
     public static void register(IEventBus modEventBus){
         BLOCKS.register(modEventBus);
         OblivionBlockEntities.addSign(() -> CERULEAN_STANDING_SIGN.get().get(), () -> CERULEAN_WALL_SIGN.get().get(),
-                () -> CERULEAN_HANGING_SIGN.get().get(), () -> CERULEAN_HANGING_WALL_SIGN.get().get());
+                () -> CERULEAN_HANGING_SIGN.get().get(), () -> CERULEAN_WALL_HANGING_SIGN.get().get());
+        OblivionBlockEntities.addSign(() -> INDIGO_STANDING_SIGN.get().get(), () -> INDIGO_WALL_SIGN.get().get(),
+                () -> INDIGO_HANGING_SIGN.get().get(), () -> INDIGO_WALL_HANGING_SIGN.get().get());
     }
 }

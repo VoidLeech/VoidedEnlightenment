@@ -10,6 +10,7 @@ import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.spongepowered.asm.mixin.Final;
@@ -23,44 +24,48 @@ public abstract class EEBlocksMixin {
     @Shadow @Final public static DeferredRegister<Block> REGISTRY;
     @Unique
     private static final RegistryObject<OblivionStandingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN = REGISTRY.register("cerulean_sign", () ->
-            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN).mapColor(MapColor.COLOR_CYAN), VEWoodTypes.CERULEAN));
 
     @Unique
     private static final RegistryObject<OblivionWallSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_WALL_SIGN = REGISTRY.register("cerulean_wall_sign", () ->
-            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN.get())
+                    .dropsLike(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN.get()), VEWoodTypes.CERULEAN));
 
     @Unique
     private static final RegistryObject<OblivionHangingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN = REGISTRY.register("cerulean_hanging_sign", () ->
-            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN.get()), VEWoodTypes.CERULEAN));
 
     @Unique
-    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_WALL_SIGN = REGISTRY.register("cerulean_hanging_wall_sign", () ->
-            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.CERULEAN));
+    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$CERULEAN_WALL_HANGING_SIGN = REGISTRY.register("cerulean_wall_hanging_sign", () ->
+            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN.get())
+                    .dropsLike(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN.get()), VEWoodTypes.CERULEAN));
 
     @Unique
     private static final RegistryObject<OblivionStandingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN = REGISTRY.register("indigo_sign", () ->
-            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+            new OblivionStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN).mapColor(MapColor.COLOR_PURPLE), VEWoodTypes.INDIGO));
 
     @Unique
     private static final RegistryObject<OblivionWallSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_WALL_SIGN = REGISTRY.register("indigo_wall_sign", () ->
-            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+            new OblivionWallSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN.get())
+                    .dropsLike(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN.get()), VEWoodTypes.INDIGO));
 
     @Unique
     private static final RegistryObject<OblivionHangingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN = REGISTRY.register("indigo_hanging_sign", () ->
-            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+            new OblivionHangingSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN.get()), VEWoodTypes.INDIGO));
 
     @Unique
-    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_HANGING_WALL_SIGN = REGISTRY.register("indigo_hanging_wall_sign", () ->
-            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), VEWoodTypes.INDIGO));
+    private static final RegistryObject<OblivionWallHangingSignBlock> VOIDED_ENLIGHTENMENT$INDIGO_WALL_HANGING_SIGN = REGISTRY.register("indigo_wall_hanging_sign", () ->
+            new OblivionWallHangingSignBlock(BlockBehaviour.Properties.copy(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN.get())
+                    .dropsLike(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN.get()), VEWoodTypes.INDIGO));
 
     static {
         VEBlocks.CERULEAN_STANDING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN);
         VEBlocks.CERULEAN_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_WALL_SIGN);
         VEBlocks.CERULEAN_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN);
-        VEBlocks.CERULEAN_HANGING_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_WALL_SIGN);
+        VEBlocks.CERULEAN_WALL_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_WALL_HANGING_SIGN);
         VEBlocks.INDIGO_STANDING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_STANDING_SIGN);
         VEBlocks.INDIGO_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_WALL_SIGN);
         VEBlocks.INDIGO_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN);
-        VEBlocks.INDIGO_HANGING_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_WALL_SIGN);
+        VEBlocks.INDIGO_WALL_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_WALL_HANGING_SIGN);
     }
 }
