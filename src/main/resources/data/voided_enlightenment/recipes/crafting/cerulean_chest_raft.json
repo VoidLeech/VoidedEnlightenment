@@ -7,10 +7,10 @@
       "tag": "forge:chests/wooden"
     },
     {
-      "item": "enlightened_end:cerulean_boat"
+      "item": "enlightened_end:cerulean_raft"
     }
   ],
   "result": {
-    "item": "enlightened_end:cerulean_chest_boat"
+    "item": "enlightened_end:cerulean_chest_raft"
   }
 }

@@ -20,9 +20,9 @@ public class VEItems {
     public static final AssignOnceSupplier<SignItem> INDIGO_SIGN = new AssignOnceSupplier<>();
     public static final AssignOnceSupplier<HangingSignItem> INDIGO_HANGING_SIGN = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_RAFT = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_CHEST_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_CHEST_RAFT = new AssignOnceSupplier<>();
 
     public static final AssignOnceSupplier<OblivionBoatItem> INDIGO_BOAT = new AssignOnceSupplier<>();
 
@@ -39,8 +39,8 @@ public class VEItems {
             event.accept(CERULEAN_HANGING_SIGN.get());
             event.accept(INDIGO_SIGN.get());
             event.accept(INDIGO_HANGING_SIGN.get());
-            event.accept(CERULEAN_BOAT.get());
-            event.accept(CERULEAN_CHEST_BOAT.get());
+            event.accept(CERULEAN_RAFT.get());
+            event.accept(CERULEAN_CHEST_RAFT.get());
             event.accept(INDIGO_BOAT.get());
             event.accept(INDIGO_CHEST_BOAT.get());
         }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "enlightened_end:item/cerulean_chest_boat"
+    "layer0": "enlightened_end:item/cerulean_raft"
   }
 }

@@ -36,11 +36,11 @@ public abstract class EEItemsMixin {
             new HangingSignItem(VEBlocks.INDIGO_HANGING_SIGN.get().get(), VEBlocks.INDIGO_WALL_HANGING_SIGN.get().get(), new Item.Properties().stacksTo(16)));
 
     @Unique
-    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_BOAT = REGISTRY.register("cerulean_boat",
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_RAFT = REGISTRY.register("cerulean_raft",
             () -> new OblivionBoatItem(false, VEWoodTypes.VEBoatType.CERULEAN, new Item.Properties().stacksTo(1)));
 
     @Unique
-    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_BOAT = REGISTRY.register("cerulean_chest_boat",
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_RAFT = REGISTRY.register("cerulean_chest_raft",
             () -> new OblivionBoatItem(true, VEWoodTypes.VEBoatType.CERULEAN, new Item.Properties().stacksTo(1)));
 
     @Unique
@@ -56,8 +56,8 @@ public abstract class EEItemsMixin {
         VEItems.CERULEAN_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_HANGING_SIGN);
         VEItems.INDIGO_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_SIGN);
         VEItems.INDIGO_HANGING_SIGN.assign(VOIDED_ENLIGHTENMENT$INDIGO_HANGING_SIGN);
-        VEItems.CERULEAN_BOAT.assign(VOIDED_ENLIGHTENMENT$CERULEAN_BOAT);
-        VEItems.CERULEAN_CHEST_BOAT.assign(VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_BOAT);
+        VEItems.CERULEAN_RAFT.assign(VOIDED_ENLIGHTENMENT$CERULEAN_RAFT);
+        VEItems.CERULEAN_CHEST_RAFT.assign(VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_RAFT);
         VEItems.INDIGO_BOAT.assign(VOIDED_ENLIGHTENMENT$INDIGO_BOAT);
         VEItems.INDIGO_CHEST_BOAT.assign(VOIDED_ENLIGHTENMENT$INDIGO_CHEST_BOAT);
     }

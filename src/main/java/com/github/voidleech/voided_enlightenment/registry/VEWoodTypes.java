@@ -17,7 +17,7 @@ public class VEWoodTypes {
 
     public enum VEBoatType implements OblivionBoatType {
 
-        CERULEAN(EnlightenedEndModBlocks.CERULEAN_PLANKS.get(), "cerulean", VEItems.CERULEAN_BOAT.get(), VEItems.CERULEAN_CHEST_BOAT.get(), true),
+        CERULEAN(EnlightenedEndModBlocks.CERULEAN_PLANKS.get(), "cerulean", VEItems.CERULEAN_RAFT.get(), VEItems.CERULEAN_CHEST_RAFT.get(), true),
         INDIGO(EnlightenedEndModBlocks.INDIGO_PLANKS.get(), "indigo", VEItems.INDIGO_BOAT.get(), VEItems.INDIGO_CHEST_BOAT.get(), false);
 
         private final String name;

@@ -34,9 +34,9 @@ public class VEBlocks {
 
     public static void register(IEventBus modEventBus){
         BLOCKS.register(modEventBus);
-        OblivionBlockEntities.addSign(() -> CERULEAN_STANDING_SIGN.get().get(), () -> CERULEAN_WALL_SIGN.get().get(),
-                () -> CERULEAN_HANGING_SIGN.get().get(), () -> CERULEAN_WALL_HANGING_SIGN.get().get());
-        OblivionBlockEntities.addSign(() -> INDIGO_STANDING_SIGN.get().get(), () -> INDIGO_WALL_SIGN.get().get(),
-                () -> INDIGO_HANGING_SIGN.get().get(), () -> INDIGO_WALL_HANGING_SIGN.get().get());
+        OblivionBlockEntities.addSign(CERULEAN_STANDING_SIGN.get(), CERULEAN_WALL_SIGN.get(),
+                CERULEAN_HANGING_SIGN.get(), CERULEAN_WALL_HANGING_SIGN.get());
+        OblivionBlockEntities.addSign(INDIGO_STANDING_SIGN.get(), INDIGO_WALL_SIGN.get(),
+                INDIGO_HANGING_SIGN.get(), INDIGO_WALL_HANGING_SIGN.get());
     }
 }
