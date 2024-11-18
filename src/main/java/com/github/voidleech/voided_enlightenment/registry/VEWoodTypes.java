@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment.registry;
 
 import com.github.voidleech.oblivion.entities.OblivionBoatType;
+import com.github.voidleech.oblivion.items.OblivionBoatItem;
 import net.mcreator.enlightened_end.EnlightenedEndMod;
 import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.minecraft.world.item.Item;
@@ -21,17 +22,17 @@ public class VEWoodTypes {
         INDIGO(EnlightenedEndModBlocks.INDIGO_PLANKS.get(), "indigo", VEItems.INDIGO_BOAT.get(), VEItems.INDIGO_CHEST_BOAT.get(), false);
 
         private final String name;
-        private final Supplier<? extends Item> boat;
-        private final Supplier<? extends Item> chestBoat;
+        private final Supplier<? extends OblivionBoatItem> boat;
+        private final Supplier<? extends OblivionBoatItem> chestBoat;
         private final boolean usesRaftModel;
         private final Block planks;
-        VEBoatType(Block pPlanks, String pName, Supplier<? extends Item> boat, Supplier<? extends Item> chestBoat, boolean usesRaftModel) {
+        VEBoatType(Block pPlanks, String pName, Supplier<? extends OblivionBoatItem> boat, Supplier<? extends OblivionBoatItem> chestBoat, boolean usesRaftModel) {
             this.name = pName;
             this.boat = boat;
             this.chestBoat = chestBoat;
             this.planks = pPlanks;
             this.usesRaftModel = usesRaftModel;
-            TYPES.put(getSerializedName(), this);
+            initOBT();
         }
 
         @Override

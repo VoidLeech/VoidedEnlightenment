@@ -21,6 +21,8 @@ import com.mojang.logging.LogUtils;
 import net.mcreator.enlightened_end.EnlightenedEndMod;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
+import net.minecraft.client.model.ChestRaftModel;
+import net.minecraft.client.model.RaftModel;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -102,8 +104,8 @@ public class VoidedEnlightenment
 
         @SubscribeEvent
         public static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
-            event.registerLayerDefinition(VEModelLayers.CERULEAN_BOAT_LAYER, BoatModel::createBodyModel);
-            event.registerLayerDefinition(VEModelLayers.CERULEAN_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
+            event.registerLayerDefinition(VEModelLayers.CERULEAN_RAFT_LAYER, RaftModel::createBodyModel);
+            event.registerLayerDefinition(VEModelLayers.CERULEAN_CHEST_RAFT_LAYER, ChestRaftModel::createBodyModel);
             event.registerLayerDefinition(VEModelLayers.INDIGO_BOAT_LAYER, BoatModel::createBodyModel);
             event.registerLayerDefinition(VEModelLayers.INDIGO_CHEST_BOAT_LAYER, ChestBoatModel::createBodyModel);
         }
