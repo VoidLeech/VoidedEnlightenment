@@ -1,12 +1,11 @@
 package com.github.voidleech.voided_enlightenment;
 
-import com.github.voidleech.voided_enlightenment.entities.client.VEBoatRenderer;
+import com.github.voidleech.oblivion.entities.client.OblivionBoatRenderer;
 import com.github.voidleech.voided_enlightenment.entities.client.VEModelLayers;
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
 import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
 import com.github.voidleech.voided_enlightenment.registry.VEBlocks;
 import com.github.voidleech.voided_enlightenment.registry.VEDispenserBehaviors;
-import com.github.voidleech.voided_enlightenment.registry.VEEntities;
 import com.github.voidleech.voided_enlightenment.registry.VEFluidInteractions;
 import com.github.voidleech.voided_enlightenment.registry.VEItems;
 import com.github.voidleech.voided_enlightenment.registry.VEItemsC;
@@ -19,10 +18,10 @@ import com.github.voidleech.voided_enlightenment.registry.VERecipeTypes;
 import com.github.voidleech.voided_enlightenment.registry.VERecipeTypesFD;
 import com.github.voidleech.voided_enlightenment.registry.VEWoodTypes;
 import com.mojang.logging.LogUtils;
+import net.mcreator.enlightened_end.EnlightenedEndMod;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -54,7 +53,6 @@ public class VoidedEnlightenment
 
         VEBlocks.register(modEventBus);
         VEItems.register(modEventBus);
-        VEEntities.register(modEventBus);
         VERecipeTypes.register(modEventBus);
         VERecipeSerializers.register(modEventBus);
 
@@ -95,12 +93,10 @@ public class VoidedEnlightenment
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            OblivionBoatRenderer.registerBoatResources(VEWoodTypes.VEBoatType.class, EnlightenedEndMod.MODID);
             event.enqueueWork(() -> {
                 Sheets.addWoodType(VEWoodTypes.CERULEAN);
                 Sheets.addWoodType(VEWoodTypes.INDIGO);
-
-                EntityRenderers.register(VEEntities.BOAT.get().get(), context -> new VEBoatRenderer(context, false));
-                EntityRenderers.register(VEEntities.CHEST_BOAT.get().get(), context -> new VEBoatRenderer(context, true));
             });
         }
 

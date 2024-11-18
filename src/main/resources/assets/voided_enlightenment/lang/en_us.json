@@ -6,12 +6,10 @@
   "block.enlightened_end.cerulean_hanging_sign": "Cerulean Hanging Sign",
   "block.enlightened_end.indigo_sign": "Indigo Sign",
   "block.enlightened_end.indigo_hanging_sign": "Indigo Hanging Sign",
-  "item.enlightened_end.cerulean_boat": "Cerulean Boat",
-  "item.enlightened_end.cerulean_chest_boat": "Cerulean Boat with Chest",
+  "item.enlightened_end.cerulean_boat": "Cerulean Raft",
+  "item.enlightened_end.cerulean_chest_boat": "Cerulean Raft with Chest",
   "item.enlightened_end.indigo_boat": "Indigo Boat",
   "item.enlightened_end.indigo_chest_boat": "Indigo Boat with Chest",
-  "entity.enlightened_end.boat": "Boat",
-  "entity.enlightened_end.chest_boat": "Boat with Chest",
   "tooltip.voided_enlightenment.knife_deprecation": "This implementation of the Adamantite Knife is superseded by Voided Enlightenment's implementation.\nUpgrade it by placing it in a crafting grid.",
   "tooltip.voided_enlightenment.knife_unsupported": "This implementation of the Adamantite Knife is unsupported by Voided Enlightenment.\nInstall Farmer's Delight to be able upgrade it to a functional knife."
 }

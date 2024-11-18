@@ -91,6 +91,3 @@ So all in all I'm more inclined to stick to 5.0.14 and develop new features and 
 ### Licensing
 This project is released under the [Avoiding Leeching License, version 1.0](LICENSE).  
 Special permission is granted to Lixir, the developer of Enlightend, to use, copy, modify, share, and deal in the mod's code and assets, but not the branding, as he sees fit, exclusively for the purpose of improving Enlightend, with no further restrictions.
-
-#### Third-Party Content
-This project contains code from Kaupenjoe's 1.20.X Forge Tutorial (Boats), which is licensed under the [MIT license](other-licenses/mit-kaupenjoe).

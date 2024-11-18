@@ -23,7 +23,7 @@
     "ooze.vanilla.BlockBehaviour$PropertiesMixin", "ooze.vanilla.BlockBehaviourMixin",
     "ooze.vanilla.BlocksMixinForCauldron", "ooze.vanilla.LavaFluidMixin", "ooze.vanilla.ReloadableServerResourcesMixin",
     "potion.BurdenedRecipeMixin", "potion.FrigidRecipeMixin", "potion.RootedRecipeMixin",
-    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "registry.EEBlocksMixin", "registry.EEEntitiesMixin",
+    "potion.SuffocationRecipeMixin", "potion.VitalityRecipeMixin", "registry.EEBlocksMixin",
     "registry.EEItemsMixin", "sound.EndMusicMixin", "sound.GasVentBottomMixin", "sound.OozeRainAmbienceMixin"
   ],
   "client": [

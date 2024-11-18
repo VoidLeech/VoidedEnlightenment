@@ -1,8 +1,8 @@
 package com.github.voidleech.voided_enlightenment.registry;
 
+import com.github.voidleech.oblivion.items.OblivionBoatItem;
 import com.github.voidleech.oblivion.util.AssignOnceSupplier;
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
-import com.github.voidleech.voided_enlightenment.items.VEBoatItem;
 import net.mcreator.enlightened_end.init.EnlightenedEndModTabs;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
@@ -20,13 +20,13 @@ public class VEItems {
     public static final AssignOnceSupplier<SignItem> INDIGO_SIGN = new AssignOnceSupplier<>();
     public static final AssignOnceSupplier<HangingSignItem> INDIGO_HANGING_SIGN = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<VEBoatItem> CERULEAN_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_BOAT = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<VEBoatItem> CERULEAN_CHEST_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> CERULEAN_CHEST_BOAT = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<VEBoatItem> INDIGO_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> INDIGO_BOAT = new AssignOnceSupplier<>();
 
-    public static final AssignOnceSupplier<VEBoatItem> INDIGO_CHEST_BOAT = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<OblivionBoatItem> INDIGO_CHEST_BOAT = new AssignOnceSupplier<>();
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

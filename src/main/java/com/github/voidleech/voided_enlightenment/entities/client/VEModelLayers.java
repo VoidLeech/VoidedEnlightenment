@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.entities.client;
 
+import com.github.voidleech.oblivion.Oblivion;
 import net.mcreator.enlightened_end.EnlightenedEndMod;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.resources.ResourceLocation;

@@ -1,9 +1,9 @@
 package com.github.voidleech.voided_enlightenment.mixin.registry;
 
-import com.github.voidleech.voided_enlightenment.entities.VEBoatEntity;
-import com.github.voidleech.voided_enlightenment.items.VEBoatItem;
+import com.github.voidleech.oblivion.items.OblivionBoatItem;
 import com.github.voidleech.voided_enlightenment.registry.VEBlocks;
 import com.github.voidleech.voided_enlightenment.registry.VEItems;
+import com.github.voidleech.voided_enlightenment.registry.VEWoodTypes;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
@@ -36,20 +36,20 @@ public abstract class EEItemsMixin {
             new HangingSignItem(VEBlocks.INDIGO_HANGING_SIGN.get().get(), VEBlocks.INDIGO_WALL_HANGING_SIGN.get().get(), new Item.Properties().stacksTo(16)));
 
     @Unique
-    private static final RegistryObject<VEBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_BOAT = REGISTRY.register("cerulean_boat",
-            () -> new VEBoatItem(false, VEBoatEntity.Type.CERULEAN, new Item.Properties().stacksTo(1)));
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_BOAT = REGISTRY.register("cerulean_boat",
+            () -> new OblivionBoatItem(false, VEWoodTypes.VEBoatType.CERULEAN, new Item.Properties().stacksTo(1)));
 
     @Unique
-    private static final RegistryObject<VEBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_BOAT = REGISTRY.register("cerulean_chest_boat",
-            () -> new VEBoatItem(true, VEBoatEntity.Type.CERULEAN, new Item.Properties().stacksTo(1)));
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$CERULEAN_CHEST_BOAT = REGISTRY.register("cerulean_chest_boat",
+            () -> new OblivionBoatItem(true, VEWoodTypes.VEBoatType.CERULEAN, new Item.Properties().stacksTo(1)));
 
     @Unique
-    private static final RegistryObject<VEBoatItem> VOIDED_ENLIGHTENMENT$INDIGO_BOAT = REGISTRY.register("indigo_boat",
-            () -> new VEBoatItem(false, VEBoatEntity.Type.INDIGO, new Item.Properties().stacksTo(1)));
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$INDIGO_BOAT = REGISTRY.register("indigo_boat",
+            () -> new OblivionBoatItem(false, VEWoodTypes.VEBoatType.INDIGO, new Item.Properties().stacksTo(1)));
 
     @Unique
-    private static final RegistryObject<VEBoatItem> VOIDED_ENLIGHTENMENT$INDIGO_CHEST_BOAT = REGISTRY.register("indigo_chest_boat",
-            () -> new VEBoatItem(true, VEBoatEntity.Type.INDIGO, new Item.Properties().stacksTo(1)));
+    private static final RegistryObject<OblivionBoatItem> VOIDED_ENLIGHTENMENT$INDIGO_CHEST_BOAT = REGISTRY.register("indigo_chest_boat",
+            () -> new OblivionBoatItem(true, VEWoodTypes.VEBoatType.INDIGO, new Item.Properties().stacksTo(1)));
 
     static {
         VEItems.CERULEAN_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_SIGN);
