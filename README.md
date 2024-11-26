@@ -39,6 +39,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Turned off the one-time-per-world in-game advertising, see [details](src/main/java/com/github/voidleech/voided_enlightenment/mixin/misc/PatreonMessageMixin.java) if you're interested in supporting the dev of the original mod.
 - Liquid Ooze is no longer a swimmable liquid, isn't renewable via adjacent source blocks anymore, and is slightly slower to move through.
 - Disabled Void Leviathan spawning for the foreseeable future, until I figure out a way to tweak it that doesn't leave it as an unengaging damage sponge.
+  - There's a config to keep them from getting blocked from spawning.
 - Hoppers don't break when horizontally adjacent to Nuclear Furnaces anymore.
 - Crafting of Adamantite Gear via Iron. Now needs Diamond as is it far more comparable to Netherite.
 - Standing next to Glacium Blocks is now safe, only the top is dangerous. (Note: this will be re-added /w more consistency in a future update)

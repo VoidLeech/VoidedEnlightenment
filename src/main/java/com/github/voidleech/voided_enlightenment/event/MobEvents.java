@@ -1,12 +1,13 @@
 package com.github.voidleech.voided_enlightenment.event;
 
+import com.github.voidleech.voided_enlightenment.VoidedEnlightenmentConfig;
 import net.mcreator.enlightened_end.init.EnlightenedEndModEntities;
 import net.minecraftforge.event.entity.living.MobSpawnEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 public class MobEvents {
     private static void noLeviathan(MobSpawnEvent.FinalizeSpawn event){
-        if (event.getEntity().getType() == EnlightenedEndModEntities.VOID_LEVIATHAN.get()){
+        if (VoidedEnlightenmentConfig.leviathanBlocked && event.getEntity().getType() == EnlightenedEndModEntities.VOID_LEVIATHAN.get()){
             event.setSpawnCancelled(true);
         }
     }

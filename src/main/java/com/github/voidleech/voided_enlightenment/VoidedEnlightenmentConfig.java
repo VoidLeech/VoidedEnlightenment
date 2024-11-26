@@ -22,6 +22,12 @@ public class VoidedEnlightenmentConfig
 
     public static boolean oozeIsntWater;
 
+    private static final ForgeConfigSpec.BooleanValue LEVIATHAN_BLOCKED = BUILDER
+            .comment("Whether the Void Leviathan is blocked from spawning.")
+            .define("leviathan_blocked", true);
+
+    public static boolean leviathanBlocked;
+
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
     @SubscribeEvent
@@ -29,5 +35,6 @@ public class VoidedEnlightenmentConfig
     {
         nukeAllowed = NUKE_ALLOWED.get();
         oozeIsntWater = OOZE_ISNT_WATER.get();
+        leviathanBlocked = LEVIATHAN_BLOCKED.get();
     }
 }
