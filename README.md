@@ -66,6 +66,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Ooze Bucket can now be dispensed.
 - Ooze Bottle can now be obtained via dispenser.
 - Flash Bomb being able to persist on the entity it hit, continuously going off.
+- Fumesplat not dropping Splatter Gland.
 - See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
