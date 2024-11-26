@@ -1,0 +1,14 @@
+{
+  "comment": "Generally cold biomes",
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:magnetic_caves",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:frosted_caves",
+      "required": false
+    }
+  ]
+}

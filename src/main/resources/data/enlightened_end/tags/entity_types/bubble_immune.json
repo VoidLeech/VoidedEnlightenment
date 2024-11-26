@@ -41,6 +41,22 @@
       "required": false
     },
     {
+      "id": "alexscaves:hullbreaker",
+      "required": false
+    },
+    {
+      "id": "alexscaves:quarry_smasher",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gum_worm",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gum_worm_segment",
+      "required": false
+    },
+    {
       "id": "alexsmobs:anaconda",
       "required": false
     },

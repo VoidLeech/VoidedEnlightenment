@@ -1,0 +1,18 @@
+{
+  "comment": "Generally hot biomes",
+  "replace": false,
+  "values": [
+    {
+    "id": "alexscaves:candy_cavity",
+    "required": false
+    },
+    {
+      "id": "alexscaves:toxic_caves",
+      "required": false
+    },
+    {
+      "id": "yungscavebiomes:lost_caves",
+      "required": false
+    }
+  ]
+}

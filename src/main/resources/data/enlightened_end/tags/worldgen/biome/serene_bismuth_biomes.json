@@ -1,0 +1,10 @@
+{
+  "comment": "Generally simple biomes",
+  "replace": false,
+  "values": [
+    {
+      "id": "silverbirch:silver_birch_forest",
+      "required": false
+    }
+  ]
+}

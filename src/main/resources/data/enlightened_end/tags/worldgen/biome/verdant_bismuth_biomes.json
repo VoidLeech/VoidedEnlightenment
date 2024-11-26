@@ -1,0 +1,14 @@
+{
+  "comment": "Generally lush biomes",
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:priomordial_caves",
+      "required": false
+    },
+    {
+      "id": "snifferplus:timeless_grotto",
+      "required": false
+    }
+  ]
+}

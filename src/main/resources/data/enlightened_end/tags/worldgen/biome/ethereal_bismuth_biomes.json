@@ -1,0 +1,14 @@
+{
+  "comment": "Generally mystical biomes",
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:abyssal_chasm",
+      "required": false
+    },
+    {
+      "id": "alexscaves:forlorn_hollows",
+      "required": false
+    }
+  ]
+}
