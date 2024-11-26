@@ -5,6 +5,7 @@ import net.mcreator.enlightened_end.init.EnlightenedEndModBlocks;
 import net.mcreator.enlightened_end.init.EnlightenedEndModSounds;
 import net.mcreator.enlightened_end.item.EnnegelGlobItem;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -13,9 +14,13 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(EnnegelGlobItem.class)
 public abstract class EnnegelGlobMixin extends Item {
+    @Unique
+    private static final ResourceLocation voided_enlightenment$superEnnegelBounce = new ResourceLocation("enlightened_end:super_ennegel_bounce");
+
     public EnnegelGlobMixin(Properties pProperties) {
         super(pProperties);
     }
@@ -36,7 +41,7 @@ public abstract class EnnegelGlobMixin extends Item {
                 }
                 level.playSound(player, pContext.getClickedPos(), EnlightenedEndModSounds.ENNEGEL_BREAK.get(), SoundSource.BLOCKS, 1.0f, 1.4f);
                 if (bounceBoost + 0.1 > 2){
-                    AdvancementHelper.grantByName("enlightened_end:super_ennegel_bounce", player);
+                    AdvancementHelper.grantByName(voided_enlightenment$superEnnegelBounce, player);
                 }
                 return InteractionResult.sidedSuccess(level.isClientSide());
             }

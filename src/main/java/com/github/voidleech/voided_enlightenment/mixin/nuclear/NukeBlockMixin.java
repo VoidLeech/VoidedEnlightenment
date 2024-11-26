@@ -5,6 +5,7 @@ import com.github.voidleech.voided_enlightenment.VoidedEnlightenmentConfig;
 import net.mcreator.enlightened_end.block.NuclearBombBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModEntities;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -19,9 +20,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 
 @Mixin(NuclearBombBlock.class)
 public abstract class NukeBlockMixin extends Block {
+    @Unique
+    private static final ResourceLocation voided_enlightenment$iHaveBecomeDeath = new ResourceLocation("enlightened_end:ihavebecomedeath");
+
     public NukeBlockMixin(Properties pProperties) {
         super(pProperties);
     }
@@ -34,7 +39,7 @@ public abstract class NukeBlockMixin extends Block {
             pLevel.setBlockAndUpdate(pPos, Blocks.AIR.defaultBlockState());
             if (pLevel instanceof ServerLevel serverLevel){
                 EnlightenedEndModEntities.ACTIVATED_NUCLEAR_BOMB.get().spawn(serverLevel, pPos, MobSpawnType.TRIGGERED);
-                AdvancementHelper.grantByName("enlightened_end:ihavebecomedeath", pPlayer);
+                AdvancementHelper.grantByName(voided_enlightenment$iHaveBecomeDeath, pPlayer);
             }
             return InteractionResult.sidedSuccess(pLevel.isClientSide);
         }
