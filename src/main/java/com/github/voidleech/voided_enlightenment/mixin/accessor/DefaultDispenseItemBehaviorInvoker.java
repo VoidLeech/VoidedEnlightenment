@@ -8,6 +8,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 
 @Mixin(DefaultDispenseItemBehavior.class)
 public interface DefaultDispenseItemBehaviorInvoker {
-    @Invoker
+    @Invoker("execute")
     ItemStack callExecute(BlockSource source, ItemStack stack);
 }

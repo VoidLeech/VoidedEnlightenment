@@ -67,7 +67,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Ooze Bottle can now be obtained via dispenser.
 - Flash Bomb being able to persist on the entity it hit, continuously going off.
 - Fumesplat not dropping Splatter Gland.
-- See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet) now works as intended when used in combination with Enlightend.
+- See-Through Lava from various mods (Alex's Mobs: Lava Vision; L_Ender's Cataclysm: Ignitium Helmet, Create: Netherite Diving Helmet) now works as intended when used in combination with Enlightend.
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
 - Replaced Enlightend's Adamantite Knife with one that actually depends on Farmer's Delight: it now cuts grass without damaging, is enchantable, and will work with addons that require a KnifeItem.
@@ -80,15 +80,14 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 A: Yes, but do note our license does not allow directly including the mod files in your pack.
 
 **Q: Will you add support for Enlightend versions past 5.0.14, when that releases?**  
-A: I'm undecided but heavily lean towards no. It'd be an entire rewrite of the mod, as:
-- Lixir (Enlightend dev) has gone and stated he's fixed many (but tbf not all) of the bugs I've shimmied in a fix for.
-- His next big (stated to be final) update is also a massive rewrite, probably breaking a bunch/all of what I've done here.
-- He's adding a bunch of new features that I'll have to review for whether I think they're actually fun:
-  - This is a significant amount of work due to the nature of Enlightend being an MCreator mod, and the code being very unorganized. Editing it too is a pain.
-  - For some of the announced features, I already know I'd want to remove them, and the others don't excite me all that much to be worth switching over for.
-  - A stated dependency on V-Minus and the (valid but not to my taste) design mindset that comes with it. I'd have to gut that entire mod as well.
-
-So all in all I'm more inclined to stick to 5.0.14 and develop new features and fixes, instead of putting time into removing 99% of his update.
+A: No. I'd have to rewrite my entire mod, for a version of Enlightend that I'd not be using personally. And ultimately this is a 'fix things so that I can enjoy them' mod that I just happen to share.  
+  **Q: Why is it a rewrite? Why won't you be using it?**  
+  A: 
+  - Lixir (Enlightend dev) has stated the entire mod will be rewritten. So I will also need to. MCreator mods are already pain to make invasive changes for, to have to do it all over again does not entice me. 
+  - Many of the bugs I fix have/will already be(en) fixed in the next Enlightend release.
+  - Certain features I like are slated to be removed.
+  - I either really don't like, or don't really care about, the new features that have already been announced.
+  - It'll require and use VMinus. I've seen VMinus semi-frequently cause crashes /w other mods, and the design mindset that comes with it just doesn't work for me; the things it does could be fine for modpacks, but a single mod depending on it should not get to dictate those things unless that's the sole purpose of the mod, which will not be the case here.
 
 ### Licensing
 This project is released under the [Avoiding Leeching License, version 1.0](LICENSE).  
