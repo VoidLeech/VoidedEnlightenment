@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "enlightened_end:cerulean_hanging_wall_sign",
-    "enlightened_end:indigo_hanging_wall_sign"
+    "enlightened_end:cerulean_wall_hanging_sign",
+    "enlightened_end:indigo_wall_hanging_sign"
   ]
 }
