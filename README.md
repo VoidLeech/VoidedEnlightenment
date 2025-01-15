@@ -90,5 +90,5 @@ A: No. I'd have to rewrite my entire mod, for a version of Enlightend that I'd n
   - It'll require and use VMinus. I've seen VMinus semi-frequently cause crashes /w other mods, and the design mindset that comes with it just doesn't work for me; the things it does could be fine for modpacks, but a single mod depending on it should not get to dictate those things unless that's the sole purpose of the mod, which will not be the case here.
 
 ### Licensing
-This project is released under the [Avoiding Leeching License, version 1.0](LICENSE).  
-Special permission is granted to Lixir, the developer of Enlightend, to use, copy, modify, share, and deal in the mod's code and assets, but not the branding, as he sees fit, exclusively for the purpose of improving Enlightend, with no further restrictions.
+This project is released under the [Avoiding Leeching License, version 1.1](LICENSE).  
+Special permission is granted to Lixir, the developer of Enlightend, to use, copy, modify, and share the mod's code and assets, but not the branding, as he sees fit, exclusively for the purpose of improving Enlightend, with no further restrictions.
