@@ -70,6 +70,8 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Fog from Alex's Caves now works as intended when used in combination with Enlightend.
 - Fixes an incidental crash with Presence Footsteps.
 - Replaced Enlightend's Adamantite Knife with one that actually depends on Farmer's Delight: it now cuts grass without damaging, is enchantable, and will work with addons that require a KnifeItem.
+- Enlightend's stone-based blocks now actually drop their items when mined with complex modded tools (Tetra, Silent Gear).
+- Consistency Changes related to tool requirements/loot tables.
 - Fixes/Consistency Changes related to the Language file.
 - Volume/Consistency Changes related to Sounds.
 - Adds some other mods' entities to Enlightend bubble_immune tag to prevent serious issues.

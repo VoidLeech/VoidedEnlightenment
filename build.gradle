@@ -96,6 +96,13 @@ processResources {
     }
 }
 
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
 repositories {
     flatDir {
         dir '../Oblivion/build/libs'

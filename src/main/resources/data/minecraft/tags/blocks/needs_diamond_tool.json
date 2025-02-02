@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "enlightened_end:irradium_ore",
+    "enlightened_end:raw_irradium_block",
+    "enlightened_end:irradium_block",
+    "enlightened_end:irradium_bricks",
+    "enlightened_end:irradium_brick_stairs",
+    "enlightened_end:irradium_brick_slab",
+    "enlightened_end:irradium_brick_wall",
+    "enlightened_end:depleted_irradium_block",
+    "enlightened_end:depleted_irradium_bricks",
+    "enlightened_end:depleted_irradium_brick_stairs",
+    "enlightened_end:depleted_irradium_brick_slab",
+    "enlightened_end:depleted_irradium_brick_wall",
+    "enlightened_end:adamantite_node",
+    "enlightened_end:adamantite_block"
+  ]
+}
