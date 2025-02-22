@@ -2,6 +2,7 @@ package com.github.voidleech.voided_enlightenment.mixin.laser;
 
 import com.github.voidleech.voided_enlightenment.reimagined.LaserModeSwitching;
 import net.mcreator.enlightened_end.block.LaserBlock;
+import net.mcreator.enlightened_end.block.LaserOnBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
@@ -15,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.spongepowered.asm.mixin.Mixin;
 
-@Mixin(LaserBlock.class)
+@Mixin(value = {LaserBlock.class, LaserOnBlock.class})
 public abstract class LaserBlockMixin extends Block {
     public LaserBlockMixin(Properties pProperties) {
         super(pProperties);

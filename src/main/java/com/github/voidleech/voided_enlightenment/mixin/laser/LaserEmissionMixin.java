@@ -1,6 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.laser;
 
-import com.github.voidleech.oblivion.propertyUndoers.IBlockPropertyUndoerExtensions;
+import com.github.voidleech.oblivion.extensions.property.IBlockPropertyUndoer;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.mcreator.enlightened_end.block.LaserEmissionBlock;
 import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
@@ -32,7 +32,7 @@ public abstract class LaserEmissionMixin extends Block {
 
     @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;noCollission()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;"))
     private static Properties voided_enlightenment$enableCollision(Properties original){
-        return ((IBlockPropertyUndoerExtensions)original).oblivion$collision();
+        return ((IBlockPropertyUndoer)original).oblivion$collision();
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.gas;
 
-import com.github.voidleech.oblivion.propertyUndoers.IBlockPropertyUndoerExtensions;
+import com.github.voidleech.oblivion.extensions.property.IBlockPropertyUndoer;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import net.mcreator.enlightened_end.block.HeliumGasBlock;
 import net.minecraft.core.BlockPos;
@@ -18,14 +18,14 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(HeliumGasBlock.class)
-public abstract class HeliumGasMixin extends Block {
-    public HeliumGasMixin(Properties pProperties) {
+public abstract class GasBlockMixin extends Block {
+    public GasBlockMixin(Properties pProperties) {
         super(pProperties);
     }
 
     @ModifyExpressionValue(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;noCollission()Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;"))
     private static Properties voided_enlightenment$enableCollision(Properties original){
-        return ((IBlockPropertyUndoerExtensions)original).oblivion$collision();
+        return ((IBlockPropertyUndoer)original).oblivion$collision();
     }
 
     @Override

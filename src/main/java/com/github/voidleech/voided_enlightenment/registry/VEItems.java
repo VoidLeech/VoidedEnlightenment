@@ -2,7 +2,9 @@ package com.github.voidleech.voided_enlightenment.registry;
 
 import com.github.voidleech.oblivion.items.OblivionBoatItem;
 import com.github.voidleech.oblivion.util.AssignOnceSupplier;
+import com.github.voidleech.oblivion.util.Platform;
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
+import net.mcreator.enlightened_end.init.EnlightenedEndModItems;
 import net.mcreator.enlightened_end.init.EnlightenedEndModTabs;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
@@ -35,6 +37,9 @@ public class VEItems {
 
     private static void buildContents(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == EnlightenedEndModTabs.EE_BUILDING.getKey()){
+            if (!Platform.isModLoaded("farmersdelight")){
+                event.accept(EnlightenedEndModItems.ADAMANTITE_KNIFE);
+            }
             event.accept(CERULEAN_SIGN.get());
             event.accept(CERULEAN_HANGING_SIGN.get());
             event.accept(INDIGO_SIGN.get());
@@ -43,6 +48,7 @@ public class VEItems {
             event.accept(CERULEAN_CHEST_RAFT.get());
             event.accept(INDIGO_BOAT.get());
             event.accept(INDIGO_CHEST_BOAT.get());
+
         }
     }
 }

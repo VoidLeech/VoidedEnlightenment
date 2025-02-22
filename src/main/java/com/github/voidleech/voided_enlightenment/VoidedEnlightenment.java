@@ -1,6 +1,7 @@
 package com.github.voidleech.voided_enlightenment;
 
 import com.github.voidleech.oblivion.entities.client.OblivionBoatRenderer;
+import com.github.voidleech.oblivion.util.Registration;
 import com.github.voidleech.voided_enlightenment.entities.client.VEModelLayers;
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
 import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
@@ -39,6 +40,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+import java.util.List;
+
 @Mod(VoidedEnlightenment.MOD_ID)
 public class VoidedEnlightenment
 {
@@ -51,7 +54,7 @@ public class VoidedEnlightenment
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         modEventBus.addListener(this::commonSetup);
         VEPotionRecipes.register();
-        new VEPacks().register(modEventBus);
+        Registration.registerPacks(List.of(VEPacks.VE), MOD_ID);
 
         VEBlocks.register(modEventBus);
         VEItems.register(modEventBus);
