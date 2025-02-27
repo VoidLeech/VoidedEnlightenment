@@ -1,7 +1,9 @@
 package com.github.voidleech.voided_enlightenment;
 
 import com.github.voidleech.oblivion.entities.client.OblivionBoatRenderer;
+import com.github.voidleech.oblivion.util.Platform;
 import com.github.voidleech.oblivion.util.Registration;
+import com.github.voidleech.voided_enlightenment.compat.stonezone.StoneZoneCompat;
 import com.github.voidleech.voided_enlightenment.entities.client.VEModelLayers;
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
 import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
@@ -67,9 +69,13 @@ public class VoidedEnlightenment
             VERecipeSerializersFD.register();
         }
 
-        if (ModList.get().isLoaded("create")){
+        if (Platform.isModLoaded("create")){
             VEItemsC.register(modEventBus);
             PipeCollisionEvents.register(forgeBus);
+        }
+
+        if (Platform.isModLoaded("stonezone")){
+            StoneZoneCompat.init();
         }
 
         forgeBus.register(this);

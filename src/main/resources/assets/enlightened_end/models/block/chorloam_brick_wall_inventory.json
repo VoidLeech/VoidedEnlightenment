@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "enlightened_end:block/chorloam_bricks"
+  }
+}

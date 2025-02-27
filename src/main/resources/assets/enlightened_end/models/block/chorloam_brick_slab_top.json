@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "enlightened_end:block/chorloam_bricks",
+    "side": "enlightened_end:block/chorloam_bricks",
+    "top": "enlightened_end:block/chorloam_bricks"
+  }
+}

@@ -175,6 +175,9 @@ dependencies {
     // Farmer's Delight compat
     compileOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
 
+    // StoneZone compat
+    compileOnly fg.deobf("maven.modrinth:stone-zone:${stonezone_version}-forge")
+
     // For testing Oblivion's Jade compat
     //runtimeOnly fg.deobf("maven.modrinth:jade:${jade_version}+forge")
 
@@ -223,7 +226,7 @@ tasks.named('processResources', ProcessResources).configure {
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
-            oblivion_version: oblivion_version
+            oblivion_version: oblivion_version, stonezone_version: stonezone_version
     ]
     inputs.properties replaceProperties
 

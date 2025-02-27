@@ -7,6 +7,9 @@ import com.github.voidleech.oblivion.blocks.OblivionWallSignBlock;
 import com.github.voidleech.oblivion.util.AssignOnceSupplier;
 import com.github.voidleech.voided_enlightenment.VoidedEnlightenment;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,6 +33,13 @@ public class VEBlocks {
     public static final AssignOnceSupplier<OblivionHangingSignBlock> INDIGO_HANGING_SIGN = new AssignOnceSupplier<>();
 
     public static final AssignOnceSupplier<OblivionWallHangingSignBlock> INDIGO_WALL_HANGING_SIGN = new AssignOnceSupplier<>();
+
+    public static final AssignOnceSupplier<Block> CHORLOAM_BRICKS = new AssignOnceSupplier<>();
+
+    public static final AssignOnceSupplier<StairBlock> CHORLOAM_BRICK_STAIRS = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<SlabBlock> CHORLOAM_BRICK_SLAB = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<WallBlock> CHORLOAM_BRICK_WALL = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<Block> PACKED_CHORLOAM = new AssignOnceSupplier<>();
 
     public static void register(IEventBus modEventBus){
         BLOCKS.register(modEventBus);

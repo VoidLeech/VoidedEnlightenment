@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enlightened_end:block/chorloam_brick_slab"
+    },
+    "type=double": {
+      "model": "enlightened_end:block/chorloam_bricks"
+    },
+    "type=top": {
+      "model": "enlightened_end:block/chorloam_brick_slab_top"
+    }
+  }
+}
