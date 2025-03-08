@@ -9,5 +9,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(DefaultDispenseItemBehavior.class)
 public interface DefaultDispenseItemBehaviorInvoker {
     @Invoker("execute")
-    ItemStack callExecute(BlockSource source, ItemStack stack);
+    ItemStack voided_enlightenment$execute(BlockSource source, ItemStack stack);
 }

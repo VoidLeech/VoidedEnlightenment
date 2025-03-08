@@ -22,12 +22,15 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 
 import java.util.List;
 
 @Mixin(CeruleanStalk0Block.class)
 public abstract class Stalk0Mixin extends Block implements BonemealableBlock {
+    @Unique
+    private static final VoxelShape voided_enlightenment$SHAPE = box(4, 6, 4, 12, 16, 12);
 
     public Stalk0Mixin(Properties pProperties) {
         super(pProperties);
@@ -40,7 +43,7 @@ public abstract class Stalk0Mixin extends Block implements BonemealableBlock {
 
     @Override
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return box(4, 6, 4, 12, 16, 12);
+        return voided_enlightenment$SHAPE;
     }
 
     @Override

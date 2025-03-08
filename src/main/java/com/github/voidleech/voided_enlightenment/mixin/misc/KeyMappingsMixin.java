@@ -1,5 +1,6 @@
 package com.github.voidleech.voided_enlightenment.mixin.misc;
 
+import com.github.voidleech.voided_enlightenment.mixin.accessor.KeyMappingAccessor;
 import net.mcreator.enlightened_end.init.EnlightenedEndModKeyMappings;
 import net.minecraft.client.KeyMapping;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
@@ -16,7 +17,7 @@ public abstract class KeyMappingsMixin {
 
     @Inject(method = "registerKeyMappings", at = @At("HEAD"), remap = false)
     private static void voided_enlightenment$youGetYourOwnCategory(RegisterKeyMappingsEvent event, CallbackInfo ci){
-        DASHING_LEGGINGS_ABILITY.category = "key.categories.enlightened_end";
-        KeyMapping.CATEGORIES.add("key.categories.enlightened_end");
+        ((KeyMappingAccessor)DASHING_LEGGINGS_ABILITY).voided_enlightenment$setCategory("key.categories.enlightened_end");
+        KeyMappingAccessor.voided_enlightenment$getCATEGORIES().add("key.categories.enlightened_end");
     }
 }

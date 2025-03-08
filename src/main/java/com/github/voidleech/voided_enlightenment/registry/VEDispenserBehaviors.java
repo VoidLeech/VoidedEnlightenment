@@ -58,7 +58,7 @@ public class VEDispenserBehaviors {
             }
         });
         // Glass Bottle
-        DispenseItemBehavior bottleOriginal = ((DispenserBlockInvoker)Blocks.DISPENSER).callGetDispenseMethod(new ItemStack(Items.GLASS_BOTTLE));
+        DispenseItemBehavior bottleOriginal = ((DispenserBlockInvoker)Blocks.DISPENSER).voided_enlightenment$getDispenseMethod(new ItemStack(Items.GLASS_BOTTLE));
         if (bottleOriginal instanceof OptionalDispenseItemBehavior bottleOriginalOpt) {
             DispenserBlock.registerBehavior(Items.GLASS_BOTTLE, new OptionalDispenseItemBehavior() {
                 @Override
@@ -78,7 +78,7 @@ public class VEDispenserBehaviors {
                         }
                         return pStack;
                     }
-                    ItemStack res = ((DefaultDispenseItemBehaviorInvoker)bottleOriginalOpt).callExecute(pSource, pStack);
+                    ItemStack res = ((DefaultDispenseItemBehaviorInvoker)bottleOriginalOpt).voided_enlightenment$execute(pSource, pStack);
                     setSuccess(bottleOriginalOpt.isSuccess());
                     return res;
                 }

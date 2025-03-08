@@ -18,13 +18,22 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
+
+import java.util.List;
 
 @Mixin(LaserEmissionBlock.class)
 public abstract class LaserEmissionMixin extends Block {
     @Shadow
     @Final
     public static DirectionProperty FACING;
+
+    @Unique
+    private static final VoxelShape[] voided_enlightenment$SHAPE_CACHE = List.of(
+            box(0, 6, 6, 16, 10, 10),
+            box(6, 0, 6, 10, 16, 10),
+            box(6, 6, 0, 10, 10, 16)).toArray(VoxelShape[]::new);
 
     public LaserEmissionMixin(Properties pProperties) {
         super(pProperties);
@@ -40,11 +49,7 @@ public abstract class LaserEmissionMixin extends Block {
         if (pContext instanceof EntityCollisionContext ctx) {
             if (ctx.getEntity() instanceof LivingEntity entity) {
                 if (entity.getItemBySlot(EquipmentSlot.FEET).getItem() == EnlightenedEndModItems.BOOST_BOOTS_BOOTS.get() && !pContext.isDescending()) {
-                    VoxelShape shape = switch (pState.getValue(FACING)) {
-                        case DOWN, UP -> box(6, 0, 6, 10, 16, 10);
-                        case WEST, EAST -> box(0, 6, 6, 16, 10, 10);
-                        case NORTH, SOUTH -> box(6, 6, 0, 10, 10, 16);
-                    };
+                    VoxelShape shape = voided_enlightenment$SHAPE_CACHE[pState.getValue(FACING).getAxis().ordinal()];
                     if (pContext.isAbove(shape, pPos, false)) {
                         return shape;
                     }
