@@ -1,0 +1,19 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "enlightened_end:cerulean_planks"
+    }
+  ],
+  "results": [
+    {
+      "item": "enlightened_end:cerulean_mosaic"
+    }
+  ],
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "create"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "enlightened_end:block/cerulean_mosaic",
+    "side": "enlightened_end:block/cerulean_mosaic",
+    "top": "enlightened_end:block/cerulean_mosaic"
+  }
+}

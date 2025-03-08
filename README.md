@@ -27,6 +27,8 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Boots enchanted with Frost Walker now allow you to walk on Frostburn Ice (I+II) and Glacium block variants (II) without freezing, or while freezing slower than normal if the level isn't high enough.
 - Chorloam is now renewable through an in-world interaction with Ooze Bottles and Mud.
 - Signs & Boats for Enlightend Woodtypes.
+- Chorloam Bricks.
+- Cerulean Mosaics.
 - Create compat.
 - Create: Vintage Improvements recipe compat.
 - Waxed Icons compat.

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "enlightened_end:block/cerulean_mosaic",
+    "side": "enlightened_end:block/cerulean_mosaic",
+    "top": "enlightened_end:block/cerulean_mosaic"
+  }
+}

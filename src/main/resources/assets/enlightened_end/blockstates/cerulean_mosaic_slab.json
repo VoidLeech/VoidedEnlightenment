@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enlightened_end:block/cerulean_mosaic_slab"
+    },
+    "type=double": {
+      "model": "enlightened_end:block/cerulean_mosaic"
+    },
+    "type=top": {
+      "model": "enlightened_end:block/cerulean_mosaic_slab_top"
+    }
+  }
+}

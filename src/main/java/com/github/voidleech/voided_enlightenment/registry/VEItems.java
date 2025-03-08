@@ -10,7 +10,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
-import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,6 +34,10 @@ public class VEItems {
     public static final AssignOnceSupplier<BlockItem> CHORLOAM_BRICK_SLAB = new AssignOnceSupplier<>();
     public static final AssignOnceSupplier<BlockItem> CHORLOAM_BRICK_WALL = new AssignOnceSupplier<>();
 
+    public static final AssignOnceSupplier<BlockItem> CERULEAN_MOSAIC = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<BlockItem> CERULEAN_MOSAIC_STAIRS = new AssignOnceSupplier<>();
+    public static final AssignOnceSupplier<BlockItem> CERULEAN_MOSAIC_SLAB = new AssignOnceSupplier<>();
+
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);
         modEventBus.addListener(VEItems::buildContents);
@@ -50,6 +53,9 @@ public class VEItems {
             event.accept(CHORLOAM_BRICK_STAIRS.get());
             event.accept(CHORLOAM_BRICK_SLAB.get());
             event.accept(CHORLOAM_BRICK_WALL.get());
+            event.accept(CERULEAN_MOSAIC.get());
+            event.accept(CERULEAN_MOSAIC_STAIRS.get());
+            event.accept(CERULEAN_MOSAIC_SLAB.get());
             event.accept(CERULEAN_SIGN.get());
             event.accept(CERULEAN_HANGING_SIGN.get());
             event.accept(INDIGO_SIGN.get());

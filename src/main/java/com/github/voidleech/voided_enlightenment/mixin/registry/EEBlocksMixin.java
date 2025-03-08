@@ -81,6 +81,18 @@ public abstract class EEBlocksMixin {
     private static final RegistryObject<WallBlock> VOIDED_ENLIGHTENMENT$CHORLOAM_BRICK_WALL = REGISTRY.register("chorloam_brick_wall", () ->
             new WallBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICK_WALL)));
 
+    @Unique
+    private static final RegistryObject<Block> VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC = REGISTRY.register("cerulean_mosaic", () ->
+            new Block(BlockBehaviour.Properties.copy(EnlightenedEndModBlocks.CERULEAN_PLANKS.get())));
+
+    @Unique
+    private static final RegistryObject<StairBlock> VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC_STAIRS = REGISTRY.register("cerulean_mosaic_stairs", () ->
+            new StairBlock(VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(EnlightenedEndModBlocks.CERULEAN_PLANKS.get())));
+
+    @Unique
+    private static final RegistryObject<SlabBlock> VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC_SLAB = REGISTRY.register("cerulean_mosaic_slab", () ->
+            new SlabBlock(BlockBehaviour.Properties.copy(EnlightenedEndModBlocks.CERULEAN_PLANKS.get())));
+
     static {
         VEBlocks.CERULEAN_STANDING_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_STANDING_SIGN);
         VEBlocks.CERULEAN_WALL_SIGN.assign(VOIDED_ENLIGHTENMENT$CERULEAN_WALL_SIGN);
@@ -95,5 +107,8 @@ public abstract class EEBlocksMixin {
         VEBlocks.CHORLOAM_BRICK_STAIRS.assign(VOIDED_ENLIGHTENMENT$CHORLOAM_BRICK_STAIRS);
         VEBlocks.CHORLOAM_BRICK_SLAB.assign(VOIDED_ENLIGHTENMENT$CHORLOAM_BRICK_SLAB);
         VEBlocks.CHORLOAM_BRICK_WALL.assign(VOIDED_ENLIGHTENMENT$CHORLOAM_BRICK_WALL);
+        VEBlocks.CERULEAN_MOSAIC.assign(VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC);
+        VEBlocks.CERULEAN_MOSAIC_STAIRS.assign(VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC_STAIRS);
+        VEBlocks.CERULEAN_MOSAIC_SLAB.assign(VOIDED_ENLIGHTENMENT$CERULEAN_MOSAIC_SLAB);
     }
 }
