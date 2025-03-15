@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "enlightened_end:chorloam"
+    },
+    {
+      "item": "enlightened_end:elevibloom"
+    }
+  ],
+  "result": {
+    "item": "enlightened_end:packed_chorloam"
+  }
+}

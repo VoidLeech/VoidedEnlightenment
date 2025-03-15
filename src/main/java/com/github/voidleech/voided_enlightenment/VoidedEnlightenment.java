@@ -10,6 +10,7 @@ import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
 import com.github.voidleech.voided_enlightenment.registry.VEBlocks;
 import com.github.voidleech.voided_enlightenment.registry.VEDispenserBehaviors;
 import com.github.voidleech.voided_enlightenment.registry.VEFluidInteractions;
+import com.github.voidleech.voided_enlightenment.registry.VEFuel;
 import com.github.voidleech.voided_enlightenment.registry.VEItems;
 import com.github.voidleech.voided_enlightenment.registry.VEItemsC;
 import com.github.voidleech.voided_enlightenment.registry.VEItemsFD;
@@ -62,6 +63,8 @@ public class VoidedEnlightenment
         VEItems.register(modEventBus);
         VERecipeTypes.register(modEventBus);
         VERecipeSerializers.register(modEventBus);
+
+        VEFuel.init();
 
         if (ModList.get().isLoaded("farmersdelight")){
             VEItemsFD.register(modEventBus);

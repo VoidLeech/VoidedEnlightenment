@@ -164,7 +164,7 @@ dependencies {
     implementation fg.deobf("curse.maven:enlightend-502786:4880586") // 5.0.14
 
     // Oblivion
-    if (oblivion_snapshot) {
+    if (oblivion_snapshot.toBoolean()) {
         implementation fg.deobf("com.github.voidleech.oblivion:oblivion_api-forge-${minecraft_version}:${oblivion_version}") // Local for concurrent dev
     }
     else {
@@ -176,7 +176,7 @@ dependencies {
     compileOnly(fg.deobf("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}"))
     compileOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-api-${minecraft_version}:${flywheel_version}"))
     compileOnly(fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}"))
-    if (using_create) {
+    if (using_create.toBoolean()) {
         runtimeOnly(fg.deobf("com.simibubi.create:create-${minecraft_version}:${create_version}-${create_buildno}:slim") { transitive = false })
         runtimeOnly(fg.deobf("net.createmod.ponder:Ponder-Forge-${minecraft_version}:${ponder_version}"))
         runtimeOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-${minecraft_version}:${flywheel_version}"))

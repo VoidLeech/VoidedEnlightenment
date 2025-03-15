@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"],
+  "key": {
+    "X": {
+      "item": "enlightened_end:packed_chorloam"
+    }
+  },
+  "result": {
+    "item": "enlightened_end:chorloam_bricks",
+    "count": 4
+  }
+}

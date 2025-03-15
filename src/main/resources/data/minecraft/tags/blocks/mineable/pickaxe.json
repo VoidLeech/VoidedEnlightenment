@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "enlightened_end:packed_chorloam",
+    "enlightened_end:chorloam_bricks",
+    "enlightened_end:chorloam_brick_stairs",
+    "enlightened_end:chorloam_brick_slab",
+    "enlightened_end:chorloam_brick_wall"
+  ]
+}
