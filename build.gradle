@@ -255,6 +255,11 @@ tasks.named('processResources', ProcessResources).configure {
     }
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 tasks.named('jar', Jar).configure {
     manifest {
         attributes([

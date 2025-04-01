@@ -21,9 +21,4 @@ build
 eclipse
 run
 runs
-
-# unpublished deps
-libs
-
-# Files from Forge MDK
-forge*changelog.txt
+NEXT.md
