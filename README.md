@@ -79,17 +79,7 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 
 ### F.A.Q.
 **Q: Can this be used in my modpack?**  
-A: Yes, but do note our license does not allow directly including the mod files in your pack.
-
-**Q: Will you add support for Enlightend versions past 5.0.14, when that releases?**  
-A: No. I'd have to rewrite my entire mod, for a version of Enlightend that I'd not be using personally. And ultimately this is a 'fix things so that I can enjoy them' mod that I just happen to share.  
-  **Q: Why is it a rewrite? Why won't you be using it?**  
-  A: 
-  - Lixir (Enlightend dev) has stated the entire mod will be rewritten. So I will also need to. MCreator mods are already pain to make invasive changes for, to have to do it all over again does not entice me. 
-  - Many of the bugs I fix have/will already be(en) fixed in the next Enlightend release.
-  - Certain features I like are slated to be removed.
-  - I either really don't like, or don't really care about, the new features that have already been announced.
-  - It'll require and use VMinus. I've seen VMinus semi-frequently cause crashes /w other mods, and the design mindset that comes with it just doesn't work for me; the things it does could be fine for modpacks, but a single mod depending on it should not get to dictate those things unless that's the sole purpose of the mod, which will not be the case here.
+**A:** Yes, obviously. However, make sure that the modpack file you distribute (.zip, .mrpack, etc.) does not contain (e.g. by being in an overrides folder) this mod's .jar file, as that would violate our license. The mod being listed in a manifest-like file and downloaded (from one of the places we distribute it) by your mod launcher upon modpack install is completely normal and thus fine.
 
 ### Licensing
 This project is released under the [Avoiding Leeching License, version 1.1](LICENSE).  

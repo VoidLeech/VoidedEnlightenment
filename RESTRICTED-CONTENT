@@ -1,4 +1,4 @@
 src/main/resources/icon.png
 src/main/resources/packs/resource/*/pack.png
 src/main/resources/packs/data/*/pack.png
-src/main/resources/assets/
+src/main/resources/*/assets/textures
