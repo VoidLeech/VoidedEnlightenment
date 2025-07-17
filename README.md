@@ -32,7 +32,6 @@ Compiling the mod requires using the Vineflower decompiler in your IDE instead o
 - Create compat.
 - Create: Vintage Improvements recipe compat.
 - Waxed Icons compat.
-- KleeSlabs compat.
 - Seamless compat.
 #### Removals
 - Disabled Enlightend's custom end fog, as it has jarring, sudden transitions, and is the source of visual incompatibilities.
