@@ -1,4 +1,6 @@
 {
+  "itemGroup.voided_enlightenment.base": "Voided Enlightenment",
+  "itemGroup.enlightened_end.base": "Enlightend",
   "item.voided_enlightenment.adamantite_knife": "Adamantite Knife",
   "key.categories.enlightened_end": "Enlightend",
   "item.voided_enlightenment.crushed_raw_bismuth": "Crushed Raw Bismuth",

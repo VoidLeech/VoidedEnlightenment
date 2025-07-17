@@ -311,7 +311,7 @@ publishMods {
     File forgejavadoc  = file("build/libs/${mod_id}-${rootProject.version}-javadoc.jar")
 
     github {
-        accessToken = providers.environmentVariable("GITHUB_TOKEN")
+        accessToken = providers.environmentVariable("GITHUB_PUBLISH")
         repository = "VoidLeech/VoidedEnlightenment"
         commitish = "${minecraft_version}/dev-5.0.14"
         tagName = "5.0.14-${minecraft_version}-${rootProject.version}"
