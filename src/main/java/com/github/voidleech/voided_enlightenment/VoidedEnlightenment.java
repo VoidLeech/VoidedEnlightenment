@@ -57,7 +57,7 @@ public class VoidedEnlightenment
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         modEventBus.addListener(this::commonSetup);
         VEPotionRecipes.register();
-        Registration.registerPacks(List.of(VEPacks.VE), MOD_ID);
+        Registration.registerPacks(List.of(VEPacks.VE, VEPacks.OOZE), MOD_ID);
 
         VEBlocks.register(modEventBus);
         VEItems.register(modEventBus);

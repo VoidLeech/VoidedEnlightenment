@@ -21,8 +21,8 @@
     "ooze.OozeBottleMixin", "ooze.OozeBucketMixin", "ooze.OozeFlowingMixin", "ooze.OozeFluidBlockMixin",
     "ooze.OozeFluidMixin", "ooze.OozeRainChanceProcedureMixin", "ooze.vanilla.BlockBehaviour$PropertiesMixin",
     "ooze.vanilla.BlockBehaviourMixin", "ooze.vanilla.BlocksMixinForCauldron", "ooze.vanilla.LavaFluidMixin",
-    "ooze.vanilla.ReloadableServerResourcesMixin", "potion.PotionRecipesMixin", "recalcitrantDrops.CanHarvestMixin",
-    "recalcitrantDrops.GetDropsMixin", "recalcitrantDrops.RequiresToolForDropsPropertyMixin", "registry.EEBlocksMixin",
+    "potion.PotionRecipesMixin", "recalcitrantDrops.CanHarvestMixin", "recalcitrantDrops.GetDropsMixin",
+    "recalcitrantDrops.RequiresToolForDropsPropertyMixin", "registry.EEBlocksMixin",
     "registry.EEItemsMixin", "sound.EndMusicMixin", "sound.GasVentBottomMixin", "sound.OozeRainAmbienceMixin"
   ],
   "client": [

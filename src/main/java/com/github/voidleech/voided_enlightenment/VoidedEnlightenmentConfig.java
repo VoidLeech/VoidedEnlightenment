@@ -16,12 +16,6 @@ public class VoidedEnlightenmentConfig
 
     public static boolean nukeAllowed;
 
-    private static final ForgeConfigSpec.BooleanValue OOZE_ISNT_WATER = BUILDER
-            .comment("Whether ooze should be removed from the minecraft:water fluid tag.")
-            .define("ooze_isnt_water", true);
-
-    public static boolean oozeIsntWater;
-
     private static final ForgeConfigSpec.BooleanValue LEVIATHAN_BLOCKED = BUILDER
             .comment("Whether the Void Leviathan is blocked from spawning.")
             .define("leviathan_blocked", true);
@@ -34,7 +28,6 @@ public class VoidedEnlightenmentConfig
     static void onLoad(final ModConfigEvent event)
     {
         nukeAllowed = NUKE_ALLOWED.get();
-        oozeIsntWater = OOZE_ISNT_WATER.get();
         leviathanBlocked = LEVIATHAN_BLOCKED.get();
     }
 }
