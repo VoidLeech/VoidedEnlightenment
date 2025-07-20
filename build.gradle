@@ -198,9 +198,6 @@ dependencies {
     // StoneZone compat
     compileOnly fg.deobf("maven.modrinth:stone-zone:${stonezone_version}-forge")
 
-    // For testing Oblivion's Jade compat
-    //runtimeOnly fg.deobf("maven.modrinth:jade:${jade_version}+forge")
-
     // For testing Waxed Icons compat
     // runtimeOnly fg.deobf("curse.maven:trimmed-857036:4845938")
     // runtimeOnly fg.deobf("curse.maven:waxedicons-909140:4733260")
@@ -242,8 +239,7 @@ afterEvaluate {
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
-            forge_version: forge_version, forge_version_range: forge_version_range,
-            loader_version_range: loader_version_range,
+            forge_version: forge_version, loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
             oblivion_version: oblivion_version, create_version: create_version,
