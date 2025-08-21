@@ -196,6 +196,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
 
     // StoneZone compat
+    compileOnly fg.deobf("maven.modrinth:moonlight:${moonlight_version}-forge")
     compileOnly fg.deobf("maven.modrinth:stone-zone:${stonezone_version}-forge")
 
     // For testing Waxed Icons compat

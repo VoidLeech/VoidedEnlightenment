@@ -1,9 +1,10 @@
 package com.github.voidleech.voided_enlightenment.compat.stonezone;
 
-import net.mehvahdjukaar.stone_zone.api.intergration.CompatStoneType;
+import net.mcreator.enlightened_end.EnlightenedEndMod;
+import net.mehvahdjukaar.stone_zone.api.set.mud.MudTypeRegistry;
 
 public class StoneZoneCompat {
     public static void init(){
-        CompatStoneType.simpleMudFinder("enlightened_end", "chorloam");
+        MudTypeRegistry.INSTANCE.addSimpleFinder(EnlightenedEndMod.MODID, "chorloam");
     }
 }
