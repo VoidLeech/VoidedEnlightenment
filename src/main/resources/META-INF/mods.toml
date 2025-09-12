@@ -67,7 +67,7 @@ description='''${mod_description}'''
 [[dependencies.${mod_id}]]
     modId="stonezone"
     mandatory=false
-    versionRange="[${stonezone_version},)"
+    versionRange="[1.9.2,)"
     ordering="NONE"
 
 

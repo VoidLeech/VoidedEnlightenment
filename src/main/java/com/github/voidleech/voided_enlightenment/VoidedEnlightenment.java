@@ -3,10 +3,10 @@ package com.github.voidleech.voided_enlightenment;
 import com.github.voidleech.oblivion.entities.client.OblivionBoatRenderer;
 import com.github.voidleech.oblivion.util.Platform;
 import com.github.voidleech.oblivion.util.Registration;
-import com.github.voidleech.voided_enlightenment.compat.stonezone.StoneZoneCompat;
+import com.github.voidleech.voided_enlightenment.compat.create.blockspouting.SpoutingBehaviours;
 import com.github.voidleech.voided_enlightenment.entities.client.VEModelLayers;
 import com.github.voidleech.voided_enlightenment.event.MobEvents;
-import com.github.voidleech.voided_enlightenment.event.PipeCollisionEvents;
+import com.github.voidleech.voided_enlightenment.compat.create.PipeCollisionEvents;
 import com.github.voidleech.voided_enlightenment.registry.VEBlocks;
 import com.github.voidleech.voided_enlightenment.registry.VEDispenserBehaviors;
 import com.github.voidleech.voided_enlightenment.registry.VEFluidInteractions;
@@ -77,10 +77,6 @@ public class VoidedEnlightenment
             PipeCollisionEvents.register(forgeBus);
         }
 
-        if (Platform.isModLoaded("stonezone")){
-            StoneZoneCompat.init();
-        }
-
         forgeBus.register(this);
         MobEvents.register(forgeBus);
 
@@ -92,6 +88,9 @@ public class VoidedEnlightenment
         event.enqueueWork(() -> {
             VEFluidInteractions.register();
             VEDispenserBehaviors.register();
+            if (Platform.isModLoaded("create")) {
+                SpoutingBehaviours.register();
+            }
         });
     }
 

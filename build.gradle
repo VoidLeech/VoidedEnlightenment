@@ -195,10 +195,6 @@ dependencies {
     // Farmer's Delight compat
     compileOnly fg.deobf("curse.maven:farmersdelight-398521:5051242")
 
-    // StoneZone compat
-    compileOnly fg.deobf("maven.modrinth:moonlight:${moonlight_version}-forge")
-    compileOnly fg.deobf("maven.modrinth:stone-zone:${stonezone_version}-forge")
-
     // For testing Waxed Icons compat
     // runtimeOnly fg.deobf("curse.maven:trimmed-857036:4845938")
     // runtimeOnly fg.deobf("curse.maven:waxedicons-909140:4733260")
@@ -243,8 +239,7 @@ tasks.named('processResources', ProcessResources).configure {
             forge_version: forge_version, loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
-            oblivion_version: oblivion_version, create_version: create_version,
-            stonezone_version: stonezone_version
+            oblivion_version: oblivion_version, create_version: create_version
     ]
     inputs.properties replaceProperties
 
@@ -345,7 +340,7 @@ publishMods {
         modLoaders.add("forge")
         modLoaders.add("neoforge")
         requires("oblivion-api", "enlightend")
-        optional("create", "farmers-delight", "stone-zone")
+        optional("create", "farmers-delight")
         additionalFile(forgesources) {
             name = "${mod_id}-${minecraft_version}-${rootProject.version}-sources.jar"
         }
@@ -361,7 +356,7 @@ publishMods {
         modLoaders.add("forge")
         modLoaders.add("neoforge")
         requires("oblivion-api", "enlightend")
-        optional("create", "farmers-delight", "stone-zone")
+        optional("create", "farmers-delight")
         additionalFiles.from(
                 forgesources,
                 forgejavadoc)

@@ -1,4 +1,4 @@
-package com.github.voidleech.voided_enlightenment.event;
+package com.github.voidleech.voided_enlightenment.compat.create;
 
 import com.github.voidleech.voided_enlightenment.registry.VETags;
 import com.simibubi.create.api.event.PipeCollisionEvent;
